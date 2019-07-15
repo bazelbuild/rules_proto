@@ -18,8 +18,7 @@ http_archive(
     urls = ["https://github.com/bazelbuild/rules_proto/archive/TODO"],
     sha256 = "TODO",
 )
-load("//proto:repositories.bzl", "proto_import_dependencies")
-load("//proto:repositories.bzl", "proto_register_toolchains")
+load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies", "rules_proto_toolchains")
 rules_proto_dependencies()
 rules_proto_toolchains()
 ```
@@ -27,17 +26,12 @@ rules_proto_toolchains()
 Then, in your BUILD files, import and use the rules:
 
 ```python
-load("@build_bazel_rules_proto//proto:defs.bzl", "proto_library")
+load("@rules_proto//proto:defs.bzl", "proto_library")
 
 proto_library(
     ...
 )
 ```
-
-## Migration Tools
-
-In the future, this repository will also contain tools to migrate your project
-for Bazel incompatible changes.
 
 ## Contributing
 
