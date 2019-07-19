@@ -12,6 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+load("//proto/private:native.bzl", "NativeProtoInfo", "native_proto_common")
+
+_MIGRATION_TAG = "__PROTO_RULES_MIGRATION_DO_NOT_USE_WILL_BREAK__"
+
+def _add_migration_tag(attrs):
+    if "tags" in attrs and attrs["tags"] != None:
+        attrs["tags"] += [_MIGRATION_TAG]
+    else:
+        attrs["tags"] = [_MIGRATION_TAG]
+    return attrs
+
 def proto_lang_toolchain(**attrs):
     """Bazel proto_lang_toolchain rule.
 
@@ -20,7 +31,7 @@ def proto_lang_toolchain(**attrs):
     Args:
       **attrs: Rule attributes
     """
-    native.proto_lang_toolchain(**attrs)
+    native.proto_lang_toolchain(**_add_migration_tag(attrs))
 
 def proto_library(**attrs):
     """Bazel proto_library rule.
@@ -30,4 +41,16 @@ def proto_library(**attrs):
     Args:
       **attrs: Rule attributes
     """
-    native.proto_library(**attrs)
+    native.proto_library(**_add_migration_tag(attrs))
+
+ProtoInfo = NativeProtoInfo
+"""Encapsulates information provided by `proto_library`.
+
+https://docs.bazel.build/versions/master/skylark/lib/ProtoInfo.html
+"""
+
+proto_common = native_proto_common
+"""Utilities for protocol buffers.
+
+https://docs.bazel.build/versions/master/skylark/lib/proto_common.html
+"""

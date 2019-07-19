@@ -12,19 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-load("//proto/private:dependencies.bzl", "dependencies")
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+# Redefine native symbols with a new name as a workaround for
+# exporting them in `//proto:defs.bzl` with their original name.
+#
+# While we cannot force users to load these symbol due to the lack of a
+# whitelisting mechanism, we can still export them and tell users to
+# load it to make a future migration to pure Starlark easier.
 
-def rules_proto_dependencies():
-    for name in dependencies:
-        if name in native.existing_rules():
-            continue
+NativeProtoInfo = ProtoInfo
 
-        http_archive(
-            name = name,
-            **dependencies[name]
-        )
-
-def rules_proto_toolchains():
-    # Nothing to do here (yet).
-    pass
+native_proto_common = proto_common
