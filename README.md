@@ -7,23 +7,26 @@ For the list of Proto rules, see the Bazel
 
 ## Getting Started
 
-There is no need to use rules from this repository just yet. If you want to use
-`rules_proto` anyway, add the following to your WORKSPACE file:
+To get started with `rules_proto`, add the following to your `WORKSPACE` file:
 
 ```python
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "rules_proto",
-    urls = ["https://github.com/bazelbuild/rules_proto/archive/TODO"],
-    sha256 = "TODO",
+    sha256 = "88b0a90433866b44bb4450d4c30bc5738b8c4f9c9ba14e9661deb123f56a833d",
+    strip_prefix = "rules_proto-b0cc14be5da05168b01db282fe93bdf17aa2b9f4",
+    urls = [
+        "https://mirror.bazel.build/github.com/bazelbuild/rules_proto/archive/b0cc14be5da05168b01db282fe93bdf17aa2b9f4.tar.gz",
+        "https://github.com/bazelbuild/rules_proto/archive/b0cc14be5da05168b01db282fe93bdf17aa2b9f4.tar.gz",
+    ],
 )
 load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies", "rules_proto_toolchains")
 rules_proto_dependencies()
 rules_proto_toolchains()
 ```
 
-Then, in your BUILD files, import and use the rules:
+Then, in your `BUILD` files, import and use the rules:
 
 ```python
 load("@rules_proto//proto:defs.bzl", "proto_library")
@@ -31,6 +34,14 @@ load("@rules_proto//proto:defs.bzl", "proto_library")
 proto_library(
     ...
 )
+```
+
+If you're migrating from the native proto rules to `rules_proto`, you can use
+the following [buildifier](https://github.com/bazelbuild/buildtools/blob/master/buildifier/README.md)
+command to automate the changes to your `BUILD` and `.bzl` files:
+
+```bash
+buildifier --lint=fix --warnings=native-proto <path/to/BUILD>
 ```
 
 ## Contributing
@@ -46,6 +57,5 @@ feature requests only.
 
 For asking questions see:
 
-* [Stack Overflow](https://stackoverflow.com/questions/tagged/bazel)
 * [rules_proto mailing list](https://groups.google.com/forum/#!forum/proto-bazel-discuss)
 * Slack channel `#proto` on [slack.bazel.build](https://slack.bazel.build)
