@@ -14,9 +14,10 @@
 
 dependencies = {
     "bazel_skylib": {
-        "sha256": "2ef429f5d7ce7111263289644d233707dba35e39696377ebab8b0bc701f7818e",
+        "sha256": "9245b0549e88e356cd6a25bf79f97aa19332083890b7ac6481a2affb6ada9752",
+        "strip_prefix": "bazel-skylib-0.9.0",
         "urls": [
-            "https://github.com/bazelbuild/bazel-skylib/archive/0.8.0.tar.gz",
+            "https://github.com/bazelbuild/bazel-skylib/archive/0.9.0.tar.gz",
         ],
     },
     "com_google_protobuf": {
