@@ -14,7 +14,8 @@
 
 """Starlark rules for building protocol buffers."""
 
-load("//proto/private:native.bzl", "NativeProtoInfo", "native_proto_common")
+load("//proto/private:native.bzl", "NativeProtoInfo")
+load("//proto/private/utils:direct_source_infos.bzl", "direct_source_infos")
 
 _MIGRATION_TAG = "__PROTO_RULES_MIGRATION_DO_NOT_USE_WILL_BREAK__"
 
@@ -57,4 +58,6 @@ ProtoInfo = NativeProtoInfo
 # Utilities for protocol buffers.
 #
 # https://docs.bazel.build/versions/master/skylark/lib/proto_common.html
-proto_common = native_proto_common
+proto_common = struct(
+    direct_source_infos = direct_source_infos,
+)

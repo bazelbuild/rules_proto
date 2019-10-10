@@ -14,4 +14,4 @@
 
 syntax = "proto3";
 
-package rules_proto.tests;
+package rules_proto.tests.prefix;
