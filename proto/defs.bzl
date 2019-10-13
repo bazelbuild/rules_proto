@@ -15,6 +15,7 @@
 """Starlark rules for building protocol buffers."""
 
 load("//proto/private:native.bzl", "NativeProtoInfo", "native_proto_common")
+load("//proto/private/rules:proto_toolchain.bzl", _proto_toolchain = "proto_toolchain")
 
 _MIGRATION_TAG = "__PROTO_RULES_MIGRATION_DO_NOT_USE_WILL_BREAK__"
 
@@ -48,6 +49,8 @@ def proto_library(**attrs):
 
     # buildifier: disable=native-proto
     native.proto_library(**_add_migration_tag(attrs))
+
+proto_toolchain = _proto_toolchain
 
 # Encapsulates information provided by `proto_library`.
 #

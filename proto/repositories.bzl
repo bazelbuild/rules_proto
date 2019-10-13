@@ -23,5 +23,6 @@ def rules_proto_dependencies():
         maybe(http_archive, name, **dependencies[name])
 
 def rules_proto_toolchains():
-    # Nothing to do here (yet).
-    pass
+    native.register_toolchains(
+        "@rules_proto//proto:default_toolchain",
+    )
