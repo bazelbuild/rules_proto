@@ -21,14 +21,11 @@ dependencies = {
         ],
     },
     "com_google_protobuf": {
-        "sha256": "cc0d00955a9eb63f507b5b35367b96b75f9833602377a84ac2bc726eacac0ea1",
-        "strip_prefix": "protobuf-c132a4aa165d8ce2b65af62d4bde4a7ce08d07c3",
+        "sha256": "758249b537abba2f21ebc2d02555bf080917f0f2f88f4cbe2903e0e28c4187ed",
+        "strip_prefix": "protobuf-3.10.0",
         "urls": [
-            # TODO(yannic): Update to release that contains fixes for
-            #     `--incompatible_load_{cc,java,proto,python}_rules_from_bzl`.
-            # TODO(yannic): Update when protocolbuffers/protobuf/6391 is merged.
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/c132a4aa165d8ce2b65af62d4bde4a7ce08d07c3.tar.gz",
-            "https://github.com/protocolbuffers/protobuf/archive/c132a4aa165d8ce2b65af62d4bde4a7ce08d07c3.tar.gz",
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v3.10.0.tar.gz",
+            "https://github.com/protocolbuffers/protobuf/archive/v3.10.0.tar.gz",
         ],
     },
     # Dependency of `com_google_protobuf`.
@@ -56,6 +53,14 @@ dependencies = {
         "urls": [
             "https://mirror.bazel.build/github.com/bazelbuild/rules_python/archive/4b84ad270387a7c439ebdccfd530e2339601ef27.tar.gz",
             "https://github.com/bazelbuild/rules_python/archive/4b84ad270387a7c439ebdccfd530e2339601ef27.tar.gz",
+        ],
+    },
+    # Dependency of `com_google_protobuf`.
+    "six": {
+        "sha256": "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73",
+        "build_file": "@com_google_protobuf//:third_party/six.BUILD",
+        "urls": [
+            "https://pypi.python.org/packages/source/s/six/six-1.12.0.tar.gz",
         ],
     },
     # Dependency of `com_google_protobuf`.
