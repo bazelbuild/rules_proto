@@ -1,9 +1,10 @@
 workspace(name = "rules_proto")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
-
 load("//proto:repositories.bzl", "rules_proto_dependencies", "rules_proto_toolchains")
+
 rules_proto_dependencies()
+
 rules_proto_toolchains()
 
 http_archive(
@@ -17,4 +18,5 @@ http_archive(
 )
 
 load("@bazel_toolchains//rules:rbe_repo.bzl", "rbe_autoconfig")
+
 rbe_autoconfig(name = "buildkite_config")

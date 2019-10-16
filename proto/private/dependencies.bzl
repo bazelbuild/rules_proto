@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+"""All development and production dependencies of rules_proto."""
+
 dependencies = {
     "bazel_skylib": {
         "sha256": "9245b0549e88e356cd6a25bf79f97aa19332083890b7ac6481a2affb6ada9752",

@@ -19,6 +19,8 @@
 # whitelisting mechanism, we can still export them and tell users to
 # load it to make a future migration to pure Starlark easier.
 
+# buildifier: disable=native-proto
 NativeProtoInfo = ProtoInfo
 
+# buildifier: disable=native-proto
 native_proto_common = proto_common
