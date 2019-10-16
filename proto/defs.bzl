@@ -49,14 +49,12 @@ def proto_library(**attrs):
     # buildifier: disable=native-proto
     native.proto_library(**_add_migration_tag(attrs))
 
+# Encapsulates information provided by `proto_library`.
+#
+# https://docs.bazel.build/versions/master/skylark/lib/ProtoInfo.html
 ProtoInfo = NativeProtoInfo
-"""Encapsulates information provided by `proto_library`.
 
-https://docs.bazel.build/versions/master/skylark/lib/ProtoInfo.html
-"""
-
+# Utilities for protocol buffers.
+#
+# https://docs.bazel.build/versions/master/skylark/lib/proto_common.html
 proto_common = native_proto_common
-"""Utilities for protocol buffers.
-
-https://docs.bazel.build/versions/master/skylark/lib/proto_common.html
-"""
