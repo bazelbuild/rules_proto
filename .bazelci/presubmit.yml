@@ -1,4 +1,5 @@
 ---
+buildifier: latest
 platforms:
   macos:
     build_targets:
