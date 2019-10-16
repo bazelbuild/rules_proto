@@ -1,6 +1,9 @@
 # Releasing rules_proto
 
-`cd` to `//dist` and run the following commands to build the release:
+> :bang: Before creating a new release, check whether the `version` in
+  `//proto:defs.bzl` was updated after the last release.
+
+`cd` into `//dist` and run the following commands to build the release:
 
 ```
 bazel clean

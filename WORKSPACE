@@ -21,10 +21,8 @@ rbe_autoconfig(name = "buildkite_config")
 
 http_archive(
     name = "bazel_federation",
-    url = "https://github.com/bazelbuild/bazel-federation/archive/f0e5eda7f0cbfe67f126ef4dacb18c89039b0506.zip", # 2019-09-30
-    sha256 = "33222ab7bcc430f1ff1db8788c2e0118b749319dd572476c4fd02322d7d15792",
-    strip_prefix = "bazel-federation-f0e5eda7f0cbfe67f126ef4dacb18c89039b0506",
-    type = "zip",
+    url = "https://github.com/bazelbuild/bazel_federation/releases/download/0.0.1/bazel_federation-0.0.1.tar.gz",
+    sha256 = "506dfbfd74ade486ac077113f48d16835fdf6e343e1d4741552b450cfc2efb53",
 )
 
 load("@bazel_federation//:repositories.bzl", "rules_pkg")
