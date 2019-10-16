@@ -14,6 +14,8 @@
 
 load("//proto/private:native.bzl", "NativeProtoInfo", "native_proto_common")
 
+version = "0.1.0"
+
 _MIGRATION_TAG = "__PROTO_RULES_MIGRATION_DO_NOT_USE_WILL_BREAK__"
 
 def _add_migration_tag(attrs):

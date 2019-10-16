@@ -4,8 +4,7 @@ filegroup(
         "BUILD",
         "defs.bzl",
         "repositories.bzl",
-    ],
-    data = [
+    ] + [
         "//proto/private:dist_files",
     ],
     visibility = [

@@ -18,3 +18,17 @@ http_archive(
 
 load("@bazel_toolchains//rules:rbe_repo.bzl", "rbe_autoconfig")
 rbe_autoconfig(name = "buildkite_config")
+
+http_archive(
+    name = "bazel_federation",
+    url = "https://github.com/bazelbuild/bazel-federation/archive/f0e5eda7f0cbfe67f126ef4dacb18c89039b0506.zip", # 2019-09-30
+    sha256 = "33222ab7bcc430f1ff1db8788c2e0118b749319dd572476c4fd02322d7d15792",
+    strip_prefix = "bazel-federation-f0e5eda7f0cbfe67f126ef4dacb18c89039b0506",
+    type = "zip",
+)
+
+load("@bazel_federation//:repositories.bzl", "rules_pkg")
+
+rules_pkg()
+load("@bazel_federation//setup:rules_pkg.bzl", "rules_pkg_setup")
+rules_pkg_setup()

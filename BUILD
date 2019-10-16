@@ -4,11 +4,10 @@ filegroup(
         "BUILD",
         "LICENSE",
         "WORKSPACE",
-    ],
-    data = [
-        "//proto:dist_files"
+    ] + [
+        "//proto:dist_files",
     ],
     visibility = [
-      "//dist:__pkg__",
+        "//dist:__pkg__",
     ],
 )
