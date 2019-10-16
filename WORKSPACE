@@ -8,11 +8,11 @@ rules_proto_toolchains()
 
 http_archive(
     name = "bazel_toolchains",
-    sha256 = "dcb58e7e5f0b4da54c6c5f8ebc65e63fcfb37414466010cf82ceff912162296e",
-    strip_prefix = "bazel-toolchains-0.28.2",
+    sha256 = "e9bab54199722935f239cb1cd56a80be2ac3c3843e1a6d3492e2bc11f9c21daf",
+    strip_prefix = "bazel-toolchains-1.0.0",
     urls = [
-        "https://mirror.bazel.build/github.com/bazelbuild/bazel-toolchains/archive/0.28.2.tar.gz",
-        "https://github.com/bazelbuild/bazel-toolchains/archive/0.28.2.tar.gz",
+        "https://mirror.bazel.build/github.com/bazelbuild/bazel-toolchains/archive/1.0.0.tar.gz",
+        "https://github.com/bazelbuild/bazel-toolchains/archive/1.0.0.tar.gz",
     ],
 )
 
