@@ -1,5 +1,7 @@
 ---
-buildifier: latest
+buildifier:
+  version: latest
+  warnings: "all"
 platforms:
   macos:
     build_targets:
