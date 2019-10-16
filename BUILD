@@ -2,13 +2,13 @@ filegroup(
     name = "dist_files",
     srcs = [
         "BUILD",
-        "defs.bzl",
-        "repositories.bzl",
+        "LICENSE",
+        "WORKSPACE",
     ],
     data = [
-        "//proto/private:dist_files",
+        "//proto:dist_files"
     ],
     visibility = [
-      "//:__pkg__",
+      "//dist:__pkg__",
     ],
 )
