@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+"""Starlark rules for building protocol buffers."""
+
 load("//proto/private:native.bzl", "NativeProtoInfo", "native_proto_common")
 
 _MIGRATION_TAG = "__PROTO_RULES_MIGRATION_DO_NOT_USE_WILL_BREAK__"
@@ -31,6 +33,8 @@ def proto_lang_toolchain(**attrs):
     Args:
       **attrs: Rule attributes
     """
+
+    # buildifier: disable=native-proto
     native.proto_lang_toolchain(**_add_migration_tag(attrs))
 
 def proto_library(**attrs):
@@ -41,16 +45,16 @@ def proto_library(**attrs):
     Args:
       **attrs: Rule attributes
     """
+
+    # buildifier: disable=native-proto
     native.proto_library(**_add_migration_tag(attrs))
 
+# Encapsulates information provided by `proto_library`.
+#
+# https://docs.bazel.build/versions/master/skylark/lib/ProtoInfo.html
 ProtoInfo = NativeProtoInfo
-"""Encapsulates information provided by `proto_library`.
 
-https://docs.bazel.build/versions/master/skylark/lib/ProtoInfo.html
-"""
-
+# Utilities for protocol buffers.
+#
+# https://docs.bazel.build/versions/master/skylark/lib/proto_common.html
 proto_common = native_proto_common
-"""Utilities for protocol buffers.
-
-https://docs.bazel.build/versions/master/skylark/lib/proto_common.html
-"""

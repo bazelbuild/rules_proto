@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+"""All development and production dependencies of rules_proto."""
+
 dependencies = {
     "bazel_skylib": {
         "sha256": "9245b0549e88e356cd6a25bf79f97aa19332083890b7ac6481a2affb6ada9752",
@@ -57,8 +59,8 @@ dependencies = {
     },
     # Dependency of `com_google_protobuf`.
     "six": {
-        "sha256": "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73",
         "build_file": "@com_google_protobuf//:third_party/six.BUILD",
+        "sha256": "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73",
         "urls": [
             "https://pypi.python.org/packages/source/s/six/six-1.12.0.tar.gz",
         ],

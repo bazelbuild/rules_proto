@@ -12,9 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-load("//proto/private:dependencies.bzl", "dependencies")
+"""Dependencies and toolchains required to use rules_proto."""
+
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
+load("//proto/private:dependencies.bzl", "dependencies")
 
 def rules_proto_dependencies():
     for name in dependencies:
