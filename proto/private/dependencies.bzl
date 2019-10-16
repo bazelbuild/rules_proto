@@ -59,8 +59,8 @@ dependencies = {
     },
     # Dependency of `com_google_protobuf`.
     "six": {
-        "sha256": "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73",
         "build_file": "@com_google_protobuf//:third_party/six.BUILD",
+        "sha256": "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73",
         "urls": [
             "https://pypi.python.org/packages/source/s/six/six-1.12.0.tar.gz",
         ],
