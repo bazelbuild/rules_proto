@@ -1,5 +1,8 @@
 # Protobuf Rules for [Bazel](https://bazel.build)
 
+* Postsubmit [![Build status](https://badge.buildkite.com/26d40f574d6f6026928bc271780782e5f168fe7e3595ea6d79.svg?branch=master)](https://buildkite.com/bazel/rules-proto)
+* Postsubmit + Current Bazel Incompatible Flags [![Build status](https://badge.buildkite.com/9c0cf88b7ca5814cf12f4ef2741306074c8e30ef7dabce1a1a.svg?branch=master)](https://buildkite.com/bazel/rules-proto-plus-bazelisk-migrate)
+
 This repository contains Starlark implementation of Protobuf rules in Bazel.
 
 For the list of Proto rules, see the Bazel
