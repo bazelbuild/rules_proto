@@ -1,0 +1,276 @@
+# Use precompiled binaries where possible.
+alias(
+    name = "protoc",
+    actual = select({
+        "//conditions:default": "@com_github_protocolbuffers_protobuf//:protoc",
+        ":linux-aarch64": "@com_google_protobuf_protoc_linux_aarch64//:protoc",
+        ":linux-ppc": "@com_google_protobuf_protoc_linux_ppc//:protoc",
+        ":linux-s390x": "@com_google_protobuf_protoc_linux_s390x//:protoc",
+        ":linux-x86_32": "@com_google_protobuf_protoc_linux_x86_32//:protoc",
+        ":linux-x86_64": "@com_google_protobuf_protoc_linux_x86_64//:protoc",
+        ":macos-x86_32": "@com_google_protobuf_protoc_macos_x86_32//:protoc",
+        ":macos-x86_64": "@com_google_protobuf_protoc_macos_x86_64//:protoc",
+        ":windows-x86_32": "@com_google_protobuf_protoc_windows_x86_32//:protoc",
+        ":windows-x86_64": "@com_google_protobuf_protoc_windows_x86_64//:protoc",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "protobuf_java",
+    actual = "@com_google_protobuf_protobuf_java//jar",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "protobuf_javalite",
+    actual = "@com_google_protobuf_protobuf_javalite//jar",
+    visibility = ["//visibility:public"],
+)
+
+# Redirect everything else to the source
+alias(
+    name = "wrappers_proto",
+    actual = "@com_github_protocolbuffers_protobuf//:wrappers_proto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "well_known_protos",
+    actual = "@com_github_protocolbuffers_protobuf//:well_known_protos",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "timestamp_proto",
+    actual = "@com_github_protocolbuffers_protobuf//:timestamp_proto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "struct_proto",
+    actual = "@com_github_protocolbuffers_protobuf//:struct_proto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "python_specific_test_protos_genproto",
+    actual = "@com_github_protocolbuffers_protobuf//:python_specific_test_protos_genproto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "python_common_test_protos_genproto",
+    actual = "@com_github_protocolbuffers_protobuf//:python_common_test_protos_genproto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "protobuf_python_genproto",
+    actual = "@com_github_protocolbuffers_protobuf//:protobuf_python_genproto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "protobuf_python",
+    actual = "@com_github_protocolbuffers_protobuf//:protobuf_python",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "protobuf_objc",
+    actual = "@com_github_protocolbuffers_protobuf//:protobuf_objc",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "protobuf_headers",
+    actual = "@com_github_protocolbuffers_protobuf//:protobuf_headers",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "objectivec",
+    actual = "@com_github_protocolbuffers_protobuf//:objectivec",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "java_toolchain",
+    actual = "@com_github_protocolbuffers_protobuf//:java_toolchain",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "field_mask_proto",
+    actual = "@com_github_protocolbuffers_protobuf//:field_mask_proto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "empty_proto",
+    actual = "@com_github_protocolbuffers_protobuf//:empty_proto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "duration_proto",
+    actual = "@com_github_protocolbuffers_protobuf//:duration_proto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "compiler_plugin_proto",
+    actual = "@com_github_protocolbuffers_protobuf//:compiler_plugin_proto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "descriptor_proto",
+    actual = "@com_github_protocolbuffers_protobuf//:descriptor_proto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "cc_wkt_protos",
+    actual = "@com_github_protocolbuffers_protobuf//:cc_wkt_protos",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "cc_toolchain",
+    actual = "@com_github_protocolbuffers_protobuf//:cc_toolchain",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "cc_test_protos_genproto",
+    actual = "@com_github_protocolbuffers_protobuf//:cc_test_protos_genproto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "cc_wkt_protos_genproto",
+    actual = "@com_github_protocolbuffers_protobuf//:cc_wkt_protos_genproto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "api_proto",
+    actual = "@com_github_protocolbuffers_protobuf//:api_proto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "type_proto",
+    actual = "@com_github_protocolbuffers_protobuf//:type_proto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "source_context_proto",
+    actual = "@com_github_protocolbuffers_protobuf//:source_context_proto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "any_proto",
+    actual = "@com_github_protocolbuffers_protobuf//:any_proto",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "protoc_lib",
+    actual = "@com_github_protocolbuffers_protobuf//:protoc_lib",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "protobuf",
+    actual = "@com_github_protocolbuffers_protobuf//:protobuf",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "protobuf_lite",
+    actual = "@com_github_protocolbuffers_protobuf//:protobuf_lite",
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "protobuf_java_util",
+    actual = "@com_github_protocolbuffers_protobuf//:protobuf_java_util",
+    visibility = ["//visibility:public"],
+)
+
+config_setting(
+    name = "linux-aarch64",
+    constraint_values = [
+        "@platforms//os:linux",
+        "@platforms//cpu:aarch64",
+    ],
+)
+
+config_setting(
+    name = "linux-ppc",
+    constraint_values = [
+        "@platforms//os:linux",
+        "@platforms//cpu:ppc",
+    ],
+)
+
+config_setting(
+    name = "linux-s390x",
+    constraint_values = [
+        "@platforms//os:linux",
+        "@platforms//cpu:s390x",
+    ],
+)
+
+config_setting(
+    name = "linux-x86_32",
+    constraint_values = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_32",
+    ],
+)
+
+config_setting(
+    name = "linux-x86_64",
+    constraint_values = [
+        "@platforms//os:linux",
+        "@platforms//cpu:x86_64",
+    ],
+)
+
+config_setting(
+    name = "macos-x86_32",
+    constraint_values = [
+        "@platforms//os:osx",
+        "@platforms//cpu:x86_32",
+    ],
+)
+
+config_setting(
+    name = "macos-x86_64",
+    constraint_values = [
+        "@platforms//os:osx",
+        "@platforms//cpu:x86_64",
+    ],
+)
+
+config_setting(
+    name = "windows-x86_32",
+    constraint_values = [
+        "@platforms//os:windows",
+        "@platforms//cpu:x86_32",
+    ],
+)
+
+config_setting(
+    name = "windows-x86_64",
+    constraint_values = [
+        "@platforms//os:windows",
+        "@platforms//cpu:x86_64",
+    ],
+)

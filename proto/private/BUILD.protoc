@@ -1,0 +1,5 @@
+alias(
+    name = "protoc",
+    actual = "bin/protoc",
+    visibility = ["//visibility:public"],
+)
