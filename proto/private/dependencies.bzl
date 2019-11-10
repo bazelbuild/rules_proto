@@ -24,7 +24,7 @@ dependencies = {
     },
     "com_google_protobuf_protoc_linux_aarch64": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "45276570e524c50f6ce82ed71ba87c75f0c8c69ca89adbf86ce0000049df27e5",        
+        "sha256": "45276570e524c50f6ce82ed71ba87c75f0c8c69ca89adbf86ce0000049df27e5",
         "urls": [
             "https://github.com/protocolbuffers/protobuf/releases/download/v3.10.0/protoc-3.10.0-linux-aarch_64.zip",
         ],
@@ -140,16 +140,16 @@ dependencies = {
 }
 
 maven_dependencies = {
-    "com_google_protobuf_protobuf_java":{
+    "com_google_protobuf_protobuf_java": {
         "artifact": "com.google.protobuf:protobuf-java:3.10.0",
         "sha1": "410b61dd0088aab4caa05739558d43df248958c9",
         "sha1_src": "3ee94b1a2c1a74d9a27196e39c4bcf8dd0101e70",
     },
-    "com_google_protobuf_protobuf_javalite":{
+    "com_google_protobuf_protobuf_javalite": {
         "artifact": "com.google.protobuf:protobuf-javalite:3.10.0",
-        "sha1":"a7e0350493910f45a208732992f8e519ade2fde5",
+        "sha1": "a7e0350493910f45a208732992f8e519ade2fde5",
         "sha1_src": "e43e8517029380185acc014f5dc6ee2ade484fb1",
-    }
+    },
 }
 
 def _protobuf_workspace_impl(ctx):
@@ -158,6 +158,30 @@ def _protobuf_workspace_impl(ctx):
 protobuf_workspace = repository_rule(
     implementation = _protobuf_workspace_impl,
     attrs = {
-        "_build": attr.label(default="@rules_proto//proto/private:BUILD.release")
-    }
+        "_build": attr.label(default = "@rules_proto//proto/private:BUILD.release"),
+    },
+)
+
+def _protoc_binary_impl(ctx):
+    args = ctx.actions.args()
+    args.add(ctx.file.src)
+    args.add(ctx.outputs.executable)
+    ctx.actions.run_shell(
+        inputs = [ctx.file.src],
+        outputs = [ctx.outputs.executable],
+        command = "cp $1 $2&&chmod +x $2",
+        arguments = [args],
+    )
+    return [DefaultInfo(executable = ctx.outputs.executable)]
+
+protoc_binary = rule(
+    implementation = _protoc_binary_impl,
+    attrs = {
+        "src": attr.label(
+            allow_single_file = True,
+            executable = True,
+            cfg = "target",
+        ),
+        "executable": attr.output(mandatory = True),
+    },
 )

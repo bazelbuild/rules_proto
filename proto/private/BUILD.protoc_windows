@@ -1,5 +1,8 @@
-alias(
+load("@rules_proto//proto/private:dependencies.bzl", "protoc_binary")
+
+protoc_binary(
     name = "protoc",
-    actual = "bin/protoc.exe",
+    src = "bin/protoc.exe",
+    executable = "protoc.exe",
     visibility = ["//visibility:public"],
 )
