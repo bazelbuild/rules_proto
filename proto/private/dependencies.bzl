@@ -19,6 +19,7 @@ dependencies = {
         "sha256": "9245b0549e88e356cd6a25bf79f97aa19332083890b7ac6481a2affb6ada9752",
         "strip_prefix": "bazel-skylib-0.9.0",
         "urls": [
+            "https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/archive/0.9.0.tar.gz",
             "https://github.com/bazelbuild/bazel-skylib/archive/0.9.0.tar.gz",
         ],
     },
@@ -62,6 +63,7 @@ dependencies = {
         "build_file": "@com_google_protobuf//:third_party/six.BUILD",
         "sha256": "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73",
         "urls": [
+            "https://mirror.bazel.build/pypi.python.org/packages/source/s/six/six-1.12.0.tar.gz",
             "https://pypi.python.org/packages/source/s/six/six-1.12.0.tar.gz",
         ],
     },
@@ -71,6 +73,7 @@ dependencies = {
         "sha256": "c3e5e9fdd5004dcb542feda5ee4f0ff0744628baf8ed2dd5d66f8ca1197cb1a1",
         "strip_prefix": "zlib-1.2.11",
         "urls": [
+            "https://mirror.bazel.build/zlib.net/zlib-1.2.11.tar.gz",
             "https://zlib.net/zlib-1.2.11.tar.gz",
         ],
     },
