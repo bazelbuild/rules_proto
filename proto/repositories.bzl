@@ -17,11 +17,26 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
 load("//proto/private:dependencies.bzl", "dependencies")
+load("//proto/private/repositories:proto_bazel_config.bzl", "proto_bazel_config")
 
 def rules_proto_dependencies():
+    """An utility method to load all dependencies of `rules_proto`.
+
+    Loads the remote repositories used by default in Bazel.
+    """
+
     for name in dependencies:
         maybe(http_archive, name, **dependencies[name])
 
+    maybe(
+        proto_bazel_config,
+        "proto_bazel_config",
+        defs = "//proto/private/repositories:proto_bazel_config_defs.bzl",
+    )
+
 def rules_proto_toolchains():
-    # Nothing to do here (yet).
-    pass
+    """An utility method to load all Protobuf toolchains."""
+
+    native.register_toolchains(
+        "//proto:toolchain",
+    )

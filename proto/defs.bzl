@@ -15,6 +15,7 @@
 """Starlark rules for building protocol buffers."""
 
 load("//proto/private:native.bzl", "NativeProtoInfo", "native_proto_common")
+load("//proto/private/rules:proto_toolchain.bzl", _proto_toolchain = "proto_toolchain")
 
 _MIGRATION_TAG = "__PROTO_RULES_MIGRATION_DO_NOT_USE_WILL_BREAK__"
 
@@ -48,6 +49,22 @@ def proto_library(**attrs):
 
     # buildifier: disable=native-proto
     native.proto_library(**_add_migration_tag(attrs))
+
+def proto_toolchain(**attrs):
+    """Bazel proto_toolchain rule.
+
+    https://docs.bazel.build/versions/master/be/protocol-buffer.html#proto_toolchain
+
+    Args:
+      **attrs: Rule attributes
+    """
+
+    # buildifier: disable=native-proto
+    if hasattr(native, "proto_toolchain"):
+        # This is Bazel 3.1.0 (or later).
+        native.proto_toolchain(**_add_migration_tag(attrs))
+        return
+    _proto_toolchain(**attrs)
 
 # Encapsulates information provided by `proto_library`.
 #
