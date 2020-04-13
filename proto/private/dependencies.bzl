@@ -80,7 +80,7 @@ dependencies = {
     },
     "com_google_protobuf_protoc_windows_x86_64": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc_windows",
-        "sha256": "eca7c20ad11ae31abffee1f593dc5a0b2e3b97e5eff275125413d196a7513090",
+        "sha256": "1490944d3bbf77b58bcbd175fef6fbf14cc9c20f79be06c4be827641af1c6ca2",
         "urls": [
             "https://github.com/protocolbuffers/protobuf/releases/download/v3.11.3/protoc-3.11.3-win64.zip",
         ],
