@@ -22,6 +22,14 @@ dependencies = {
             "https://github.com/bazelbuild/bazel-skylib/releases/download/1.0.2/bazel-skylib-1.0.2.tar.gz",
         ],
     },
+    "com_github_protocolbuffers_protobuf": {
+        "sha256": "cf754718b0aa945b00550ed7962ddc167167bd922b842199eeb6505e6f344852",
+        "strip_prefix": "protobuf-3.11.3",
+        "urls": [
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v3.11.3.tar.gz",
+            "https://github.com/protocolbuffers/protobuf/archive/v3.11.3.tar.gz",
+        ],
+    },
     "com_google_protobuf_protoc_linux_aarch64": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
         "sha256": "3994233e61c287a377a9134e658ca3034924849f0e3a82d12b0e6efa2bed4b46",
@@ -85,14 +93,6 @@ dependencies = {
             "https://github.com/protocolbuffers/protobuf/releases/download/v3.11.3/protoc-3.11.3-win64.zip",
         ],
     },
-    "com_github_protocolbuffers_protobuf": {
-        "sha256": "cf754718b0aa945b00550ed7962ddc167167bd922b842199eeb6505e6f344852",
-        "strip_prefix": "protobuf-3.11.3",
-        "urls": [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v3.11.3.tar.gz",
-            "https://github.com/protocolbuffers/protobuf/archive/v3.11.3.tar.gz",
-        ],
-    },
     # Dependency of `com_github_protocolbuffers_protobuf`.
     "rules_cc": {
         "sha256": "29daf0159f0cf552fcff60b49d8bcd4f08f08506d2da6e41b07058ec50cfeaec",
@@ -141,17 +141,17 @@ dependencies = {
 # TODO: should these be mirrored to mirror.bazel.build?
 maven_dependencies = {
     "com_google_protobuf_protobuf_java": {
-        "jar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.11.3/protobuf-java-3.11.3.jar"],
         "jar_sha256": "4e567f364f5608606616ef764e801d66a52e5241577ad7405f519a3a8a6802bb",
-        "srcjar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.11.3/protobuf-java-3.11.3-sources.jar"],
+        "jar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.11.3/protobuf-java-3.11.3.jar"],
         "srcjar_sha256": "9d2ee817e71c63f197271d425b11dac1414926302eea1d2eaae5e4fd2ca31d5d",
+        "srcjar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.11.3/protobuf-java-3.11.3-sources.jar"],
         "licenses": ["notice"],
     },
     "com_google_protobuf_protobuf_javalite": {
-        "jar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.11.3/protobuf-javalite-3.11.3.jar"],
         "jar_sha256": "5ff32ba40ce12b859898600a967a69094ae38bb57f619cf08c2160ae376174b6",
-        "srcjar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.11.3/protobuf-javalite-3.11.3-sources.jar"],
+        "jar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.11.3/protobuf-javalite-3.11.3.jar"],
         "srcjar_sha256": "6eeb3fa7f7bae8b41847cf49858454b1dd1a6859f0cfe50ffb6f846c5e027d49",
+        "srcjar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.11.3/protobuf-javalite-3.11.3-sources.jar"],
         "licenses": ["notice"],
     },
 }
