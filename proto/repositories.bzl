@@ -17,12 +17,13 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
 load("//proto/private:dependencies.bzl", "dependencies", "maven_dependencies", "protobuf_workspace")
+load("@bazel_tools//tools/build_defs/repo:java.bzl", "java_import_external")
 
 def rules_proto_dependencies():
     for name in dependencies:
         maybe(http_archive, name, **dependencies[name])
     for name in maven_dependencies:
-        maybe(native.maven_jar, name, **maven_dependencies[name])
+        maybe(java_import_external, name, **maven_dependencies[name])
     protobuf_workspace(name="com_google_protobuf")
 
 def rules_proto_toolchains():

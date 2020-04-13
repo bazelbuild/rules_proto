@@ -16,74 +16,73 @@
 
 dependencies = {
     "bazel_skylib": {
-        "sha256": "9245b0549e88e356cd6a25bf79f97aa19332083890b7ac6481a2affb6ada9752",
-        "strip_prefix": "bazel-skylib-0.9.0",
+        "sha256": "97e70364e9249702246c0e9444bccdc4b847bed1eb03c5a3ece4f83dfe6abc44",
         "urls": [
-            "https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/archive/0.9.0.tar.gz",
-            "https://github.com/bazelbuild/bazel-skylib/archive/0.9.0.tar.gz",
+            "https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.0.2/bazel-skylib-1.0.2.tar.gz",
+            "https://github.com/bazelbuild/bazel-skylib/releases/download/1.0.2/bazel-skylib-1.0.2.tar.gz",
         ],
     },
     "com_google_protobuf_protoc_linux_aarch64": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "45276570e524c50f6ce82ed71ba87c75f0c8c69ca89adbf86ce0000049df27e5",
+        "sha256": "3994233e61c287a377a9134e658ca3034924849f0e3a82d12b0e6efa2bed4b46",
         "urls": [
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.10.0/protoc-3.10.0-linux-aarch_64.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.11.3/protoc-3.11.3-linux-aarch_64.zip",
         ],
     },
     "com_google_protobuf_protoc_linux_ppc": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "7ab112ca489dcdd3cb5d3e5868707831ed96e913d9978523f2cb890ff1835324",
+        "sha256": "0dc5bf7eea3ee742ea7f56f51a229dac18e2deef330d5ccaef75c6d629469be7",
         "urls": [
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.10.0/protoc-3.10.0-linux-ppcle_64.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.11.3/protoc-3.11.3-linux-ppcle_64.zip",
         ],
     },
     "com_google_protobuf_protoc_linux_s390x": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "0bf0d954d6cb97ec9fe8a1605e71f23cf2e8171ce0580ec6bd1b68197590a621",
+        "sha256": "81d8647b168af8f2cb3b1c2a665e35648a2c2906f3cb59382f39c7842ae639e3",
         "urls": [
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.10.0/protoc-3.10.0-linux-s390x_64.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.11.3/protoc-3.11.3-linux-s390x_64.zip",
         ],
     },
     "com_google_protobuf_protoc_linux_x86_32": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "c1488147122a3b176f1b3f19d3b296eb807b0214df4588ad26d36dd852af8bc8",
+        "sha256": "840d0f8ef9886707b12414de4c100f62e6a5135b533040d3117e4b80db09e8ac",
         "urls": [
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.10.0/protoc-3.10.0-linux-x86_32.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.11.3/protoc-3.11.3-linux-x86_32.zip",
         ],
     },
     "com_google_protobuf_protoc_linux_x86_64": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "213a591b42acb9e145ef9f3fe5f6037f14a14686065c508fcd547031243cc5d5",
+        "sha256": "39f5d64b0f31117c94651c880d0a776159e49eab42b2066229569934b936a5e7",
         "urls": [
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.10.0/protoc-3.10.0-linux-x86_64.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.11.3/protoc-3.11.3-linux-x86_64.zip",
         ],
     },
     "com_google_protobuf_protoc_macos_x86_32": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "49c732a8431fb5bd377082014162e24c7d09216797cf447ddffb74cd6adf2ef8",
+        "sha256": "b9684666c28cb37b532470df4df85f0238a3df610d3b9a5d03ce4222b0cd5e12",
         "urls": [
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.10.0/protoc-3.10.0-osx-x86_32.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.11.3/protoc-3.11.3-osx-x86_32.zip",
         ],
     },
     "com_google_protobuf_protoc_macos_x86_64": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "345d0b7652e37b7811e31b9659dee2b5418375197ab60d3cdc49213187310525",
+        "sha256": "a02dc07c3776de214c3dff4025b33269aebd0fc03aa8e791e7025df43c06e219",
         "urls": [
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.10.0/protoc-3.10.0-osx-x86_64.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.11.3/protoc-3.11.3-osx-x86_64.zip",
         ],
     },
     "com_google_protobuf_protoc_windows_x86_32": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc_windows",
-        "sha256": "0533a9f0236988a128219e9568b35a7eead51c5c6f7df2d25c179ef031977fa2",
+        "sha256": "63755dd0018e005293b8ef0cd21e348f420d466b94c54285e3e2593c22e8a74c",
         "urls": [
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.10.0/protoc-3.10.0-win32.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.11.3/protoc-3.11.3-win32.zip",
         ],
     },
     "com_google_protobuf_protoc_windows_x86-64": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc_windows",
         "sha256": "eca7c20ad11ae31abffee1f593dc5a0b2e3b97e5eff275125413d196a7513090",
         "urls": [
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.10.0/protoc-3.10.0-win64.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.11.3/protoc-3.11.3-win64.zip",
         ],
     },
     "com_github_protocolbuffers_protobuf": {
@@ -96,20 +95,18 @@ dependencies = {
     },
     # Dependency of `com_github_protocolbuffers_protobuf`.
     "rules_cc": {
-        "sha256": "bb8320b0bc1d8d01dc8c8e8c50edced8553655c03776960c1287d03dfbcac3e5",
-        "strip_prefix": "rules_cc-401380cd2279b83da0dcb86ecbac04a04805405b",
+        "sha256": "29daf0159f0cf552fcff60b49d8bcd4f08f08506d2da6e41b07058ec50cfeaec",
+        "strip_prefix": "rules_cc-b7fe9697c0c76ab2fd431a891dbb9a6a32ed7c3e",
         "urls": [
-            "https://mirror.bazel.build/github.com/bazelbuild/rules_cc/archive/401380cd2279b83da0dcb86ecbac04a04805405b.tar.gz",
-            "https://github.com/bazelbuild/rules_cc/archive/401380cd2279b83da0dcb86ecbac04a04805405b.tar.gz",
+            "https://github.com/bazelbuild/rules_cc/archive/b7fe9697c0c76ab2fd431a891dbb9a6a32ed7c3e.tar.gz",
         ],
     },
     # Dependency of `com_github_protocolbuffers_protobuf`.
     "rules_java": {
-        "sha256": "4e2f33528a66e3a9909910eaa5a562fb22f5b422513cdc3816fd01fbb6e2d08d",
-        "strip_prefix": "rules_java-166a046a27e118d578127759b413ee0b06aca3cd",
+        "sha256": "f5a3e477e579231fca27bf202bb0e8fbe4fc6339d63b38ccb87c2760b533d1c3",
+        "strip_prefix": "rules_java-981f06c3d2bd10225e85209904090eb7b5fb26bd",
         "urls": [
-            "https://mirror.bazel.build/github.com/bazelbuild/rules_java/archive/166a046a27e118d578127759b413ee0b06aca3cd.tar.gz",
-            "https://github.com/bazelbuild/rules_java/archive/166a046a27e118d578127759b413ee0b06aca3cd.tar.gz",
+            "https://github.com/bazelbuild/rules_java/archive/981f06c3d2bd10225e85209904090eb7b5fb26bd.tar.gz",
         ],
     },
     # Dependency of `com_github_protocolbuffers_protobuf`.
@@ -117,7 +114,6 @@ dependencies = {
         "sha256": "e5470e92a18aa51830db99a4d9c492cc613761d5bdb7131c04bd92b9834380f6",
         "strip_prefix": "rules_python-4b84ad270387a7c439ebdccfd530e2339601ef27",
         "urls": [
-            "https://mirror.bazel.build/github.com/bazelbuild/rules_python/archive/4b84ad270387a7c439ebdccfd530e2339601ef27.tar.gz",
             "https://github.com/bazelbuild/rules_python/archive/4b84ad270387a7c439ebdccfd530e2339601ef27.tar.gz",
         ],
     },
@@ -142,49 +138,45 @@ dependencies = {
     },
 }
 
+# TODO: should these be mirrored to mirror.bazel.build?
 maven_dependencies = {
     "com_google_protobuf_protobuf_java": {
-        "artifact": "com.google.protobuf:protobuf-java:3.10.0",
-        "sha1": "410b61dd0088aab4caa05739558d43df248958c9",
-        "sha1_src": "3ee94b1a2c1a74d9a27196e39c4bcf8dd0101e70",
+        "jar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.11.3/protobuf-java-3.11.3.jar"],
+        "jar_sha256": "4e567f364f5608606616ef764e801d66a52e5241577ad7405f519a3a8a6802bb",
+        "srcjar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.11.3/protobuf-java-3.11.3-sources.jar"],
+        "srcjar_sha256": "9d2ee817e71c63f197271d425b11dac1414926302eea1d2eaae5e4fd2ca31d5d",
+        "licenses": ["notice"],
     },
     "com_google_protobuf_protobuf_javalite": {
-        "artifact": "com.google.protobuf:protobuf-javalite:3.10.0",
-        "sha1": "a7e0350493910f45a208732992f8e519ade2fde5",
-        "sha1_src": "e43e8517029380185acc014f5dc6ee2ade484fb1",
+        "jar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.11.3/protobuf-javalite-3.11.3.jar"],
+        "jar_sha256": "5ff32ba40ce12b859898600a967a69094ae38bb57f619cf08c2160ae376174b6",
+        "srcjar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.11.3/protobuf-javalite-3.11.3-sources.jar"],
+        "srcjar_sha256": "6eeb3fa7f7bae8b41847cf49858454b1dd1a6859f0cfe50ffb6f846c5e027d49",
+        "licenses": ["notice"],
     },
 }
 
 def _protobuf_workspace_impl(ctx):
     ctx.symlink(ctx.attr._build, "BUILD")
+    ctx.symlink(ctx.attr._protobuf_bzl, "protobuf.bzl")
+    ctx.symlink(ctx.attr._protobuf_deps_bzl, "protobuf_deps.bzl")
 
 protobuf_workspace = repository_rule(
     implementation = _protobuf_workspace_impl,
     attrs = {
         "_build": attr.label(default = "@rules_proto//proto/private:BUILD.release"),
+        "_protobuf_bzl": attr.label(default="@com_github_protocolbuffers_protobuf//:protobuf.bzl"),
+        "_protobuf_deps_bzl": attr.label(default="@com_github_protocolbuffers_protobuf//:protobuf.bzl"),
     },
 )
 
-def _protoc_binary_impl(ctx):
-    args = ctx.actions.args()
-    args.add(ctx.file.src)
-    args.add(ctx.outputs.executable)
-    ctx.actions.run_shell(
-        inputs = [ctx.file.src],
-        outputs = [ctx.outputs.executable],
-        command = "cp $1 $2&&chmod +x $2",
-        arguments = [args],
+def protoc_binary(name, src, executable, **kwargs):
+    native.genrule(
+        name = name,
+        executable = True,
+        srcs = [src],
+        outs = [executable],
+        cmd_bash = "cp $< $@&&chmod +x $@",
+        cmd_bat = "copy $< $@",
+        **kwargs,
     )
-    return [DefaultInfo(executable = ctx.outputs.executable)]
-
-protoc_binary = rule(
-    implementation = _protoc_binary_impl,
-    attrs = {
-        "src": attr.label(
-            allow_single_file = True,
-            executable = True,
-            cfg = "target",
-        ),
-        "executable": attr.output(mandatory = True),
-    },
-)
