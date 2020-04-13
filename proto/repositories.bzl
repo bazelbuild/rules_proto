@@ -24,7 +24,7 @@ def rules_proto_dependencies():
         maybe(http_archive, name, **dependencies[name])
     for name in maven_dependencies:
         maybe(java_import_external, name, **maven_dependencies[name])
-    protobuf_workspace(name="com_google_protobuf")
+    protobuf_workspace(name = "com_google_protobuf")
 
 def rules_proto_toolchains():
     # Nothing to do here (yet).
