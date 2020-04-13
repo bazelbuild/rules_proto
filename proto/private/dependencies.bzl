@@ -143,16 +143,16 @@ maven_dependencies = {
     "com_google_protobuf_protobuf_java": {
         "jar_sha256": "4e567f364f5608606616ef764e801d66a52e5241577ad7405f519a3a8a6802bb",
         "jar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.11.3/protobuf-java-3.11.3.jar"],
+        "licenses": ["notice"],
         "srcjar_sha256": "9d2ee817e71c63f197271d425b11dac1414926302eea1d2eaae5e4fd2ca31d5d",
         "srcjar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.11.3/protobuf-java-3.11.3-sources.jar"],
-        "licenses": ["notice"],
     },
     "com_google_protobuf_protobuf_javalite": {
         "jar_sha256": "5ff32ba40ce12b859898600a967a69094ae38bb57f619cf08c2160ae376174b6",
         "jar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.11.3/protobuf-javalite-3.11.3.jar"],
+        "licenses": ["notice"],
         "srcjar_sha256": "6eeb3fa7f7bae8b41847cf49858454b1dd1a6859f0cfe50ffb6f846c5e027d49",
         "srcjar_urls": ["https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.11.3/protobuf-javalite-3.11.3-sources.jar"],
-        "licenses": ["notice"],
     },
 }
 
