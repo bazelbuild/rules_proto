@@ -24,6 +24,12 @@ alias(
 )
 
 alias(
+    name = "protobuf_java_util",
+    actual = "@com_google_protobuf_protobuf_java_util//jar",
+    visibility = ["//visibility:public"],
+)
+
+alias(
     name = "protobuf_javalite",
     actual = "@com_google_protobuf_protobuf_javalite//jar",
     visibility = ["//visibility:public"],
@@ -71,8 +77,6 @@ redirect_targets = [
     "any_proto",
     "protoc_lib",
     "protobuf",
-    "protobuf_lite",
-    "protobuf_java_util",
 ]
 
 [

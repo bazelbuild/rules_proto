@@ -2,7 +2,17 @@ load("@rules_proto//proto/private:dependencies.bzl", "protoc_binary")
 
 protoc_binary(
     name = "protoc",
-    src = "bin/protoc",
+    srcs = select({
+        ":windows": ["bin/protoc.exe"],
+        "//conditions:default": ["bin/protoc"]
+    }),
     executable = "protoc_bin",
     visibility = ["//visibility:public"],
+)
+
+config_setting(
+    name = "windows",
+    constraint_values = [
+        "@platforms//os:windows",
+    ],
 )
