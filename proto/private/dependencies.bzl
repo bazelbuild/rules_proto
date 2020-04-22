@@ -26,8 +26,8 @@ dependencies = {
         "sha256": "cf754718b0aa945b00550ed7962ddc167167bd922b842199eeb6505e6f344852",
         "strip_prefix": "protobuf-3.11.3",
         "urls": [
-            "https://mirror.bazel.build/mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v3.11.3.tar.gz",
             "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v3.11.3.tar.gz",
+            "https://github.com/protocolbuffers/protobuf/archive/v3.11.3.tar.gz",
         ],
     },
     "com_google_protobuf_protoc_linux_aarch64": {
@@ -211,6 +211,7 @@ def protoc_binary(name, srcs, executable, **kwargs):
 
 This is a workaround to make sure protoc can be used with attributes
 which don't allow files."""
+
     # TODO(yannic) replace this with a symlink after https://github.com/bazelbuild/bazel/pull/10695
     native.genrule(
         name = name,

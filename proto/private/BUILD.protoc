@@ -4,9 +4,9 @@ protoc_binary(
     name = "protoc",
     srcs = select({
         ":windows": ["bin/protoc.exe"],
-        "//conditions:default": ["bin/protoc"]
+        "//conditions:default": ["bin/protoc"],
     }),
-    executable = "protoc_bin",
+    executable = "protoc.exe",
     visibility = ["//visibility:public"],
 )
 
