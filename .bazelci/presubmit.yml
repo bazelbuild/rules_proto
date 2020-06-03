@@ -1,7 +1,10 @@
 ---
 buildifier:
   version: latest
-  warnings: "all"
+  # skylark-comment fails because links to Bazel's docs for
+  # `ProtoInfo` and `proto_common` contain `/skylark/`.
+  warnings: "-skylark-comment"
+
 platforms:
   macos:
     build_targets:
