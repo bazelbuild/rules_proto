@@ -1,7 +1,5 @@
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 
-# Intentionally left empty (for now).
-
 bzl_library(
     name = "defs",
     srcs = ["defs.bzl"],
