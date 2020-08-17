@@ -26,5 +26,4 @@ proto_library(
 bzl_library(
     name = "tags",
     srcs = ["tags.bzl"],
-    visibility = ["//visibility:public"],
 )
