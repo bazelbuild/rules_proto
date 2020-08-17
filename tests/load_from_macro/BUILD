@@ -1,3 +1,5 @@
+load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
+
 # Copyright 2019 The Bazel Authors. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,4 +21,10 @@ proto_library(
     name = "foo",
     srcs = ["foo.proto"],
     tags = TAGS,
+)
+
+bzl_library(
+    name = "tags",
+    srcs = ["tags.bzl"],
+    visibility = ["//visibility:public"],
 )
