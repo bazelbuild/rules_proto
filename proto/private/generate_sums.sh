@@ -39,7 +39,7 @@ URLS=("https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v$
 "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/${VERSION}/protobuf-javalite-${VERSION}-sources.jar"
 )
 
-for U in ${URLS[@]}; do
+for U in "${URLS[@]}"; do
   MU="https://mirror.bazel.build/${U#"https://"}"
   SUM=$(wget -q -O - $U|shasum -a 256|cut -d' ' -f1)
   echo
