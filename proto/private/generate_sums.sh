@@ -43,7 +43,7 @@ for U in "${URLS[@]}"; do
   MU="https://mirror.bazel.build/${U#"https://"}"
   SUM=$(wget -q -O - $U|shasum -a 256|cut -d' ' -f1)
   echo
-  echo '        "sha256": "'${SUM}'",'
+  echo '        "sha256": "'"${SUM}"'",'
   echo '        "urls": ['
   echo '            "'"$MU"'",'
   echo '            "'"$U"'",'
