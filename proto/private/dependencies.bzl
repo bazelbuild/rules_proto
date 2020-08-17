@@ -202,7 +202,7 @@ protobuf_workspace = repository_rule(
     attrs = {
         "_build": attr.label(default = "@rules_proto//proto/private:BUILD.release"),
         "_protobuf_bzl": attr.label(default = "@com_github_protocolbuffers_protobuf//:protobuf.bzl"),
-        "_protobuf_deps_bzl": attr.label(default = "@com_github_protocolbuffers_protobuf//:protobuf.bzl"),
+        "_protobuf_deps_bzl": attr.label(default = "@com_github_protocolbuffers_protobuf//:protobuf_deps.bzl"),
     },
 )
 
