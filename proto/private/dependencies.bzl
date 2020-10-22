@@ -48,10 +48,10 @@ dependencies = {
     },
     "com_google_protobuf_protoc_linux_s390x": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+        "sha256": "11f95a50e193eb3d423240bc84a0a0f94b6e2043e819ba0bebcf24c7feaa3cde",
         "urls": [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protoc-3.13.0-linux-s390x_64.zip",
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protoc-3.13.0-linux-s390x_64.zip",
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protoc-3.13.0-linux-s390x.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protoc-3.13.0-linux-s390x.zip",
         ],
     },
     "com_google_protobuf_protoc_linux_x86_32": {
@@ -68,14 +68,6 @@ dependencies = {
         "urls": [
             "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protoc-3.13.0-linux-x86_64.zip",
             "https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protoc-3.13.0-linux-x86_64.zip",
-        ],
-    },
-    "com_google_protobuf_protoc_macos_x86_32": {
-        "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
-        "urls": [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protoc-3.13.0-osx-x86_32.zip",
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.13.0/protoc-3.13.0-osx-x86_32.zip",
         ],
     },
     "com_google_protobuf_protoc_macos_x86_64": {
