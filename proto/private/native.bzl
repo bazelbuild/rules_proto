@@ -16,7 +16,7 @@
 # exporting them in `//proto:defs.bzl` with their original name.
 #
 # While we cannot force users to load these symbol due to the lack of a
-# whitelisting mechanism, we can still export them and tell users to
+# allowlisting mechanism, we can still export them and tell users to
 # load it to make a future migration to pure Starlark easier.
 
 """Lovely workaround to be able to expose native constants pretending to be Starlark."""
