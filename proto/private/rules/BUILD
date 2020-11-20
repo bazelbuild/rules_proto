@@ -1,13 +1,14 @@
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 
 bzl_library(
-    name = "defs",
+    name = "proto_descriptor_set",
     srcs = [
-        "defs.bzl",
+        "proto_descriptor_set.bzl",
     ],
-    visibility = ["//visibility:public"],
+    visibility = [
+        "//proto:__subpackages__",
+    ],
     deps = [
         "//proto/private:native",
-        "//proto/private/rules:proto_descriptor_set",
     ],
 )
