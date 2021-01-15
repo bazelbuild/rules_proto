@@ -18,7 +18,7 @@
 
 namespace {
 
-constexpr size_t kBufferSize = 1024 * 1024;  // 1 MB
+constexpr size_t kBufferSize = 4096;  // 4kB
 
 // Return codes.
 constexpr int kOk = 0;
