@@ -31,8 +31,10 @@ def rules_proto_dependencies():
         maybe(java_import_external, name, **maven_dependencies[name])
     protobuf_workspace(name = "com_google_protobuf")
 
+# buildifier: disable=unnamed-macro
 def rules_proto_toolchains():
     """An utility method to load all Protobuf toolchains."""
 
-    # Nothing to do here (yet).
-    pass
+    native.register_toolchains(
+        "//proto/private:toolchain",
+    )
