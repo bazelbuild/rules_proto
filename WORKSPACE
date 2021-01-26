@@ -9,11 +9,11 @@ rules_proto_toolchains()
 
 http_archive(
     name = "bazel_toolchains",
-    sha256 = "7ebb200ed3ca3d1f7505659c7dfed01c4b5cb04c3a6f34140726fe22f5d35e86",
-    strip_prefix = "bazel-toolchains-3.4.1",
+    sha256 = "1caf8584434d3e31be674067996be787cfa511fda2a0f05811131b588886477f",
+    strip_prefix = "bazel-toolchains-3.7.2",
     urls = [
-        "https://github.com/bazelbuild/bazel-toolchains/releases/download/3.4.1/bazel-toolchains-3.4.1.tar.gz",
-        "https://mirror.bazel.build/github.com/bazelbuild/bazel-toolchains/archive/3.4.1.tar.gz",
+        "https://github.com/bazelbuild/bazel-toolchains/releases/download/3.7.2/bazel-toolchains-3.7.2.tar.gz",
+        "https://mirror.bazel.build/github.com/bazelbuild/bazel-toolchains/archive/3.7.2.tar.gz",
     ],
 )
 
