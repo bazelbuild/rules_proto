@@ -30,6 +30,12 @@ dependencies = {
             "https://github.com/protocolbuffers/protobuf/archive/v3.13.0.tar.gz",
         ],
     },
+    "com_google_protobuf_protobuf_cc_macos_x86_64": {
+        "sha256": "0a5b436cc6be687df3767294952475adc81744c241595ec55b32efbfdd3d1f38",
+        "url": "https://homebrew.bintray.com/bottles/protobuf-3.13.0.mojave.bottle.tar.gz",
+        "build_file": "@rules_proto//proto/private:BUILD.protobuf_cc",
+        "strip_prefix": "protobuf/3.13.0/lib",
+    },
     "com_google_protobuf_protoc_linux_aarch64": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
         "sha256": "5f6f59be05ce91425195dc689f5faa59284efb4799526b6f92a7a91efe5702fd",

@@ -1,0 +1,33 @@
+LINK_OPTS = [
+    "-lpthread",
+    "-lm",
+]
+
+cc_import(
+    name = "protobuf_lite_import",
+    static_library = "libprotobuf-lite.a",
+)
+
+cc_import(
+    name = "protobuf_import",
+    static_library = "libprotobuf.a",
+)
+
+cc_library(
+    name = "protobuf_lite",
+    linkopts = LINK_OPTS,
+    visibility = ["//visibility:public"],
+    deps = [":protobuf_lite_import"],
+)
+
+cc_library(
+    name = "protobuf",
+    linkopts = LINK_OPTS,
+    visibility = ["//visibility:public"],
+    deps = [
+        ":protobuf_import",
+        ":protobuf_lite",
+        "@com_github_protocolbuffers_protobuf//:protobuf_headers",
+        "@zlib",
+    ],
+)

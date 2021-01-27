@@ -1,5 +1,20 @@
 load("@rules_proto//proto:defs.bzl", "proto_lang_toolchain")
 
+WELL_KNOWN_PROTO_KEYS = [
+    "any",
+    "api",
+    "compiler_plugin",
+    "descriptor",
+    "duration",
+    "empty",
+    "field_mask",
+    "source_context",
+    "struct",
+    "timestamp",
+    "type",
+    "wrappers",
+]
+
 # Use precompiled binaries where possible.
 alias(
     name = "protoc",
@@ -14,6 +29,32 @@ alias(
         ":windows-x86_64": "@com_google_protobuf_protoc_windows_x86_64//:protoc",
         "//conditions:default": "@com_github_protocolbuffers_protobuf//:protoc",
     }),
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "protobuf",
+    actual = select({
+        ":macos-x86_64": "@com_google_protobuf_protobuf_cc_macos_x86_64//:protobuf",
+        "//conditions:default": "@com_github_protocolbuffers_protobuf//:protobuf",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "protobuf_lite",
+    actual = select({
+        ":macos-x86_64": "@com_google_protobuf_protobuf_cc_macos_x86_64//:protobuf_lite",
+        "//conditions:default": "@com_github_protocolbuffers_protobuf//:protobuf_lite",
+    }),
+    visibility = ["//visibility:public"],
+)
+
+proto_lang_toolchain(
+    name = "cc_toolchain",
+    blacklisted_protos = [proto + "_proto" for proto in WELL_KNOWN_PROTO_KEYS],
+    command_line = "--cpp_out=$(OUT)",
+    runtime = ":protobuf",
     visibility = ["//visibility:public"],
 )
 
@@ -69,7 +110,6 @@ redirect_targets = [
     "compiler_plugin_proto",
     "descriptor_proto",
     "cc_wkt_protos",
-    "cc_toolchain",
     "cc_test_protos_genproto",
     "cc_wkt_protos_genproto",
     "api_proto",
@@ -77,7 +117,6 @@ redirect_targets = [
     "source_context_proto",
     "any_proto",
     "protoc_lib",
-    "protobuf",
 ]
 
 [
