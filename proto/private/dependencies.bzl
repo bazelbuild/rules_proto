@@ -23,7 +23,7 @@ dependencies = {
         ],
     },
     "com_github_protocolbuffers_protobuf": {
-        "sha256": "a6c2ec827a9154f50d23497d41805bc9fbd1c81e56d89f913ee49fbe160f643b",
+        "sha256": "bde9c2949e64d059c18d8f93566a64dafc6d2e8e259a70322fb804831dfd0b5b",
         "strip_prefix": "protobuf-3.17.0",
         "urls": [
             "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v3.17.0.tar.gz",
