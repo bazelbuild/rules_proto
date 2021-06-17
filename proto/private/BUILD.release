@@ -6,7 +6,7 @@ alias(
     actual = select({
         ":linux-aarch64": "@com_google_protobuf_protoc_linux_aarch64//:protoc",
         ":linux-ppc": "@com_google_protobuf_protoc_linux_ppc//:protoc",
-        ":linux-s390_64": "@com_google_protobuf_protoc_linux_s390_64//:protoc",
+        ":linux-s390x": "@com_google_protobuf_protoc_linux_s390x//:protoc",
         ":linux-x86_32": "@com_google_protobuf_protoc_linux_x86_32//:protoc",
         ":linux-x86_64": "@com_google_protobuf_protoc_linux_x86_64//:protoc",
         ":macos-x86_64": "@com_google_protobuf_protoc_macos_x86_64//:protoc",
@@ -106,10 +106,10 @@ config_setting(
 )
 
 config_setting(
-    name = "linux-s390_64",
+    name = "linux-s390x",
     constraint_values = [
         "@platforms//os:linux",
-        "@platforms//cpu:s390_64",
+        "@platforms//cpu:s390x",
     ],
 )
 
