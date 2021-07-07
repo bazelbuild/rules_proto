@@ -7,24 +7,32 @@ buildifier:
 
 platforms:
   macos:
+    build_flags:
+      - "--incompatible_enable_exports_provider"
     build_targets:
       - "//..."
     test_targets:
       - "//..."
 
   rbe_ubuntu1604:
+    build_flags:
+      - "--incompatible_enable_exports_provider"
     build_targets:
       - "//..."
     test_targets:
       - "//..."
 
   ubuntu1804:
+    build_flags:
+      - "--incompatible_enable_exports_provider"
     build_targets:
       - "//..."
     test_targets:
       - "//..."
 
   windows:
+    build_flags:
+      - "--incompatible_enable_exports_provider"
     build_targets:
       - "//..."
     test_targets:
