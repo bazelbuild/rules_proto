@@ -105,11 +105,11 @@ dependencies = {
     },
     # Dependency of `com_github_protocolbuffers_protobuf`.
     "rules_java": {
-        "sha256": "f5a3e477e579231fca27bf202bb0e8fbe4fc6339d63b38ccb87c2760b533d1c3",
-        "strip_prefix": "rules_java-981f06c3d2bd10225e85209904090eb7b5fb26bd",
+        "sha256": "9a72d1bade803e1913d1e0a6f8beb35786fa3e8e460c98a56d2054200b9f6c5e",
+        "strip_prefix": "rules_java-385292fcfd244186e5e5811122ed32cf214a9024",
         "urls": [
-            "https://mirror.bazel.build/github.com/bazelbuild/rules_java/archive/981f06c3d2bd10225e85209904090eb7b5fb26bd.tar.gz",
-            "https://github.com/bazelbuild/rules_java/archive/981f06c3d2bd10225e85209904090eb7b5fb26bd.tar.gz",
+            "https://mirror.bazel.build/github.com/bazelbuild/rules_java/archive/385292fcfd244186e5e5811122ed32cf214a9024.tar.gz",
+            "https://github.com/bazelbuild/rules_java/archive/385292fcfd244186e5e5811122ed32cf214a9024.tar.gz",
         ],
     },
     # Dependency of `com_github_protocolbuffers_protobuf`.
