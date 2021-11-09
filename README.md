@@ -11,7 +11,7 @@ For the list of Proto rules, see the Bazel
 
 To get started with `rules_proto`, add the following to your `WORKSPACE` file:
 
-```python
+```starlark
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
@@ -30,7 +30,7 @@ rules_proto_toolchains()
 
 Then, in your `BUILD` files, import and use the rules:
 
-```python
+```starlark
 load("@rules_proto//proto:defs.bzl", "proto_library")
 
 proto_library(
