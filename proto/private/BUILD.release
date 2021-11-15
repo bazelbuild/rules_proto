@@ -6,7 +6,7 @@ genrule(
         "@com_google_protobuf_protoc_macos_aarch64//:file",
         "@com_google_protobuf_protoc_macos_x86_64//:protoc",
     ],
-    outs = ["protoc"],
+    outs = ["protoc_universal"],
     cmd = "lipo -create $(SRCS) -output $@",
     exec_compatible_with = ["@platforms//os:osx"],
     visibility = ["//visibility:public"],
