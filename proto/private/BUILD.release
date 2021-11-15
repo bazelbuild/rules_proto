@@ -1,5 +1,17 @@
 load("@rules_proto//proto:defs.bzl", "proto_lang_toolchain")
 
+genrule(
+    name = "protoc_macos_universal",
+    srcs = [
+        "@com_google_protobuf_protoc_macos_aarch64//:file",
+        "@com_google_protobuf_protoc_macos_x86_64//:protoc",
+    ],
+    outs = ["protoc"],
+    cmd = "lipo -create $(SRCS) -output $@",
+    exec_compatible_with = ["@platforms//os:osx"],
+    visibility = ["//visibility:public"],
+)
+
 # Use precompiled binaries where possible.
 alias(
     name = "protoc",
@@ -9,7 +21,7 @@ alias(
         ":linux-s390x": "@com_google_protobuf_protoc_linux_s390_64//:protoc",
         ":linux-x86_32": "@com_google_protobuf_protoc_linux_x86_32//:protoc",
         ":linux-x86_64": "@com_google_protobuf_protoc_linux_x86_64//:protoc",
-        ":macos-x86_64": "@com_google_protobuf_protoc_macos_x86_64//:protoc",
+        ":macos": ":protoc_macos_universal",
         ":windows-x86_32": "@com_google_protobuf_protoc_windows_x86_32//:protoc",
         ":windows-x86_64": "@com_google_protobuf_protoc_windows_x86_64//:protoc",
         "//conditions:default": "@com_github_protocolbuffers_protobuf//:protoc",
@@ -130,10 +142,9 @@ config_setting(
 )
 
 config_setting(
-    name = "macos-x86_64",
+    name = "macos",
     constraint_values = [
         "@platforms//os:osx",
-        "@platforms//cpu:x86_64",
     ],
 )
 
