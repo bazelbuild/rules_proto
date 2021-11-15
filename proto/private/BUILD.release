@@ -9,6 +9,7 @@ genrule(
     outs = ["protoc_universal"],
     cmd = "lipo -create $(SRCS) -output $@",
     exec_compatible_with = ["@platforms//os:osx"],
+    executable = True,
     visibility = ["//visibility:public"],
 )
 
