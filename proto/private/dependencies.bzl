@@ -22,6 +22,12 @@ dependencies = {
             "https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.1.1/bazel-skylib-1.1.1.tar.gz",
         ],
     },
+    "build_bazel_apple_support": {
+        "sha256": "c604b75865c07f45828c7fffd5fdbff81415a9e84a68f71a9c1d8e3b2694e547",
+        "urls": [
+            "https://github.com/bazelbuild/apple_support/releases/download/0.12.1/apple_support.0.12.1.tar.gz",
+        ],
+    },
     "com_github_protocolbuffers_protobuf": {
         "sha256": "87407cd28e7a9c95d9f61a098a53cf031109d451a7763e7dd1253abf8b4df422",
         "strip_prefix": "protobuf-3.19.1",
