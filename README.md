@@ -4,6 +4,9 @@
 
 This repository contains Starlark implementation of Protobuf rules in Bazel.
 
+For a high-level overview of using Protocol Buffers and gRPC with Bazel, see
+<https://bazel-contrib.github.io/SIG-rules-authors/proto-grpc.html>.
+
 For the list of Proto rules, see the Bazel
 [documentation](https://docs.bazel.build/versions/master/be/overview.html).
 
