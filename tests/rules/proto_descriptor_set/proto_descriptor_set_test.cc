@@ -70,11 +70,40 @@ void AssertFileDescriptorSetContains(
   EXPECT_EQ(expected_proto_files, actual_proto_files);
 }
 
+void AssertFileDescriptorSetEquals(
+    const std::string& expected_path,
+    const std::string& actual_path) {
+  std::vector<std::string> expected_proto_files =
+      ReadFileDescriptorSet(
+          GetRlocation(rulesproto::kWorkspaceRlocation + expected_path));
+  std::vector<std::string> actual_proto_files =
+      ReadFileDescriptorSet(
+          GetRlocation(rulesproto::kWorkspaceRlocation + actual_path));
+  EXPECT_EQ(expected_proto_files, actual_proto_files);
+}
+
 }  // namespace
+
+TEST(ProtoDescriptorSetTest, NoDeps) {
+  AssertFileDescriptorSetContains(
+      "tests/rules/proto_descriptor_set/no_deps.pb", {});
+}
+
+TEST(ProtoDescriptorSetTest, NoDepsReexport) {
+  AssertFileDescriptorSetEquals(
+      "tests/rules/proto_descriptor_set/no_deps.pb",
+      "tests/rules/proto_descriptor_set/no_deps_reexport.pb");
+}
 
 TEST(ProtoDescriptorSetTest, NoProtos) {
   AssertFileDescriptorSetContains(
       "tests/rules/proto_descriptor_set/no_protos.pb", {});
+}
+
+TEST(ProtoDescriptorSetTest, NoProtosReexport) {
+  AssertFileDescriptorSetEquals(
+      "tests/rules/proto_descriptor_set/no_protos.pb",
+      "tests/rules/proto_descriptor_set/no_protos_reexport.pb");
 }
 
 TEST(ProtoDescriptorSetTest, WellKnownProtos) {
@@ -94,6 +123,12 @@ TEST(ProtoDescriptorSetTest, WellKnownProtos) {
           "google/protobuf/type.proto",
           "google/protobuf/wrappers.proto",
       });
+}
+
+TEST(ProtoDescriptorSetTest, WellKnownProtosReexport) {
+  AssertFileDescriptorSetEquals(
+      "tests/rules/proto_descriptor_set/well_known_protos.pb",
+      "tests/rules/proto_descriptor_set/well_known_protos_reexport.pb");
 }
 
 }  // namespace rulesproto

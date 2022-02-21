@@ -41,13 +41,14 @@ def _proto_descriptor_set_impl(ctx):
     )
 
     return [
+        ctx.attr.internal_export_lib[ProtoInfo],
         DefaultInfo(
             files = depset([output]),
             runfiles = ctx.runfiles(files = [output]),
         ),
     ]
 
-proto_descriptor_set = rule(
+_proto_descriptor_set = rule(
     implementation = _proto_descriptor_set_impl,
     attrs = {
         "deps": attr.label_list(
@@ -55,6 +56,16 @@ proto_descriptor_set = rule(
             providers = [ProtoInfo],
             doc = """
 Sequence of `ProtoInfo`s to collect `FileDescriptorSet`s from.
+""".strip(),
+        ),
+        "internal_export_lib": attr.label(
+            mandatory = True,
+            providers = [ProtoInfo],
+            doc = """
+Merged `ProtoInfo` with all deps for re-export.
+
+This is an internal attribute set from the macro below until we can construct
+`ProtoInfo` from Starlark. Do not set manually.
 """.strip(),
         ),
         "_file_concat": attr.label(
@@ -68,3 +79,16 @@ Collects all `FileDescriptorSet`s from `deps` and combines them into a single
 `FileDescriptorSet` containing all the `FileDescriptorProto`.
 """.strip(),
 )
+
+# TODO(yannic): Remove this macro when we can construct `ProtoInfo` from Starlark.
+def proto_descriptor_set(name, deps = None, **kwargs):
+    """Wrapper for `_proto_descriptor_set` for setting `internal_export_lib`.
+
+    See definition above for supported attributes.
+    """
+
+    export_lib_name = "{}.proto_info_export_lib".format(name)
+
+    # buildifier: disable=native-proto
+    native.proto_library(name = export_lib_name, deps = deps)
+    _proto_descriptor_set(name = name, deps = deps, internal_export_lib = export_lib_name, **kwargs)

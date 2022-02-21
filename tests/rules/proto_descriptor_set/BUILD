@@ -1,12 +1,30 @@
 load("@rules_cc//cc:defs.bzl", "cc_test")
 load("//proto:defs.bzl", "proto_descriptor_set", "proto_library")
 
+proto_descriptor_set(
+    name = "no_deps",
+)
+
+proto_descriptor_set(
+    name = "no_deps_reexport",
+    deps = [
+        ":no_deps",
+    ],
+)
+
 proto_library(
     name = "empty_proto_library",
 )
 
 proto_descriptor_set(
     name = "no_protos",
+    deps = [
+        ":empty_proto_library",
+    ],
+)
+
+proto_descriptor_set(
+    name = "no_protos_reexport",
     deps = [
         ":empty_proto_library",
     ],
@@ -30,14 +48,25 @@ proto_descriptor_set(
     ],
 )
 
+proto_descriptor_set(
+    name = "well_known_protos_reexport",
+    deps = [
+        ":well_known_protos",
+    ],
+)
+
 cc_test(
     name = "proto_descriptor_set_test",
     srcs = [
         "proto_descriptor_set_test.cc",
     ],
     data = [
+        ":no_deps",
+        ":no_deps_reexport",
         ":no_protos",
+        ":no_protos_reexport",
         ":well_known_protos",
+        ":well_known_protos_reexport",
     ],
     deps = [
         "//tests/utils:workspace_constants",
