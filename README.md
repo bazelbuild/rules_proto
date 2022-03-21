@@ -49,6 +49,12 @@ command to automate the changes to your `BUILD` and `.bzl` files:
 buildifier --lint=fix --warnings=native-proto <path/to/BUILD>
 ```
 
+If the provided prebuilt binaries for `protoc` don't work for you, you can force
+`protoc` to be compiled by using the `recompile-protoc` bool flag:
+```bash
+bazel build --@rules_proto//proto:recompile-protoc <target>
+```
+
 ## Contributing
 
 Bazel and `rules_proto` are the work of many contributors.

@@ -4,6 +4,8 @@ load("@rules_proto//proto:defs.bzl", "proto_lang_toolchain")
 alias(
     name = "protoc",
     actual = select({
+        # on some platforms the prebuilt binaries don't work, so we allow users to force recompilcation
+        ":recompile": "@com_github_protocolbuffers_protobuf//:protoc",
         ":linux-aarch64": "@com_google_protobuf_protoc_linux_aarch64//:protoc",
         ":linux-ppc": "@com_google_protobuf_protoc_linux_ppc//:protoc",
         ":linux-s390x": "@com_google_protobuf_protoc_linux_s390_64//:protoc",
@@ -88,6 +90,11 @@ redirect_targets = [
     )
     for target in redirect_targets
 ]
+
+config_setting(
+    name = "recompile",
+    flag_values = {"@rules_proto//proto:recompile-protoc": "1"},
+)
 
 config_setting(
     name = "linux-aarch64",
