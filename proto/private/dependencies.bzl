@@ -72,10 +72,10 @@ dependencies = {
     },
     "com_google_protobuf_protoc_macos_aarch64": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+        "sha256": "dc5ad98c7b1d7ad90475ed333f023946e8fe5bef748cb54dc463069adb3fb5aa",
         "urls": [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-osx-aarch64.zip",
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-osx-aarch64.zip",
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-osx-aarch_64.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-osx-aarch_64.zip",
         ],
     },
     "com_google_protobuf_protoc_macos_x86_64": {
