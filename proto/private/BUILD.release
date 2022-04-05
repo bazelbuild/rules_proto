@@ -9,6 +9,7 @@ alias(
         ":linux-s390x": "@com_google_protobuf_protoc_linux_s390_64//:protoc",
         ":linux-x86_32": "@com_google_protobuf_protoc_linux_x86_32//:protoc",
         ":linux-x86_64": "@com_google_protobuf_protoc_linux_x86_64//:protoc",
+        ":macos-aarch64": "@com_google_protobuf_protoc_macos_aarch64//:protoc",
         ":macos-x86_64": "@com_google_protobuf_protoc_macos_x86_64//:protoc",
         ":windows-x86_32": "@com_google_protobuf_protoc_windows_x86_32//:protoc",
         ":windows-x86_64": "@com_google_protobuf_protoc_windows_x86_64//:protoc",
@@ -126,6 +127,14 @@ config_setting(
     constraint_values = [
         "@platforms//os:linux",
         "@platforms//cpu:x86_64",
+    ],
+)
+
+config_setting(
+    name = "macos-aarch64",
+    constraint_values = [
+        "@platforms//os:osx",
+        "@platforms//cpu:arm64",
     ],
 )
 

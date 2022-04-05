@@ -23,75 +23,83 @@ dependencies = {
         ],
     },
     "com_github_protocolbuffers_protobuf": {
-        "sha256": "4dd35e788944b7686aac898f77df4e9a54da0ca694b8801bd6b2a9ffc1b3085e",
-        "strip_prefix": "protobuf-3.19.2",
+        "sha256": "b07772d38ab07e55eca4d50f4b53da2d998bb221575c60a4f81100242d4b4889",
+        "strip_prefix": "protobuf-3.20.0",
         "urls": [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v3.19.2.tar.gz",
-            "https://github.com/protocolbuffers/protobuf/archive/v3.19.2.tar.gz",
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v3.20.0.tar.gz",
+            "https://github.com/protocolbuffers/protobuf/archive/v3.20.0.tar.gz",
         ],
     },
     "com_google_protobuf_protoc_linux_aarch64": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "d14af76a12eaf22cb96c9eec4c82b2132f3b1ee29bd43e07551e4a3cef5cc16a",
+        "sha256": "9bf7091569462e8349fe7d7584502b5d2c3bf8f4aafb4fcbdc465895158fd13e",
         "urls": [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-linux-aarch_64.zip",
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-linux-aarch_64.zip",
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-linux-aarch_64.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-linux-aarch_64.zip",
         ],
     },
     "com_google_protobuf_protoc_linux_ppc": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "b61467465e00ec86bc08b3a782f99abceadbcd91ac5c6124fe150db7a6426f66",
+        "sha256": "22936d06bfccad88aefb4277c11b73c64c2a84b54c4a80541a79012e0fcb967e",
         "urls": [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-linux-ppcle_64.zip",
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-linux-ppcle_64.zip",
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-linux-ppcle_64.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-linux-ppcle_64.zip",
         ],
     },
     "com_google_protobuf_protoc_linux_s390_64": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "494c25dfbc302472de03b38959b149d94f6a29be3a7644e71b3d605d3b125e30",
+        "sha256": "df7bedb7ed67b35c22ebd06ccf9d5d20c2cb66ae6409d041a7fc977a46fe5280",
         "urls": [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-linux-s390_64.zip",
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-linux-s390_64.zip",
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-linux-s390_64.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-linux-s390_64.zip",
         ],
     },
     "com_google_protobuf_protoc_linux_x86_32": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "1d4296cade2fe12215064d440a5c692681b5a0cda02ac9ca2b4e742baa6ad30f",
+        "sha256": "b2e29ac3f25fe22e8681c368c18860f610022105df8b64640e24f4e2eb9eaa48",
         "urls": [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-linux-x86_32.zip",
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-linux-x86_32.zip",
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-linux-x86_32.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-linux-x86_32.zip",
         ],
     },
     "com_google_protobuf_protoc_linux_x86_64": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "595ac0beaa7d2d6a672911b3b39a27fea964a5e76eeeba418a4bd3c4e8f72405",
+        "sha256": "75d8a9d7a2c42566e46411750d589c51276242d8b6247a5724bac0f9283e05a8",
         "urls": [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-linux-x86_64.zip",
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-linux-x86_64.zip",
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-linux-x86_64.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-linux-x86_64.zip",
+        ],
+    },
+    "com_google_protobuf_protoc_macos_aarch64": {
+        "build_file": "@rules_proto//proto/private:BUILD.protoc",
+        "sha256": "dc5ad98c7b1d7ad90475ed333f023946e8fe5bef748cb54dc463069adb3fb5aa",
+        "urls": [
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-osx-aarch_64.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-osx-aarch_64.zip",
         ],
     },
     "com_google_protobuf_protoc_macos_x86_64": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "1af3bdcd1e684d7cbf498749f630574609f75bc33e50b03e0c9f7243d9986771",
+        "sha256": "8b35a679c99b36caef5899e596281fe0b943ed248f7d5f70b3e705684bf67cb4",
         "urls": [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-osx-x86_64.zip",
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-osx-x86_64.zip",
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-osx-x86_64.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-osx-x86_64.zip",
         ],
     },
     "com_google_protobuf_protoc_windows_x86_32": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "0135c6abdfc7a81e5ee9cdac8ffd7380d0bb95eacf7504f6e3570cf0e8d7e1c9",
+        "sha256": "b4558739ad46d47c2e2b9529726e9d035850cda01c5d32a22d7e6a19c6322c20",
         "urls": [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-win32.zip",
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-win32.zip",
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-win32.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-win32.zip",
         ],
     },
     "com_google_protobuf_protoc_windows_x86_64": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
-        "sha256": "465eabb87b38c1f26f0c5404561611ad5ed9f961bd0cda095a112f641846c3d0",
+        "sha256": "70fbfdb38f2337c44da00b69eb4ba5d68182bbaab3f805a1a07ccdf1ff3923cc",
         "urls": [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-win64.zip",
-            "https://github.com/protocolbuffers/protobuf/releases/download/v3.19.2/protoc-3.19.2-win64.zip",
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-win64.zip",
+            "https://github.com/protocolbuffers/protobuf/releases/download/v3.20.0/protoc-3.20.0-win64.zip",
         ],
     },
     # Dependency of `com_github_protocolbuffers_protobuf`.
@@ -110,6 +118,14 @@ dependencies = {
         "urls": [
             "https://mirror.bazel.build/github.com/bazelbuild/rules_java/archive/385292fcfd244186e5e5811122ed32cf214a9024.tar.gz",
             "https://github.com/bazelbuild/rules_java/archive/385292fcfd244186e5e5811122ed32cf214a9024.tar.gz",
+        ],
+    },
+    # Dependency of `com_github_protocolbuffers_protobuf`.
+    "rules_pkg": {
+        "sha256": "a89e203d3cf264e564fcb96b6e06dd70bc0557356eb48400ce4b5d97c2c3720d",
+        "urls": [
+            "https://mirror.bazel.build/github.com/bazelbuild/rules_pkg/releases/download/0.5.1/rules_pkg-0.5.1.tar.gz",
+            "https://github.com/bazelbuild/rules_pkg/releases/download/0.5.1/rules_pkg-0.5.1.tar.gz",
         ],
     },
     # Dependency of `com_github_protocolbuffers_protobuf`.
@@ -135,42 +151,42 @@ dependencies = {
 
 maven_dependencies = {
     "com_google_protobuf_protobuf_java": {
-        "jar_sha256": "3446cbfa13795228bc6549b91a409f27cdf6913d1c8f03e0f99572988623a04b",
+        "jar_sha256": "cb9256793672c937a09e38b84dcf36f9a8bed7995e49f01898a9eda72649113f",
         "jar_urls": [
-            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.19.2/protobuf-java-3.19.2.jar",
-            "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.19.2/protobuf-java-3.19.2.jar",
+            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.20.0/protobuf-java-3.20.0.jar",
+            "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.20.0/protobuf-java-3.20.0.jar",
         ],
         "licenses": ["notice"],
-        "srcjar_sha256": "5150243063356046d85f2949f471cf533ee4b44d31052f419fa5e70a72e76baf",
+        "srcjar_sha256": "c5240ffc85d924948a3fa508037e4d3e36c3e0e466ee083da87ce1c0d8c5c7ef",
         "srcjar_urls": [
-            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.19.2/protobuf-java-3.19.2-sources.jar",
-            "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.19.2/protobuf-java-3.19.2-sources.jar",
+            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.20.0/protobuf-java-3.20.0-sources.jar",
+            "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.20.0/protobuf-java-3.20.0-sources.jar",
         ],
     },
     "com_google_protobuf_protobuf_java_util": {
-        "jar_sha256": "9588d67db391b19cffb4ec658d9365ac5362b2089661c157fd27f21380cdd1e8",
+        "jar_sha256": "6c78fb24344da44e0ada1952322e4d7ebe2ed32b4270355fc8d66ea69eb8412a",
         "jar_urls": [
-            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.19.2/protobuf-java-util-3.19.2.jar",
-            "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.19.2/protobuf-java-util-3.19.2.jar",
+            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.20.0/protobuf-java-util-3.20.0.jar",
+            "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.20.0/protobuf-java-util-3.20.0.jar",
         ],
         "licenses": ["notice"],
-        "srcjar_sha256": "1733265b9938f062042cb70a3f330617885351097bddc1dd3e22eed9d803530f",
+        "srcjar_sha256": "af75212e29f12af383957aa9bbfbc5e37fb94bac57d7498be2035e807c25698f",
         "srcjar_urls": [
-            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.19.2/protobuf-java-util-3.19.2-sources.jar",
-            "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.19.2/protobuf-java-util-3.19.2-sources.jar",
+            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.20.0/protobuf-java-util-3.20.0-sources.jar",
+            "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.20.0/protobuf-java-util-3.20.0-sources.jar",
         ],
     },
     "com_google_protobuf_protobuf_javalite": {
-        "jar_sha256": "bfc598474392a015c050d34be38bb84eb3986809374eac437420d51680150e94",
+        "jar_sha256": "26b98b9f8471b1859447c7a3572b51f56088ef74b144464a2e8d1e33e5e7a92e",
         "jar_urls": [
-            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.19.2/protobuf-javalite-3.19.2.jar",
-            "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.19.2/protobuf-javalite-3.19.2.jar",
+            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.20.0/protobuf-javalite-3.20.0.jar",
+            "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.20.0/protobuf-javalite-3.20.0.jar",
         ],
         "licenses": ["notice"],
-        "srcjar_sha256": "0154a27b8b6e4753013922fc8e50c59ebd7108af95f11fa9bc6b72ef14db0dc9",
+        "srcjar_sha256": "eb243cf79b2f80069a68a41b03eb915e4daa956aa22308551c0cab66e3646dd7",
         "srcjar_urls": [
-            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.19.2/protobuf-javalite-3.19.2-sources.jar",
-            "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.19.2/protobuf-javalite-3.19.2-sources.jar",
+            "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.20.0/protobuf-javalite-3.20.0-sources.jar",
+            "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.20.0/protobuf-javalite-3.20.0-sources.jar",
         ],
     },
 }
