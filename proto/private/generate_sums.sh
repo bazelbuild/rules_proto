@@ -28,6 +28,7 @@ URLS=(
     "https://github.com/protocolbuffers/protobuf/releases/download/v${VERSION}/protoc-${VERSION}-linux-s390_64.zip"
     "https://github.com/protocolbuffers/protobuf/releases/download/v${VERSION}/protoc-${VERSION}-linux-x86_32.zip"
     "https://github.com/protocolbuffers/protobuf/releases/download/v${VERSION}/protoc-${VERSION}-linux-x86_64.zip"
+    "https://github.com/protocolbuffers/protobuf/releases/download/v${VERSION}/protoc-${VERSION}-osx-aarch_64.zip"
     "https://github.com/protocolbuffers/protobuf/releases/download/v${VERSION}/protoc-${VERSION}-osx-x86_64.zip"
     "https://github.com/protocolbuffers/protobuf/releases/download/v${VERSION}/protoc-${VERSION}-win32.zip"
     "https://github.com/protocolbuffers/protobuf/releases/download/v${VERSION}/protoc-${VERSION}-win64.zip"
@@ -44,10 +45,10 @@ for U in "${URLS[@]}"; do
   MU="https://mirror.bazel.build/${U#"https://"}"
   SUM=$(curl -L --fail -q "$U" | shasum -a 256 | cut -d' ' -f1)
   echo ""
-  echo "        'sha256': '${SUM}',"
-  echo "        'urls': ["
-  echo "            '$MU',"
-  echo "            '$U',"
+  echo "        \"sha256\": \"${SUM}\","
+  echo "        \"urls\": ["
+  echo "            \"$MU\","
+  echo "            \"$U\","
   echo "        ],"
 done
 
