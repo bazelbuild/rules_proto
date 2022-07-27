@@ -12,24 +12,24 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "com_google_googletest",
-    sha256 = "81964fe578e9bd7c94dfdb09c8e4d6e6759e19967e397dbea48d1c10e45d0df2",
-    strip_prefix = "googletest-release-1.12.1",
+    sha256 = "9dc9157a9a1551ec7a7e43daea9a694a0bb5fb8bec81235d8a1e6ef64c716dcb",
+    strip_prefix = "googletest-release-1.10.0",
     urls = [
-        "https://mirror.bazel.build/github.com/google/googletest/archive/refs/tags/release-1.12.1.tar.gz",
-        "https://github.com/google/googletest/archive/refs/tags/release-1.12.1.tar.gz",
+        "https://mirror.bazel.build/github.com/google/googletest/archive/release-1.10.0.tar.gz",
+        "https://github.com/google/googletest/archive/release-1.10.0.tar.gz",
     ],
 )
 
 http_archive(
-    name = "bazelci_rules",
-    sha256 = "eca21884e6f66a88c358e580fd67a6b148d30ab57b1680f62a96c00f9bc6a07e",
-    strip_prefix = "bazelci_rules-1.0.0",
-    url = "https://github.com/bazelbuild/continuous-integration/releases/download/rules-1.0.0/bazelci_rules-1.0.0.tar.gz",
+    name = "bazel_toolchains",
+    sha256 = "1caf8584434d3e31be674067996be787cfa511fda2a0f05811131b588886477f",
+    strip_prefix = "bazel-toolchains-3.7.2",
+    urls = [
+        "https://github.com/bazelbuild/bazel-toolchains/releases/download/3.7.2/bazel-toolchains-3.7.2.tar.gz",
+        "https://mirror.bazel.build/github.com/bazelbuild/bazel-toolchains/archive/3.7.2.tar.gz",
+    ],
 )
 
-load("@bazelci_rules//:rbe_repo.bzl", "rbe_preconfig")
+load("@bazel_toolchains//rules:rbe_repo.bzl", "rbe_autoconfig")
 
-rbe_preconfig(
-    name = "buildkite_config",
-    toolchain = "ubuntu1804-bazel-java11",
-)
+rbe_autoconfig(name = "buildkite_config")

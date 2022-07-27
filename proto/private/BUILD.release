@@ -1,4 +1,4 @@
-load("@rules_proto//proto:defs.bzl", "proto_lang_toolchain")
+load("//proto:defs.bzl", "proto_lang_toolchain")
 
 # Use precompiled binaries where possible.
 alias(
@@ -54,7 +54,7 @@ proto_lang_toolchain(
 # Redirect everything else to the source
 redirect_targets = [
     "wrappers_proto",
-    "well_known_type_protos",
+    "well_known_protos",
     "timestamp_proto",
     "struct_proto",
     "python_specific_test_protos_genproto",
