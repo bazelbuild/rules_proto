@@ -29,4 +29,7 @@ http_archive(
 
 load("@bazelci_rules//:rbe_repo.bzl", "rbe_preconfig")
 
-rbe_preconfig(name="buildkite_config", toolchain = "ubuntu1804-bazel-java11")
+rbe_preconfig(
+    name = "buildkite_config",
+    toolchain = "ubuntu1804-bazel-java11",
+)
