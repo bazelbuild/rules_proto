@@ -21,11 +21,13 @@ http_archive(
 )
 
 http_archive(
-    name = "bazel_toolchains",
-    sha256 = "02e4f3744f1ce3f6e711e261fd322916ddd18cccd38026352f7a4c0351dbda19",
-    strip_prefix = "bazel-toolchains-5.1.2",
-    urls = [
-        "https://mirror.bazel.build/github.com/bazelbuild/bazel-toolchains/archive/refs/tags/v5.1.2.tar.gz",
-        "https://github.com/bazelbuild/bazel-toolchains/archive/refs/tags/v5.1.2.tar.gz",
-    ],
+    name = "bazelci_rules",
+    sha256 = "eca21884e6f66a88c358e580fd67a6b148d30ab57b1680f62a96c00f9bc6a07e",
+    strip_prefix = "bazelci_rules-1.0.0",
+    url = "https://github.com/bazelbuild/continuous-integration/releases/download/rules-1.0.0/bazelci_rules-1.0.0.tar.gz",
+)
+load("@bazelci_rules//:rbe_repo.bzl", "rbe_preconfig")
+rbe_preconfig(
+    name = "rbe_default",
+    toolchain = "ubuntu1604-bazel-java8",
 )
