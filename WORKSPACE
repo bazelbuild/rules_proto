@@ -26,8 +26,7 @@ http_archive(
     strip_prefix = "bazelci_rules-1.0.0",
     url = "https://github.com/bazelbuild/continuous-integration/releases/download/rules-1.0.0/bazelci_rules-1.0.0.tar.gz",
 )
+
 load("@bazelci_rules//:rbe_repo.bzl", "rbe_preconfig")
-rbe_preconfig(
-    name = "rbe_default",
-    toolchain = "ubuntu1604-bazel-java8",
-)
+
+rbe_preconfig(name="buildkite_config", toolchain = "ubuntu1804-bazel-java11")
