@@ -1,4 +1,4 @@
-load("//proto:defs.bzl", "proto_lang_toolchain")
+load("@rules_proto//proto:defs.bzl", "proto_lang_toolchain")
 
 # Use precompiled binaries where possible.
 alias(
