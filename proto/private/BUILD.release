@@ -54,7 +54,7 @@ proto_lang_toolchain(
 # Redirect everything else to the source
 redirect_targets = [
     "wrappers_proto",
-    "well_known_types_proto",
+    "well_known_type_protos",
     "timestamp_proto",
     "struct_proto",
     "python_specific_test_protos_genproto",
