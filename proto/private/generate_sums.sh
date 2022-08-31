@@ -28,15 +28,16 @@ URLS=(
     "https://github.com/protocolbuffers/protobuf/releases/download/v${VERSION}/protoc-${VERSION}-linux-s390_64.zip"
     "https://github.com/protocolbuffers/protobuf/releases/download/v${VERSION}/protoc-${VERSION}-linux-x86_32.zip"
     "https://github.com/protocolbuffers/protobuf/releases/download/v${VERSION}/protoc-${VERSION}-linux-x86_64.zip"
+    "https://github.com/protocolbuffers/protobuf/releases/download/v${VERSION}/protoc-${VERSION}-osx-aarch_64.zip"
     "https://github.com/protocolbuffers/protobuf/releases/download/v${VERSION}/protoc-${VERSION}-osx-x86_64.zip"
     "https://github.com/protocolbuffers/protobuf/releases/download/v${VERSION}/protoc-${VERSION}-win32.zip"
     "https://github.com/protocolbuffers/protobuf/releases/download/v${VERSION}/protoc-${VERSION}-win64.zip"
-    "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/${VERSION}/protobuf-java-${VERSION}.jar"
-    "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/${VERSION}/protobuf-java-${VERSION}-sources.jar"
-    "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/${VERSION}/protobuf-java-util-${VERSION}.jar"
-    "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/${VERSION}/protobuf-java-util-${VERSION}-sources.jar"
-    "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/${VERSION}/protobuf-javalite-${VERSION}.jar"
-    "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/${VERSION}/protobuf-javalite-${VERSION}-sources.jar"
+    "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.${VERSION}/protobuf-java-3.${VERSION}.jar"
+    "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.${VERSION}/protobuf-java-3.${VERSION}-sources.jar"
+    "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.${VERSION}/protobuf-java-util-3.${VERSION}.jar"
+    "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.${VERSION}/protobuf-java-util-3.${VERSION}-sources.jar"
+    "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.${VERSION}/protobuf-javalite-3.${VERSION}.jar"
+    "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.${VERSION}/protobuf-javalite-3.${VERSION}-sources.jar"
 )
 
 for U in "${URLS[@]}"; do
@@ -44,10 +45,10 @@ for U in "${URLS[@]}"; do
   MU="https://mirror.bazel.build/${U#"https://"}"
   SUM=$(curl -L --fail -q "$U" | shasum -a 256 | cut -d' ' -f1)
   echo ""
-  echo "        'sha256': '${SUM}',"
-  echo "        'urls': ["
-  echo "            '$MU',"
-  echo "            '$U',"
+  echo "        \"sha256\": \"${SUM}\","
+  echo "        \"urls\": ["
+  echo "            \"$MU\","
+  echo "            \"$U\","
   echo "        ],"
 done
 
