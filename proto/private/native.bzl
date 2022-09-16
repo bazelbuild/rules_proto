@@ -25,4 +25,4 @@
 NativeProtoInfo = ProtoInfo
 
 # buildifier: disable=native-proto
-native_proto_common = proto_common
+native_proto_common = proto_common_do_not_use
