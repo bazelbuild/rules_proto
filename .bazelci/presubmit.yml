@@ -25,9 +25,6 @@ tasks:
   windows:
     build_targets: *build_targets
     test_targets: *test_targets
-  rbe_ubuntu2004:
-    build_targets: *build_targets
-    test_targets: *test_targets
   ubuntu2004_head:
     bazel: last_green
     platform: ubuntu2004
