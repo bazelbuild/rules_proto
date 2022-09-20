@@ -12,4 +12,5 @@ bazel_dep(name = "rules_java", version = "5.1.0")
 
 # Importing non bzl-mod remote_coverage_tools
 coverage_deps_ext = use_extension("//proto/private:bzlmod_deps.bzl", "coverage_deps_ext")
+
 use_repo(coverage_deps_ext, "remote_coverage_tools")
