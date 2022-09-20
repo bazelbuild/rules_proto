@@ -1,0 +1,3 @@
+build:bzlmod --experimental_enable_bzlmod
+build:bzlmod --crosstool_top=@rules_cc.0.0.1.cc_configure.local_config_cc//:toolchain
+build:bzlmod --host_crosstool_top=@rules_cc.0.0.1.cc_configure.local_config_cc//:toolchain
