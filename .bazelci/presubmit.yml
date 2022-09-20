@@ -45,7 +45,7 @@ tasks:
     test_targets: *test_targets
   ubuntu2004_bzlmod:
     bazel: last_green
-    platform: rbe_ubuntu2004
+    platform: ubuntu2004
     build_flags:
       - "--config=bzlmod"
     build_targets: *build_targets_bzlmod
