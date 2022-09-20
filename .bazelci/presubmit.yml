@@ -46,6 +46,8 @@ tasks:
     build_flags:
       - "--config=bzlmod"
     build_targets: *build_targets_bzlmod
+    test_flags:
+      - "--config=bzlmod"
     test_targets: *test_targets_bzlmod
   macos_bzlmod:
     bazel: last_green
@@ -53,6 +55,8 @@ tasks:
     build_flags:
       - "--config=bzlmod"
     build_targets: *build_targets_bzlmod
+    test_flags:
+      - "--config=bzlmod"
     test_targets: *test_targets_bzlmod
   windows_bzlmod:
     bazel: last_green
@@ -60,4 +64,6 @@ tasks:
     build_flags:
       - "--config=bzlmod"
     build_targets: *build_targets_bzlmod
+    test_flags:
+      - "--config=bzlmod"
     test_targets: *test_targets_bzlmod
