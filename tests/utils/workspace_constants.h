@@ -22,5 +22,6 @@
 namespace rulesproto {
 
 constexpr char kWorkspaceRlocation[] = "rules_proto/";
+constexpr char kWorkspaceRlocationBzlmod[] = "__main__/";
 
 }  // namespace rulesproto
