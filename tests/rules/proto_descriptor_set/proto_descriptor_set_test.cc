@@ -33,12 +33,7 @@ namespace {
 
 std::string GetRlocation(const std::string& file) {
   static std::unique_ptr<Runfiles> runfiles(Runfiles::CreateForTest());
-  std::string path = runfiles->Rlocation(rulesproto::kWorkspaceRlocation + file);
-  std::ifstream input(path, std::ifstream::binary);
-  if (!input) {
-    path = runfiles->Rlocation(rulesproto::kWorkspaceRlocationBzlmod + file);
-  }
-  return path;
+  return runfiles->Rlocation(file);
 }
 
 template <typename T, typename K>
@@ -71,7 +66,7 @@ void AssertFileDescriptorSetContains(
     const std::vector<std::string>& expected_proto_files) {
   std::vector<std::string> actual_proto_files =
       ReadFileDescriptorSet(
-          GetRlocation(path));
+          GetRlocation(rulesproto::kWorkspaceRlocation + path));
   EXPECT_EQ(expected_proto_files, actual_proto_files);
 }
 
