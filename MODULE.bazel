@@ -6,7 +6,10 @@ module(
 )
 
 bazel_dep(name = "bazel_skylib", version = "1.1.1")
-bazel_dep(name = "rules_cc", version = "0.0.1")
 bazel_dep(name = "protobuf", repo_name = "com_google_protobuf", version = "3.19.0")
-bazel_dep(name = "googletest", repo_name = "com_google_googletest", version = "1.11.0")
-bazel_dep(name = "rules_java", version = "5.1.0")
+
+# TODO(bazel-team): add support for protobuf_workspace
+
+# Dependencies needed in tests
+bazel_dep(name = "rules_cc", dev_dependency = True, version = "0.0.1")
+bazel_dep(name = "googletest", dev_dependency = True, repo_name = "com_google_googletest", version = "1.11.0")
