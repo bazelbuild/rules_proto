@@ -1,0 +1,1 @@
+build:bzlmod --enable_bzlmod

@@ -1,0 +1,2 @@
+# TODO(bazel-team): Without following line runfiles use __main__ as a repo name.
+workspace(name = "rules_proto")
