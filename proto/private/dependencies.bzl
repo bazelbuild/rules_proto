@@ -151,7 +151,7 @@ dependencies = {
 
 maven_dependencies = {
     "com_google_protobuf_protobuf_java": {
-        "jar_sha256": "ad275e75ee79e6c6388198dcb9acf0db2edee64782e11b508f379c3a2a17d168",
+        "jar_sha256": "51febfb24af6faa7eb729c880b8ba011cbab8ce55920656a450740b73d343ee2",
         "jar_urls": [
             "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.21.5/protobuf-java-3.21.5.jar",
             "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.21.5/protobuf-java-3.21.5.jar",
@@ -164,7 +164,7 @@ maven_dependencies = {
         ],
     },
     "com_google_protobuf_protobuf_java_util": {
-        "jar_sha256": "0b16133638b1455bea3449c002c7769c75962007d55e9a39c0bed55128da7f70",
+        "jar_sha256": "34dc0c5bc98416e95a28b3b18caf74816eaa083b2f9c5702b2300a3763970c7b",
         "jar_urls": [
             "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.21.5/protobuf-java-util-3.21.5.jar",
             "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.21.5/protobuf-java-util-3.21.5.jar",
