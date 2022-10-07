@@ -19,7 +19,6 @@ Then, in your `BUILD` files, import and use the rules:
 
 ```starlark
 load("@rules_proto//proto:defs.bzl", "proto_library")
-
 proto_library(
     ...
 )
