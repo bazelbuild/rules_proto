@@ -14,22 +14,7 @@
 
 """All development and production dependencies of rules_proto."""
 
-dependencies = {
-    "bazel_skylib": {
-        "sha256": "c6966ec828da198c5d9adbaa94c05e3a1c7f21bd012a0b29ba8ddbccb2c93b0d",
-        "urls": [
-            "https://github.com/bazelbuild/bazel-skylib/releases/download/1.1.1/bazel-skylib-1.1.1.tar.gz",
-            "https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.1.1/bazel-skylib-1.1.1.tar.gz",
-        ],
-    },
-    "com_github_protocolbuffers_protobuf": {
-        "sha256": "75be42bd736f4df6d702a0e4e4d30de9ee40eac024c4b845d17ae4cc831fe4ae",
-        "strip_prefix": "protobuf-21.7",
-        "urls": [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v21.7.tar.gz",
-            "https://github.com/protocolbuffers/protobuf/archive/v21.7.tar.gz",
-        ],
-    },
+prebuilt_binaries = {
     "com_google_protobuf_protoc_linux_aarch64": {
         "build_file": "@rules_proto//proto/private:BUILD.protoc",
         "sha256": "2696a8f9a61ce67c510d000c88e2d0a8b5adf1f90514e461e8d8943c46d04737",
@@ -102,6 +87,25 @@ dependencies = {
             "https://github.com/protocolbuffers/protobuf/releases/download/v21.7/protoc-21.7-win64.zip",
         ],
     },
+}
+
+transitive_dependencies = {
+    "bazel_skylib": {
+        "sha256": "c6966ec828da198c5d9adbaa94c05e3a1c7f21bd012a0b29ba8ddbccb2c93b0d",
+        "urls": [
+            "https://github.com/bazelbuild/bazel-skylib/releases/download/1.1.1/bazel-skylib-1.1.1.tar.gz",
+            "https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.1.1/bazel-skylib-1.1.1.tar.gz",
+        ],
+    },
+    "com_github_protocolbuffers_protobuf": {
+        "sha256": "75be42bd736f4df6d702a0e4e4d30de9ee40eac024c4b845d17ae4cc831fe4ae",
+        "strip_prefix": "protobuf-21.7",
+        "urls": [
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v21.7.tar.gz",
+            "https://github.com/protocolbuffers/protobuf/archive/v21.7.tar.gz",
+        ],
+    },
+
     # Dependency of `com_github_protocolbuffers_protobuf`.
     "rules_cc": {
         "sha256": "4aeb102efbcfad509857d7cb9c5456731e8ce566bfbf2960286a2ec236796cc3",
