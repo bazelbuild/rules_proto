@@ -3,4 +3,7 @@
   "maintainers": [],
   "versions": [],
   "yanked_versions": {}
+  "repository": [
+    "github:bazelbuild/rules_proto"
+  ]
 }
