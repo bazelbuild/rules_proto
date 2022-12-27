@@ -2,7 +2,7 @@
   "homepage": "https://github.com/bazelbuild/rules_proto",
   "maintainers": [],
   "versions": [],
-  "yanked_versions": {}
+  "yanked_versions": {},
   "repository": [
     "github:bazelbuild/rules_proto"
   ]
