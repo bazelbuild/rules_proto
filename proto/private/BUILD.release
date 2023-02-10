@@ -80,6 +80,7 @@ redirect_targets = [
     "protoc_lib",
     "protobuf",
     "protobuf_lite",
+    "proto_api",
 ]
 
 [
