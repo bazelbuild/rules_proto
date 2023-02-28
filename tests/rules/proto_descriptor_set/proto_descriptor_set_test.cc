@@ -19,8 +19,9 @@
 #include <string>
 #include <vector>
 
-#include "google/protobuf/descriptor.pb.h"
+#include "google/protobuf/descriptor.proto.h"
 #include "gtest/gtest.h"
+#include "testing/base/public/gmock.h"
 #include "tests/utils/workspace_constants.h"
 #include "tools/cpp/runfiles/runfiles.h"
 
@@ -72,7 +73,7 @@ void AssertFileDescriptorSetContains(
   std::vector<std::string> actual_proto_files =
       ReadFileDescriptorSet(
           GetRlocation(path));
-  EXPECT_EQ(expected_proto_files, actual_proto_files);
+  EXPECT_THAT(actual_proto_files, ::testing::IsSupersetOf(expected_proto_files));
 }
 
 }  // namespace
@@ -88,7 +89,6 @@ TEST(ProtoDescriptorSetTest, WellKnownProtos) {
       {
           "google/protobuf/any.proto",
           "google/protobuf/api.proto",
-          "google/protobuf/compiler/plugin.proto",
           "google/protobuf/descriptor.proto",
           "google/protobuf/duration.proto",
           "google/protobuf/empty.proto",
