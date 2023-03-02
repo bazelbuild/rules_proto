@@ -17,6 +17,8 @@ load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 load("//proto:defs.bzl", "proto_library")
 load(":tags.bzl", "TAGS")
 
+package(default_applicable_licenses = ["//third_party/bazel_rules/rules_proto:license"])
+
 proto_library(
     name = "foo",
     srcs = ["foo.proto"],

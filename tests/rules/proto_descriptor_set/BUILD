@@ -1,6 +1,8 @@
 load("@rules_cc//cc:defs.bzl", "cc_test")
 load("//proto:defs.bzl", "proto_descriptor_set", "proto_library")
 
+package(default_applicable_licenses = ["//third_party/bazel_rules/rules_proto:license"])
+
 proto_library(
     name = "empty_proto_library",
 )
