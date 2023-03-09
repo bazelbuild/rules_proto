@@ -43,7 +43,7 @@ URLS=(
 for U in "${URLS[@]}"; do
   echo "Downloading '${U}'..."
   MU="https://mirror.bazel.build/${U#"https://"}"
-  SUM=$(curl -L --fail -q "$U" | shasum -a 256 | cut -d' ' -f1)
+  SUM=$(curl -sL --fail -q "$U" | shasum -a 256 | cut -d' ' -f1)
   echo ""
   echo "        \"sha256\": \"${SUM}\","
   echo "        \"urls\": ["
