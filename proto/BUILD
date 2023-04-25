@@ -1,7 +1,5 @@
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
 
-package(default_applicable_licenses = ["//third_party/bazel_rules/rules_proto:license"])
-
 bzl_library(
     name = "defs",
     srcs = [
