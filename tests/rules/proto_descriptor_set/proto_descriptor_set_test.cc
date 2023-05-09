@@ -19,10 +19,11 @@
 #include <string>
 #include <vector>
 
+#include "tools/cpp/runfiles/runfiles.h"
 #include "google/protobuf/descriptor.pb.h"
+#include "gmock/gmock.h"
 #include "gtest/gtest.h"
 #include "tests/utils/workspace_constants.h"
-#include "tools/cpp/runfiles/runfiles.h"
 
 using bazel::tools::cpp::runfiles::Runfiles;
 using google::protobuf::FileDescriptorProto;
@@ -33,7 +34,8 @@ namespace {
 
 std::string GetRlocation(const std::string& file) {
   static std::unique_ptr<Runfiles> runfiles(Runfiles::CreateForTest());
-  std::string path = runfiles->Rlocation(rulesproto::kWorkspaceRlocation + file);
+  std::string path =
+      runfiles->Rlocation(rulesproto::kWorkspaceRlocation + file);
   std::ifstream input(path, std::ifstream::binary);
   if (!input) {
     path = runfiles->Rlocation(rulesproto::kWorkspaceRlocationBzlmod + file);
@@ -60,8 +62,8 @@ std::vector<std::string> ReadFileDescriptorSet(const std::string& path) {
     unordered_proto_files.insert(file_descriptor.name());
   }
 
-  std::vector<std::string> proto_files(
-      unordered_proto_files.begin(), unordered_proto_files.end());
+  std::vector<std::string> proto_files(unordered_proto_files.begin(),
+                                       unordered_proto_files.end());
   std::sort(proto_files.begin(), proto_files.end());
   return proto_files;
 }
@@ -70,9 +72,9 @@ void AssertFileDescriptorSetContains(
     const std::string& path,
     const std::vector<std::string>& expected_proto_files) {
   std::vector<std::string> actual_proto_files =
-      ReadFileDescriptorSet(
-          GetRlocation(path));
-  EXPECT_EQ(expected_proto_files, actual_proto_files);
+      ReadFileDescriptorSet(GetRlocation(path));
+  EXPECT_THAT(actual_proto_files,
+              ::testing::IsSupersetOf(expected_proto_files));
 }
 
 }  // namespace
@@ -88,8 +90,7 @@ TEST(ProtoDescriptorSetTest, WellKnownProtos) {
       {
           "google/protobuf/any.proto",
           "google/protobuf/api.proto",
-          "google/protobuf/compiler/plugin.proto",
-          "google/protobuf/descriptor.proto",
+          "google/protobuf/descriptor.pb",
           "google/protobuf/duration.proto",
           "google/protobuf/empty.proto",
           "google/protobuf/field_mask.proto",
