@@ -1,0 +1,30 @@
+load("@rules_proto//proto:defs.bzl", "proto_library")
+load("@rules_proto//lang/cc:cc_proto_library.bzl", "cc_proto_library")
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+
+proto_library(
+    name = "help",
+    srcs = ["help.proto"],
+)
+
+cc_proto_library(
+    name = "cc_help",
+    deps = [":help"],
+)
+
+cc_library(
+    name = "main_lib",
+    srcs = [
+        ":cc_help",
+        "main.cc"
+    ],
+)
+
+# js_binary(
+#     name = "main",
+#     entry_point = "main.js",
+#     data = [
+#         ":main_lib"
+#     ]
+# )

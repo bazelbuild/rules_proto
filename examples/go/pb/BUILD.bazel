@@ -1,0 +1,26 @@
+load("@rules_proto//proto:defs.bzl", "proto_library")
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+load("@io_bazel_rules_go//proto/wkt:well_known_types.bzl", "PROTO_RUNTIME_DEPS")
+load("@rules_proto//lang/go:go_proto_library.bzl", "go_proto_library")
+
+
+proto_library(
+    name = "help",
+    srcs = ["help.proto"],
+)
+
+go_proto_library(
+    name = "go_help",
+    deps = [":help"],
+)
+
+go_library(
+    name = "pb",
+    importpath = "examples/go/pb",
+    srcs = [
+        ":go_help"
+    ],
+    deps = PROTO_RUNTIME_DEPS,
+    visibility = ["//visibility:public"]
+)
+

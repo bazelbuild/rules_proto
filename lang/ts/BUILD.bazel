@@ -1,0 +1,30 @@
+load("@rules_proto//proto:lang_toolchain.bzl", "proto_lang_toolchain")
+load("@npm//:protoc-gen-ts/package_json.bzl", "bin")
+
+
+bin.protoc_gen_ts_binary(
+    name = "protoc_gen_ts",
+    env = {
+        "BAZEL_BINDIR": "$(BINDIR)"
+    },
+)
+
+toolchain_type(
+    name = "toolchain_type",
+    visibility = ["//visibility:public"],
+)
+
+proto_lang_toolchain(
+    name = "protoc_gen_ts_toolchain",
+    mnemonic = "GenTS",
+    out_replacement_format_flag = "--ts_out=%s",
+    plugin = ":protoc_gen_ts",
+    plugin_format_flag = "--plugin=protoc-gen-ts=%s",
+    progress_message = "Generating TS ts_proto_library %{label}",
+)
+
+toolchain(
+    name = "default_toolchain",
+    toolchain = ":protoc_gen_ts_toolchain",
+    toolchain_type = ":toolchain_type",
+)

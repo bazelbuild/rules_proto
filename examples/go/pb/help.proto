@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+option go_package = "/examples/go/pb";
+
+message Help {
+    string about = 1;
+}

@@ -1,0 +1,41 @@
+load("@rules_proto//proto:defs.bzl", "proto_library")
+load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
+load("@rules_proto//lang/ts:ts_proto_library.bzl", "ts_proto_library")
+load("@aspect_rules_js//js:defs.bzl", "js_binary")
+
+proto_library(
+    name = "help",
+    srcs = ["help.proto"],
+)
+
+proto_library(
+    name = "help2",
+    srcs = ["help.proto"],
+    deps = [
+        ":help"
+    ]
+)
+
+ts_proto_library(
+    name = "ts_help",
+    deps = [":help2"],
+)
+
+ts_project(
+    name = "main_lib",
+    srcs = [
+        ":ts_help",
+        "main.ts"
+    ],
+    deps = [
+        "//:node_modules/google-protobuf"
+    ]
+)
+
+js_binary(
+    name = "main",
+    entry_point = "main.js",
+    data = [
+        ":main_lib"
+    ]
+)

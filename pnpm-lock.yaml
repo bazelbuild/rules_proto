@@ -1,0 +1,34 @@
+lockfileVersion: 5.4
+
+specifiers:
+  google-protobuf: 3.21.2
+  protoc-gen-ts: 0.8.6
+  typescript: 4.9.5
+
+dependencies:
+  google-protobuf: 3.21.2
+  protoc-gen-ts: 0.8.6_ss7alqtodw6rv4lluxhr36xjoa
+  typescript: 4.9.5
+
+packages:
+
+  /google-protobuf/3.21.2:
+    resolution: {integrity: sha512-3MSOYFO5U9mPGikIYCzK0SaThypfGgS6bHqrUGXG3DPHCrb+txNqeEcns1W0lkGfk0rCyNXm7xB9rMxnCiZOoA==}
+    dev: false
+
+  /protoc-gen-ts/0.8.6_ss7alqtodw6rv4lluxhr36xjoa:
+    resolution: {integrity: sha512-66oeorGy4QBvYjQGd/gaeOYyFqKyRmRgTpofmnw8buMG0P7A0jQjoKSvKJz5h5tNUaVkIzvGBUTRVGakrhhwpA==}
+    hasBin: true
+    peerDependencies:
+      google-protobuf: ^3.13.0
+      typescript: 4.x.x
+    dependencies:
+      google-protobuf: 3.21.2
+      typescript: 4.9.5
+    dev: false
+
+  /typescript/4.9.5:
+    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: false

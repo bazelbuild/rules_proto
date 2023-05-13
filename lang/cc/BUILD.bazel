@@ -1,0 +1,19 @@
+load("@rules_proto//proto:lang_toolchain.bzl", "proto_lang_toolchain")
+
+toolchain_type(
+    name = "toolchain_type",
+    visibility = ["//visibility:public"],
+)
+
+proto_lang_toolchain(
+    name = "protoc_cc_toolchain",
+    mnemonic = "GenCC",
+    out_replacement_format_flag = "--cpp_out=%s",
+    progress_message = "Generating CC cc_proto_library %{label}",
+)
+
+toolchain(
+    name = "default_toolchain",
+    toolchain = ":protoc_cc_toolchain",
+    toolchain_type = ":toolchain_type",
+)

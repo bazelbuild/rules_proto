@@ -1,0 +1,7 @@
+{
+    "dependencies": {
+        "protoc-gen-ts": "0.8.6",
+        "typescript": "4.9.5",
+        "google-protobuf": "3.21.2"
+    }
+}

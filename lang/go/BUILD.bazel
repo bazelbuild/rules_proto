@@ -1,0 +1,21 @@
+load("@rules_proto//proto:lang_toolchain.bzl", "proto_lang_toolchain")
+
+toolchain_type(
+    name = "toolchain_type",
+    visibility = ["//visibility:public"],
+)
+
+proto_lang_toolchain(
+    name = "protoc_gen_go_toolchain", 
+    plugin = "@com_github_golang_protobuf//protoc-gen-go",
+    mnemonic  = "GenGo",
+    progress_message = "Generating Go go_proto_library %{label}",
+    plugin_format_flag = '--plugin=protoc-gen-go=%s',
+    out_replacement_format_flag = "--go_out=%s",
+)
+
+toolchain(
+    name = "default_toolchain",
+    toolchain = ":protoc_gen_go_toolchain",
+    toolchain_type = ":toolchain_type",
+)
