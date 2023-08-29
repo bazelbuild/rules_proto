@@ -156,7 +156,6 @@ maven_dependencies = {
             "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.21.7/protobuf-java-3.21.7.jar",
             "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.21.7/protobuf-java-3.21.7.jar",
         ],
-        "licenses": ["notice"],
         "srcjar_sha256": "c664e12e6e3fea801477edf95014980a8a96528d3904d2add90c68b5d047a6c2",
         "srcjar_urls": [
             "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-java/3.21.7/protobuf-java-3.21.7-sources.jar",
@@ -169,7 +168,6 @@ maven_dependencies = {
             "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.21.7/protobuf-java-util-3.21.7.jar",
             "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.21.7/protobuf-java-util-3.21.7.jar",
         ],
-        "licenses": ["notice"],
         "srcjar_sha256": "43b9188848b01cec71d34326868e25c102b2a344c6ef1072d54c3681559c5f57",
         "srcjar_urls": [
             "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-java-util/3.21.7/protobuf-java-util-3.21.7-sources.jar",
@@ -182,7 +180,6 @@ maven_dependencies = {
             "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.21.7/protobuf-javalite-3.21.7.jar",
             "https://repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.21.7/protobuf-javalite-3.21.7.jar",
         ],
-        "licenses": ["notice"],
         "srcjar_sha256": "e1c557e98c59d10dbd657c69a1e15b7585a592402f12c78026f9d0bfb605c310",
         "srcjar_urls": [
             "https://mirror.bazel.build/repo1.maven.org/maven2/com/google/protobuf/protobuf-javalite/3.21.7/protobuf-javalite-3.21.7-sources.jar",
