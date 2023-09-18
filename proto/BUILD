@@ -13,6 +13,17 @@ bzl_library(
 )
 
 bzl_library(
+    name = "proto_toolchain_bzl",
+    srcs = [
+        "proto_toolchain.bzl",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        "//proto/private/rules:proto_toolchain_bzl",
+    ],
+)
+
+bzl_library(
     name = "repositories",
     srcs = [
         "repositories.bzl",
