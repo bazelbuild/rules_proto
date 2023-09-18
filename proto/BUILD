@@ -22,3 +22,9 @@ bzl_library(
         "//proto/private:dependencies",
     ],
 )
+
+# Toolchain type provided by proto_toolchain rule and used by proto_library
+toolchain_type(
+    name = "toolchain_type",
+    visibility = ["//visibility:public"],
+)
