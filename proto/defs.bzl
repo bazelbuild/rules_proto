@@ -14,6 +14,7 @@
 
 """Starlark rules for building protocol buffers."""
 
+load("//proto:proto_lang_toolchain.bzl", _proto_lang_toolchain = "proto_lang_toolchain")
 load("//proto/private:native.bzl", "NativeProtoInfo", "native_proto_common")
 load("//proto/private/rules:proto_descriptor_set.bzl", _proto_descriptor_set = "proto_descriptor_set")
 
@@ -25,18 +26,6 @@ def _add_migration_tag(attrs):
     else:
         attrs["tags"] = [_MIGRATION_TAG]
     return attrs
-
-def proto_lang_toolchain(**attrs):
-    """Bazel proto_lang_toolchain rule.
-
-    https://docs.bazel.build/versions/master/be/protocol-buffer.html#proto_lang_toolchain
-
-    Args:
-      **attrs: Rule attributes
-    """
-
-    # buildifier: disable=native-proto
-    native.proto_lang_toolchain(**_add_migration_tag(attrs))
 
 def proto_library(**attrs):
     """Bazel proto_library rule.
@@ -51,6 +40,8 @@ def proto_library(**attrs):
     native.proto_library(**_add_migration_tag(attrs))
 
 proto_descriptor_set = _proto_descriptor_set
+
+proto_lang_toolchain = _proto_lang_toolchain
 
 # Encapsulates information provided by `proto_library`.
 #
