@@ -2,13 +2,23 @@
 
 * Postsubmit [![Build status](https://badge.buildkite.com/26d40f574d6f6026928bc271780782e5f168fe7e3595ea6d79.svg?branch=master)](https://buildkite.com/bazel/rules-proto)
 
-This repository contains Starlark implementation of Protobuf rules in Bazel.
+This repository contains a Starlark implementation of `proto_library` and related "base layer" rules in Bazel.
+It does **not** provide rules for any specific languages. These are typically expected to be provided in the ruleset for the language.
 
 For a high-level overview of using Protocol Buffers and gRPC with Bazel, see
 <https://bazel-contrib.github.io/SIG-rules-authors/proto-grpc.html>.
 
 For the list of Proto rules, see the Bazel
 [documentation](https://docs.bazel.build/versions/master/be/overview.html).
+
+## Roadmap
+
+As of September 2023, this repo is mostly empty and contains stubs for `proto_library`, `ProtoInfo` and other proto toolchain support rules.
+
+This will change soon, around the time Bazel 7 is released (in Oct/Nov 2023), because the stubs will be replaced with actual implementations.
+We plan to remove the native implementations in Bazel 8, at which point rules_proto will be the only way to build Protobuf rules.
+
+As such it's recommended to use this repository now, so that the removal of implementations from Bazel 8 does not cause you problems.
 
 ## Getting Started
 
