@@ -1,4 +1,4 @@
-"dev dependencies needed to develop rules_proto"
+"""dev dependencies needed to develop rules_proto"""
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 

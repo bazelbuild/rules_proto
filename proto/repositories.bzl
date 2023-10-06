@@ -14,18 +14,16 @@
 
 """Dependencies and toolchains required to use rules_proto."""
 
-load("@bazel_tools//tools/build_defs/repo:http.bzl", _http_archive = "http_archive")
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
-
-def http_archive(name, **kwargs):
-    maybe(_http_archive, name = name, **kwargs)
 
 def rules_proto_dependencies():
     """An utility method to load all dependencies of `rules_proto`.
 
     Loads the remote repositories used by default in Bazel.
     """
-    http_archive(
+    maybe(
+        http_archive,
         name = "bazel_skylib",
         sha256 = "74d544d96f4a5bb630d465ca8bbcfe231e3594e5aae57e1edbf17a6eb3ca2506",
         urls = [
