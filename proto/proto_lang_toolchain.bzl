@@ -13,6 +13,8 @@
 # limitations under the License.
 """proto_lang_toolchain rule"""
 
+load("//proto:proto_common.bzl", "proto_common")
+
 def proto_lang_toolchain(*, name, toolchain_type = None, exec_compatible_with = [], target_compatible_with = [], **attrs):
     """Creates a proto_lang_toolchain and corresponding toolchain target.
 
@@ -28,6 +30,9 @@ def proto_lang_toolchain(*, name, toolchain_type = None, exec_compatible_with = 
       target_compatible_with: ([constraints]) List of constraints the target libraries are compatible with.
       **attrs: Rule attributes
     """
+
+    if getattr(proto_common, "INCOMPATIBLE_PASS_TOOLCHAIN_TYPE", False):
+        attrs["toolchain_type"] = toolchain_type
 
     # buildifier: disable=native-proto
     native.proto_lang_toolchain(name = name, **attrs)

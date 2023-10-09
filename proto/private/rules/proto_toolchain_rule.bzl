@@ -14,9 +14,12 @@
 
 """A Starlark implementation of the proto_toolchain rule."""
 
-load("//proto:proto_common.bzl", "ProtoLangToolchainInfo")
+load("//proto:proto_common.bzl", "ProtoLangToolchainInfo", "proto_common")
 
 def _impl(ctx):
+    kwargs = {}
+    if getattr(proto_common, "INCOMPATIBLE_PASS_TOOLCHAIN_TYPE", False):
+        kwargs["toolchain_type"] = "//proto:toolchain_type"
     return [
         DefaultInfo(
             files = depset(),
@@ -33,6 +36,7 @@ def _impl(ctx):
                 progress_message = ctx.attr.progress_message,
                 mnemonic = ctx.attr.mnemonic,
                 allowlist_different_package = None,
+                **kwargs
             ),
         ),
     ]
