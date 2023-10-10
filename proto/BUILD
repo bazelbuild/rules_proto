@@ -28,7 +28,7 @@ bzl_library(
     srcs = [
         "repositories.bzl",
     ],
-    visibility = ["//visibility:public"]
+    visibility = ["//visibility:public"],
 )
 
 # Toolchain type provided by proto_toolchain rule and used by proto_library
