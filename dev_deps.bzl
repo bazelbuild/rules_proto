@@ -2,9 +2,10 @@
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
+
 def rules_proto_dev_deps():
     http_archive(
-        name = "rules_cc",
+        name = "rules_cc",   
         sha256 = "4aeb102efbcfad509857d7cb9c5456731e8ce566bfbf2960286a2ec236796cc3",
         strip_prefix = "rules_cc-2f8c04c04462ab83c545ab14c0da68c3b4c96191",
         urls = [
@@ -29,5 +30,15 @@ def rules_proto_dev_deps():
         strip_prefix = "bazelci_rules-1.0.0",
         urls = [
             "https://github.com/bazelbuild/continuous-integration/releases/download/rules-1.0.0/bazelci_rules-1.0.0.tar.gz",
+        ],
+    )
+
+    http_archive(
+        name = "com_google_protobuf",
+        sha256 = "75be42bd736f4df6d702a0e4e4d30de9ee40eac024c4b845d17ae4cc831fe4ae",
+        strip_prefix = "protobuf-21.7",
+        urls = [
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v21.7.tar.gz",
+            "https://github.com/protocolbuffers/protobuf/archive/v21.7.tar.gz",
         ],
     )
