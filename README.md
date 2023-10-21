@@ -1,6 +1,6 @@
 # Protobuf Rules for [Bazel](https://bazel.build)
 
-* Postsubmit [![Build status](https://badge.buildkite.com/26d40f574d6f6026928bc271780782e5f168fe7e3595ea6d79.svg?branch=master)](https://buildkite.com/bazel/rules-proto)
+* Postsubmit [![Build status](https://badge.buildkite.com/26d40f574d6f6026928bc271780782e5f168fe7e3595ea6d79.svg)](https://buildkite.com/bazel/rules-proto)
 
 This repository contains a Starlark implementation of `proto_library` and related "base layer" rules in Bazel.
 It does **not** provide rules for any specific languages. These are typically expected to be provided in the ruleset for the language.
