@@ -29,9 +29,6 @@ bzl_library(
         "repositories.bzl",
     ],
     visibility = ["//visibility:public"],
-    deps = [
-        "//proto/private:dependencies",
-    ],
 )
 
 # Toolchain type provided by proto_toolchain rule and used by proto_library
