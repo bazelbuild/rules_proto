@@ -1,4 +1,4 @@
-load("//tools/build_defs/license:license.bzl", "license")
+load("@rules_license//rules:license.bzl", "license")
 
 license(
     name = "license",
