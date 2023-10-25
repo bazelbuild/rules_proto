@@ -7,6 +7,7 @@ rules_proto_dependencies()
 rules_proto_toolchains()
 
 # Dev-only dependencies. USERS SHOULD NOT INSTALL THESE!
+
 load(":dev_deps.bzl", "rules_proto_dev_deps")
 
 rules_proto_dev_deps()
