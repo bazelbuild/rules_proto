@@ -18,15 +18,6 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 def rules_proto_dev_deps():
     http_archive(
-        name = "io_bazel_stardoc",
-        sha256 = "dfbc364aaec143df5e6c52faf1f1166775a5b4408243f445f44b661cfdc3134f",
-        urls = [
-            "https://mirror.bazel.build/github.com/bazelbuild/stardoc/releases/download/0.5.6/stardoc-0.5.6.tar.gz",
-            "https://github.com/bazelbuild/stardoc/releases/download/0.5.6/stardoc-0.5.6.tar.gz",
-        ],
-    )
-
-    http_archive(
         name = "rules_cc",
         sha256 = "4aeb102efbcfad509857d7cb9c5456731e8ce566bfbf2960286a2ec236796cc3",
         strip_prefix = "rules_cc-2f8c04c04462ab83c545ab14c0da68c3b4c96191",
@@ -63,4 +54,22 @@ def rules_proto_dev_deps():
             "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v21.7.tar.gz",
             "https://github.com/protocolbuffers/protobuf/archive/v21.7.tar.gz",
         ],
+    )
+    
+    http_archive(
+        name = "io_bazel_stardoc",
+        sha256 = "dfbc364aaec143df5e6c52faf1f1166775a5b4408243f445f44b661cfdc3134f",
+        urls = [
+            "https://mirror.bazel.build/github.com/bazelbuild/stardoc/releases/download/0.5.6/stardoc-0.5.6.tar.gz",
+            "https://github.com/bazelbuild/stardoc/releases/download/0.5.6/stardoc-0.5.6.tar.gz",
+        ],
+    )
+
+    http_archive(
+        name = "rules_license",
+        urls = [
+            "https://mirror.bazel.build/github.com/bazelbuild/rules_license/releases/download/0.0.7/rules_license-0.0.7.tar.gz",
+            "https://github.com/bazelbuild/rules_license/releases/download/0.0.7/rules_license-0.0.7.tar.gz",
+        ],
+        sha256 = "4531deccb913639c30e5c7512a054d5d875698daeb75d8cf90f284375fe7c360",
     )
