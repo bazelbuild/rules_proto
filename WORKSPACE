@@ -1,6 +1,6 @@
 workspace(name = "rules_proto")
 
-load("//proto:repositories.bzl", "rules_proto_dependencies", "rules_proto_toolchains")
+load("//third_party/bazel_rules/rules_proto/proto:repositories.bzl", "rules_proto_dependencies", "rules_proto_toolchains")
 
 rules_proto_dependencies()
 
