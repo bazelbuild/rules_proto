@@ -70,3 +70,26 @@ https://docs.bazel.build/versions/master/be/protocol-buffer.html#proto_library
 | <a id="proto_library-attrs"></a>attrs |  Rule attributes   |  none |
 
 
+<a id="proto_toolchain"></a>
+
+## proto_toolchain
+
+<pre>
+proto_toolchain(<a href="#proto_toolchain-name">name</a>, <a href="#proto_toolchain-proto_compiler">proto_compiler</a>, <a href="#proto_toolchain-exec_compatible_with">exec_compatible_with</a>)
+</pre>
+
+Creates a proto_toolchain and toolchain target for proto_library.
+
+Toolchain target is suffixed with "_toolchain".
+
+
+**PARAMETERS**
+
+
+| Name  | Description | Default Value |
+| :------------- | :------------- | :------------- |
+| <a id="proto_toolchain-name"></a>name |  name of the toolchain   |  none |
+| <a id="proto_toolchain-proto_compiler"></a>proto_compiler |  (Label) of either proto compiler sources or prebuild binaries   |  none |
+| <a id="proto_toolchain-exec_compatible_with"></a>exec_compatible_with |  ([constraints]) List of constraints the prebuild binary is compatible with.   |  <code>[]</code> |
+
+

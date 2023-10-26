@@ -15,6 +15,7 @@
 """Starlark rules for building protocol buffers."""
 
 load("//proto:proto_lang_toolchain.bzl", _proto_lang_toolchain = "proto_lang_toolchain")
+load("//proto:proto_toolchain.bzl", _proto_toolchain = "proto_toolchain")
 load("//proto/private:native.bzl", "NativeProtoInfo", "native_proto_common")
 load("//proto/private/rules:proto_descriptor_set.bzl", _proto_descriptor_set = "proto_descriptor_set")
 
@@ -42,6 +43,8 @@ def proto_library(**attrs):
 proto_descriptor_set = _proto_descriptor_set
 
 proto_lang_toolchain = _proto_lang_toolchain
+
+proto_toolchain = _proto_toolchain
 
 # Encapsulates information provided by `proto_library`.
 #

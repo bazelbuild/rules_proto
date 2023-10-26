@@ -13,6 +13,7 @@ bzl_library(
     visibility = ["//visibility:public"],
     deps = [
         ":proto_lang_toolchain",
+        ":proto_toolchain",
         "//proto/private:native",
         "//proto/private/rules:proto_descriptor_set",
     ],
@@ -36,7 +37,7 @@ bzl_library(
 )
 
 bzl_library(
-    name = "proto_toolchain_bzl",
+    name = "proto_toolchain",
     srcs = [
         "proto_toolchain.bzl",
     ],
