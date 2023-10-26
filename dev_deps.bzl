@@ -17,6 +17,16 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 def rules_proto_dev_deps():
+    """development only dependencies for rules_proto"""
+    http_archive(
+        name = "io_bazel_stardoc",
+        sha256 = "dfbc364aaec143df5e6c52faf1f1166775a5b4408243f445f44b661cfdc3134f",
+        urls = [
+            "https://mirror.bazel.build/github.com/bazelbuild/stardoc/releases/download/0.5.6/stardoc-0.5.6.tar.gz",
+            "https://github.com/bazelbuild/stardoc/releases/download/0.5.6/stardoc-0.5.6.tar.gz",
+        ],
+    )
+
     http_archive(
         name = "rules_cc",
         sha256 = "4aeb102efbcfad509857d7cb9c5456731e8ce566bfbf2960286a2ec236796cc3",
