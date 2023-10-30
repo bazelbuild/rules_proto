@@ -58,10 +58,10 @@ def rules_proto_dev_deps():
 
     http_archive(
         name = "com_google_protobuf",
-        sha256 = "75be42bd736f4df6d702a0e4e4d30de9ee40eac024c4b845d17ae4cc831fe4ae",
-        strip_prefix = "protobuf-21.7",
+        sha256 = "616bb3536ac1fff3fb1a141450fa28b875e985712170ea7f1bfe5e5fc41e2cd8",
+        strip_prefix = "protobuf-24.4",
         urls = [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v21.7.tar.gz",
-            "https://github.com/protocolbuffers/protobuf/archive/v21.7.tar.gz",
+            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v24.4.tar.gz",
+            "https://github.com/protocolbuffers/protobuf/archive/v24.4.tar.gz",
         ],
     )
