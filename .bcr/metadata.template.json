@@ -1,6 +1,21 @@
 {
   "homepage": "https://github.com/bazelbuild/rules_proto",
-  "maintainers": [],
+  "maintainers": [
+    {
+      "github": "comius",
+      "name": "Ivo List"
+    },
+    {
+      "email": "alex@aspect.dev",
+      "github": "alexeagle",
+      "name": "Alex Eagle"
+    },
+    {
+      "email": "sahin@aspect.dev",
+      "github": "thesayyn",
+      "name": "Şahin Yort"
+    }
+  ],
   "versions": [],
   "yanked_versions": {}
   "repository": [
