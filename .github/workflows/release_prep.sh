@@ -11,13 +11,7 @@ readonly TAG=${GITHUB_REF_NAME}
 readonly PREFIX="rules_proto-${TAG}"
 readonly ARCHIVE="${PREFIX}.tar.gz"
 
-# Configuration for 'git archive'
-# see https://git-scm.com/docs/git-archive/2.40.0#ATTRIBUTES
-cat >.git/info/attributes <<EOF
-# Omit folders that users don't need, making the distribution artifact smaller
-tests export-ignore
-EOF
-
+# NB: configuration for 'git archive' is in /.gitattributes
 git archive --format=tar --prefix=${PREFIX}/ ${TAG} | gzip > $ARCHIVE
 SHA=$(shasum -a 256 $ARCHIVE | awk '{print $1}')
 
@@ -25,7 +19,7 @@ SHA=$(shasum -a 256 $ARCHIVE | awk '{print $1}')
 cat << EOF
 ## Using bzlmod with Bazel 6 or later:
 
-1. Add \`common --enable_bzlmod\` to \`.bazelrc\`.
+1. [Bazel 6] Add \`common --enable_bzlmod\` to \`.bazelrc\`.
 
 2. Add to your \`MODULE.bazel\` file:
 
