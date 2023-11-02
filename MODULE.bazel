@@ -1,6 +1,9 @@
+"Bazel dependencies"
+
 module(
     name = "rules_proto",
-    version = "5.3.0-21.7",
+    # Note: the publish-to-BCR app will patch this line to stamp the version being published.
+    version = "0.0.0",
     compatibility_level = 1,
 )
 

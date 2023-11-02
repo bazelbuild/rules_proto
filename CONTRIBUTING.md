@@ -26,3 +26,13 @@ information on using pull requests.
 
 This project follows [Google's Open Source Community
 Guidelines](https://opensource.google.com/conduct/).
+
+## Releasing
+
+To perform a release, simply tag the commit you wish to release, for example:
+
+```
+rules_proto$ git fetch
+rules_proto$ git tag 1.2.3 origin/main
+rules_proto$ git push origin 1.2.3
+```
