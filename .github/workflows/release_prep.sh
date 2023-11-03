@@ -39,5 +39,5 @@ http_archive(
     strip_prefix = "${PREFIX}",
     url = "https://github.com/bazelbuild/rules_proto/releases/download/${TAG}/${ARCHIVE}",
 )
-\`\`\`starlark
+\`\`\`
 EOF
