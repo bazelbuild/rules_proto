@@ -1,3 +1,5 @@
+"unit tests for proto_common.toolchains"
+
 load("@bazel_skylib//lib:partial.bzl", "partial")
 load("@bazel_skylib//lib:unittest.bzl", "asserts", "unittest")
 load("//proto:proto_common.bzl", "toolchains")
@@ -45,5 +47,5 @@ def unittest_toolchains():
                 "//tests:incompatible_enable_proto_toolchain_resolution": [],
                 "//conditions:default": ["@platforms//:incompatible"],
             }),
-        )
+        ),
     )
