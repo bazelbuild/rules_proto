@@ -24,7 +24,7 @@ proto_common = native_proto_common
 ProtoLangToolchainInfo = proto_common.ProtoLangToolchainInfo
 
 def _incompatible_toolchains_enabled():
-    getattr(proto_common, "INCOMPATIBLE_ENABLE_PROTO_TOOLCHAIN_RESOLUTION", False)
+    return getattr(proto_common, "INCOMPATIBLE_ENABLE_PROTO_TOOLCHAIN_RESOLUTION", False)
 
 def _find_toolchain(ctx, legacy_attr, toolchain_type):
     if _incompatible_toolchains_enabled():
