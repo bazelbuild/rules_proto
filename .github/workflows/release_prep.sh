@@ -39,5 +39,11 @@ http_archive(
     strip_prefix = "${PREFIX}",
     url = "https://github.com/bazelbuild/rules_proto/releases/download/${TAG}/${ARCHIVE}",
 )
+
+load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies")
+rules_proto_dependencies()
+
+load("@rules_proto//proto:toolchains.bzl", "rules_proto_toolchains")
+rules_proto_toolchains()
 \`\`\`
 EOF
