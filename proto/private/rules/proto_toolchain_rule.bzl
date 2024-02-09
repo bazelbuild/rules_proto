@@ -28,7 +28,7 @@ def _impl(ctx):
     # just use module_extension_has_os_arch_dependent which checks if Bazel version >= 6.4.0
     # See: https://github.com/protocolbuffers/protobuf/pull/14590#discussion_r1398778415
     # See: https://github.com/bazel-contrib/bazel_features/blob/443861571a389ddc16d17690ab8e46ee87b4ea57/features.bzl#L25C5-L25C43
-    if bazel_features.external_deps.module_extension_has_os_arch_dependent:
+    if True:  # bazel_features.external_deps.module_extension_has_os_arch_dependent:
         kwargs["allowlist_different_package"] = None
 
     return [
