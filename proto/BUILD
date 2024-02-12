@@ -20,6 +20,12 @@ bzl_library(
 )
 
 bzl_library(
+    name = "repositories",
+    srcs = ["repositories.bzl"],
+    visibility = ["//visibility:public"],
+)
+
+bzl_library(
     name = "proto_lang_toolchain",
     srcs = [
         "proto_lang_toolchain.bzl",
@@ -45,14 +51,6 @@ bzl_library(
     deps = [
         "//proto/private/rules:proto_toolchain_bzl",
     ],
-)
-
-bzl_library(
-    name = "repositories",
-    srcs = [
-        "repositories.bzl",
-    ],
-    visibility = ["//visibility:public"],
 )
 
 # Toolchain type provided by proto_toolchain rule and used by proto_library
