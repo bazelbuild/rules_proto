@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Dependencies required to use rules_proto."""
+"""Dependencies and toolchains required to use rules_proto."""
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 load("@bazel_tools//tools/build_defs/repo:utils.bzl", "maybe")
@@ -40,10 +40,8 @@ def rules_proto_dependencies():
         sha256 = "4531deccb913639c30e5c7512a054d5d875698daeb75d8cf90f284375fe7c360",
     )
 
-    maybe(
-        http_archive,
-        name = "bazel_features",
-        sha256 = "b8789c83c893d7ef3041d3f2795774936b27ff61701a705df52fd41d6ddbf692",
-        strip_prefix = "bazel_features-1.2.0",
-        url = "https://github.com/bazel-contrib/bazel_features/releases/download/v1.2.0/bazel_features-v1.2.0.tar.gz",
-    )
+def rules_proto_toolchains():
+    """An utility method to load all Protobuf toolchains."""
+
+    # Nothing to do here (yet).
+    pass

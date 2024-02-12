@@ -22,33 +22,3 @@ load("//proto/private:native.bzl", "native_proto_common")
 proto_common = native_proto_common
 
 ProtoLangToolchainInfo = proto_common.ProtoLangToolchainInfo
-
-def _incompatible_toolchains_enabled():
-    return getattr(proto_common, "INCOMPATIBLE_ENABLE_PROTO_TOOLCHAIN_RESOLUTION", False)
-
-def _find_toolchain(ctx, legacy_attr, toolchain_type):
-    if _incompatible_toolchains_enabled():
-        toolchain = ctx.toolchains[toolchain_type]
-        if not toolchain:
-            fail("No toolchains registered for '%s'." % toolchain_type)
-        return toolchain.proto
-    else:
-        return getattr(ctx.attr, legacy_attr)[ProtoLangToolchainInfo]
-
-def _use_toolchain(toolchain_type):
-    if _incompatible_toolchains_enabled():
-        return [config_common.toolchain_type(toolchain_type, mandatory = False)]
-    else:
-        return []
-
-def _if_legacy_toolchain(legacy_attr_dict):
-    if _incompatible_toolchains_enabled():
-        return {}
-    else:
-        return legacy_attr_dict
-
-toolchains = struct(
-    use_toolchain = _use_toolchain,
-    find_toolchain = _find_toolchain,
-    if_legacy_toolchain = _if_legacy_toolchain,
-)

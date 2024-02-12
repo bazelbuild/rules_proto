@@ -18,7 +18,6 @@ bzl_library(
     srcs = [
         "proto_toolchain.bzl",
         "proto_toolchain_rule.bzl",
-        "@bazel_features//:bzl_files",
     ],
     visibility = [
         "//proto:__subpackages__",
