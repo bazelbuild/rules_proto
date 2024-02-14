@@ -1,4 +1,4 @@
-# Copyright 2023 The Bazel Authors. All rights reserved.
+# Copyright 2024 The Bazel Authors. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,11 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+"""proto_descriptor_set rule"""
 
-"""Export for proto_toolchain"""
+load("//proto/private/rules:proto_descriptor_set.bzl", _proto_descriptor_set = "proto_descriptor_set")
 
-load("//proto/private/rules:proto_toolchain.bzl", _proto_toolchain_macro = "proto_toolchain")
-
-# deprecated: load proto_toolchain from toolchain package
-
-proto_toolchain = _proto_toolchain_macro
+proto_descriptor_set = _proto_descriptor_set

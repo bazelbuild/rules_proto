@@ -16,6 +16,4 @@
 
 load("//proto/private/rules:proto_toolchain.bzl", _proto_toolchain_macro = "proto_toolchain")
 
-# deprecated: load proto_toolchain from toolchain package
-
 proto_toolchain = _proto_toolchain_macro

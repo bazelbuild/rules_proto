@@ -11,11 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+"""ProtoInfo"""
 
-"""Export for proto_toolchain"""
+load("//proto/private:native.bzl", "NativeProtoInfo")
 
-load("//proto/private/rules:proto_toolchain.bzl", _proto_toolchain_macro = "proto_toolchain")
-
-# deprecated: load proto_toolchain from toolchain package
-
-proto_toolchain = _proto_toolchain_macro
+ProtoInfo = NativeProtoInfo

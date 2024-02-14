@@ -1,6 +1,6 @@
 load("@bazel_skylib//rules:common_settings.bzl", "bool_flag")
 load("//proto:defs.bzl", "proto_library")
-load("//proto:proto_common.bzl", "proto_common")
+load("//proto/modules:proto_common.bzl", "proto_common")
 
 config_setting(
     name = "incompatible_enable_proto_toolchain_resolution",

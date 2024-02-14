@@ -14,44 +14,21 @@
 
 """Starlark rules for building protocol buffers."""
 
-load("//proto:proto_lang_toolchain.bzl", _proto_lang_toolchain = "proto_lang_toolchain")
-load("//proto:proto_toolchain.bzl", _proto_toolchain = "proto_toolchain")
-load("//proto/private:native.bzl", "NativeProtoInfo", "native_proto_common")
-load("//proto/private/rules:proto_descriptor_set.bzl", _proto_descriptor_set = "proto_descriptor_set")
+load("//proto:proto_descriptor_set.bzl", _proto_descriptor_set = "proto_descriptor_set")
+load("//proto:proto_library.bzl", _proto_library = "proto_library")
+load("//proto/modules:proto_common.bzl", _proto_common = "proto_common")
+load("//proto/modules:proto_info.bzl", _ProtoInfo = "ProtoInfo")
+load("//proto/toolchains:proto_lang_toolchain.bzl", _proto_lang_toolchain = "proto_lang_toolchain")
+load("//proto/toolchains:proto_toolchain.bzl", _proto_toolchain = "proto_toolchain")
 
-_MIGRATION_TAG = "__PROTO_RULES_MIGRATION_DO_NOT_USE_WILL_BREAK__"
-
-def _add_migration_tag(attrs):
-    if "tags" in attrs and attrs["tags"] != None:
-        attrs["tags"] = attrs["tags"] + [_MIGRATION_TAG]
-    else:
-        attrs["tags"] = [_MIGRATION_TAG]
-    return attrs
-
-def proto_library(**attrs):
-    """Bazel proto_library rule.
-
-    https://docs.bazel.build/versions/master/be/protocol-buffer.html#proto_library
-
-    Args:
-      **attrs: Rule attributes
-    """
-
-    # buildifier: disable=native-proto
-    native.proto_library(**_add_migration_tag(attrs))
-
+# Rules
+proto_library = _proto_library
 proto_descriptor_set = _proto_descriptor_set
 
+# Toolchain rules
+proto_toolchain = _proto_toolchain
 proto_lang_toolchain = _proto_lang_toolchain
 
-proto_toolchain = _proto_toolchain
-
-# Encapsulates information provided by `proto_library`.
-#
-# https://docs.bazel.build/versions/master/skylark/lib/ProtoInfo.html
-ProtoInfo = NativeProtoInfo
-
-# Utilities for protocol buffers.
-#
-# https://docs.bazel.build/versions/master/skylark/lib/proto_common.html
-proto_common = native_proto_common
+# Modules
+proto_common = _proto_common
+ProtoInfo = _ProtoInfo
