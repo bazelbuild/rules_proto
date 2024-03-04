@@ -1,0 +1,19 @@
+name: Mirror Releases
+on:
+  # Trigger manually in the UI
+  workflow_dispatch:
+  # Trigger daily at 06:10 UTC
+  schedule:
+    - cron: "10 6 * * *"
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          ./tools/protoc/mirror_protoc_releases.sh
+          npx @bazel/buildifier tools/protoc/versions.bzl
+      - uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: "chore: mirror protoc release"
