@@ -14,8 +14,22 @@
 
 """Toolchains required to use rules_proto."""
 
-def rules_proto_toolchains():
-    """An utility method to load all Protobuf toolchains."""
+load("//proto/private/protoc:prebuilt_protoc_toolchain.bzl", "prebuilt_protoc_repo")
+load("//proto/private/protoc:protoc_toolchains.bzl", "protoc_toolchains_repo")
+load("//proto/private/protoc:versions.bzl", "PROTOC_PLATFORMS")
 
-    # Nothing to do here (yet).
-    pass
+def rules_proto_toolchains(name, version, register = True):
+    """A utility method to load all Protobuf toolchains.
+
+    Args:
+        name: base name for generated repositories, allowing multiple protoc versions.
+        version: a release tag from protocolbuffers/protobuf, e.g. 'v25.3'
+        register: whether to register the resulting toolchains.
+            Should be True for WORKSPACE and False under bzlmod.
+    """
+
+    for platform in PROTOC_PLATFORMS.keys():
+        prebuilt_protoc_repo(name = ".".join([name, platform]), platform = platform, version = version)
+    protoc_toolchains_repo(name = name, user_repository_name = name)
+    if register:
+        native.register_toolchains("@{}//:all".format(name))
