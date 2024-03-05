@@ -16,7 +16,7 @@
 
 load("//proto:proto_descriptor_set.bzl", _proto_descriptor_set = "proto_descriptor_set")
 load("//proto:proto_library.bzl", _proto_library = "proto_library")
-load("//proto/modules:proto_common.bzl", _proto_common = "proto_common")
+load("//proto/modules:proto_common.bzl", _proto_common = "proto_common", _toolchains = "toolchains")
 load("//proto/modules:proto_info.bzl", _ProtoInfo = "ProtoInfo")
 load("//proto/toolchains:proto_lang_toolchain.bzl", _proto_lang_toolchain = "proto_lang_toolchain")
 load("//proto/toolchains:proto_toolchain.bzl", _proto_toolchain = "proto_toolchain")
@@ -32,3 +32,4 @@ proto_lang_toolchain = _proto_lang_toolchain
 # Modules
 proto_common = _proto_common
 ProtoInfo = _ProtoInfo
+toolchains = _toolchains
