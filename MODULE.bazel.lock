@@ -1018,7 +1018,7 @@
   "moduleExtensions": {
     "//proto:extensions.bzl%proto": {
       "general": {
-        "bzlTransitiveDigest": "zUGPR7IAxvlfl5nBPf0ajVr3k0I7FgzanbuabhV9yXk=",
+        "bzlTransitiveDigest": "vXyPKNhNo/Kz4JS40kYwkXHbcnGNd3PiG/uJtKhfHHo=",
         "accumulatedFileDigests": {},
         "envVariables": {},
         "generatedRepoSpecs": {

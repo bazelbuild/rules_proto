@@ -27,10 +27,12 @@ load("@rules_proto//proto/private/rules:proto_toolchain_rule.bzl", "proto_toolch
 
 proto_toolchain(
     name = "prebuilt_protoc_toolchain",
-    proto_compiler = ":bin/protoc",
+    proto_compiler = "{protoc_label}",
     visibility = ["//visibility:public"],
 )
-""".format())
+""".format(
+        protoc_label = ":bin/protoc.exe" if rctx.attr.platform.find("windows") != -1 else ":bin/protoc",
+    ))
 
 prebuilt_protoc_repo = repository_rule(
     doc = "Download a pre-built protoc and create a concrete toolchains for it",
