@@ -23,6 +23,7 @@ echo "Mirroring integrity hashes for $REPOSITORY at release $VERSION ..."
 DOWNLOAD_URLS_FILTER='
 map(select(.tag_name == $version))[0]
 | .assets
+| map(select(.name | startswith("protoc")))
 | map(.browser_download_url)[]
 '
 # Workaround: protobuf doesn't publish their integrity hashes to e.g. checksums.txt

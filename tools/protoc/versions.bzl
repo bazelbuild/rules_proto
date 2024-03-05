@@ -6,8 +6,6 @@ See .github/workflows/mirror_protoc_release.yml for automation that runs the scr
 
 PROTOC_VERSIONS = {
     "v24.4": {
-        "protobuf-24.4.tar.gz": "sha384-qRqrWm8nUDacIup44ogek2J6UZn7xIBR6lH6yUONPDEbGe4E9z84ga5HGr6W8/81",
-        "protobuf-24.4.zip": "sha384-GL7gM4ob5QOWRJcJlKJ7BtEuJwMSahQmx+YZgFT+naB+HJnrYlsT64x6C3WsneCC",
         "protoc-24.4-linux-aarch_64.zip": "sha384-1yUAFmmBLZ3LU/vJoLxBX/MWJeanKe7p9SYkVmqlWwghayQEzifO6zsZ65fbQrNZ",
         "protoc-24.4-linux-ppcle_64.zip": "sha384-vx5i4cMWTK4d0P7yCucDG5T8z9nk+Ypi85+nOTZNrONPSsBoDpmrsjTeErcAxTD6",
         "protoc-24.4-linux-s390_64.zip": "sha384-gXY/gbqiOqNOfnHh7Ae1CJDUeFQ+0ZdgJrjNoeZ0Q5dL5IrRiHIdD0D1nV8wo4d8",
@@ -20,8 +18,6 @@ PROTOC_VERSIONS = {
         "protoc-24.4-win64.zip": "sha384-HR8U6fkwvpJvc5LlN7fdl6KgAM3BOtxJm0+HyyaT4EWtQIkdKlGW2kd7cQL56X3L",
     },
     "v25.0": {
-        "protobuf-25.0.tar.gz": "sha384-P0ngnobCm0ky9qhdvrY05tttQOUAlSoLJmrmvQ6PxIcyjmRI2pd9AE+kDOlaNXlU",
-        "protobuf-25.0.zip": "sha384-nmAo5cvh4VzfVryFDKtZjUcLIZE8oLrY010sbGWdXCSAoMt8gyMwA3hy0AnjNdun",
         "protoc-25.0-linux-aarch_64.zip": "sha384-du9ecUx9YoI5tiMy6tdnPDR6adBOHXEewdgu1RSIuXkuck+9ymNbP40JeTCP4iT0",
         "protoc-25.0-linux-ppcle_64.zip": "sha384-cev+I039Hf0msDxGM19RIBQW1QuDjxpU0CmCUVWOz1L6rwislt7fWWCSqPHkK/5J",
         "protoc-25.0-linux-s390_64.zip": "sha384-+IxQIVSFY7Gc51F1BT6ND9mvxhbmSs6vuDf6tUvovIw0kXfAf4M2jRQT3v+t28Pb",
@@ -34,8 +30,6 @@ PROTOC_VERSIONS = {
         "protoc-25.0-win64.zip": "sha384-L8syrXxlXJ/9KH8n20f5OqeLtuKs4ceW9I3Pj390kdDZ1LVmCd3IcThhfkHhxapx",
     },
     "v25.1": {
-        "protobuf-25.1.tar.gz": "sha384-vkC/WSZOsysT/cnXFT78JfjhYyHb0/MHPKazkhW0/0HTAtaVIwskmsRix2E2q28a",
-        "protobuf-25.1.zip": "sha384-cxZEvMlThaA5zqvQfeZbco4CuyZfq/Tjqdmc1aChwlBLnnaQNOxQMDzAy9nKsNbF",
         "protoc-25.1-linux-aarch_64.zip": "sha384-M06CY8AuIGM0mNGcSYucGr2EfJqgqLCrMYPrYN9ZoQLlI3IXZ06CV3YLOqUZV496",
         "protoc-25.1-linux-ppcle_64.zip": "sha384-ke4q7W7ji8ae0TZnt9xmmx+EzmY4L8OxCT9z6PITWkfyFDiEcaAC+EOxIuFqX8dO",
         "protoc-25.1-linux-s390_64.zip": "sha384-5udatx+PxFTJSmqj9PUgAx1oCbEUJeO68imWwUU/KsxYl0iXa3K3Et1pnvELOLEb",
@@ -48,8 +42,6 @@ PROTOC_VERSIONS = {
         "protoc-25.1-win64.zip": "sha384-bo9+6PAX04kumoq1RjA829m2Rkhijnw8nQ6Le4wYX47qNF9sooeS84ZE55IjdVXh",
     },
     "v25.2": {
-        "protobuf-25.2.tar.gz": "sha384-5L9OGrv5rdD6M30RA4A8X3RW+cAK05fFt93H56lw1KtkTlazrh3qTxOuMjL11+bn",
-        "protobuf-25.2.zip": "sha384-0Qno40/wqkCHuTM2rCgVd+nS66Ule3YnqsdTGf3bCZKjnQPrQqmufTXyIvttCw7P",
         "protoc-25.2-linux-aarch_64.zip": "sha384-XoUL9QXarwVOUqdQd6jQQIxWADtJglQKKX6eCn1wqyObKcOMzmBAxIgPs6JZfKzh",
         "protoc-25.2-linux-ppcle_64.zip": "sha384-uCsYCijlcpLVM5OAoK5AvmZ/ZG4FxFW5nq4YxHhNbM8rkKorhGwePsfdxjWXD0U8",
         "protoc-25.2-linux-s390_64.zip": "sha384-7jphWhRqYWg8CJLMtCT1F4LZI9b7exag21s4apghBvfrB9qLhv9CfutAElsezfso",
@@ -62,8 +54,6 @@ PROTOC_VERSIONS = {
         "protoc-25.2-win64.zip": "sha384-zwfHd9XCgWXwTNAcC8dUR/9gPKKdF/pbfS2FqRyMzSzaaTfKLkeMRJQSql9CtcFo",
     },
     "v25.3": {
-        "protobuf-25.3.tar.gz": "sha384-CORK2b6dJeBIjaE509agfyBXFsQTbNHx/bntTWnz1hgMq3mFQeh5MJXeT2JnGQYG",
-        "protobuf-25.3.zip": "sha384-kDAMVpfn4VNyjywFJiuLoelCfc3AypQMlmfF+VcDWh7pBwp7mZtPdAR29WttBsYn",
         "protoc-25.3-linux-aarch_64.zip": "sha384-jwCvnInYx9lD4bNy3EI/leVIVGqpyYkJ3qZSXXtIERcaBRIS1hAi4Tluu9Cy4eiy",
         "protoc-25.3-linux-ppcle_64.zip": "sha384-aLa68jnCzwO7pS0ler84UxwzaL7srl+9fFZuR3ykh4FJIDJW/jCQGTeuos8VfWcI",
         "protoc-25.3-linux-s390_64.zip": "sha384-PrlMkT15A2RsI4QYbRgvxq/xsNV7i1jzMbIZkSHDUMyZPC2Txf1ydLrmsIdQ/NQP",
@@ -76,8 +66,6 @@ PROTOC_VERSIONS = {
         "protoc-25.3-win64.zip": "sha384-Fe23g3o7lyfGIpl8YNK6zLecYvp1A7dRjOozoztLQPoIFYlKmETsjh5+p4USHrkL",
     },
     "v26.0-rc3": {
-        "protobuf-26.0-rc3.tar.gz": "sha384-RVFu8PJJCOSXwYTqH7FyWRSgsP1AAjcEa+VViddVTgtd9wYvZjQoQ8jmlFxwfFw+",
-        "protobuf-26.0-rc3.zip": "sha384-JYSXGTSBfwUU6UzqazUTkT3lTZDzx10YdaNQYjojrT7X1Ro1fA+T4tjJw0e8UISV",
         "protoc-26.0-rc-3-linux-aarch_64.zip": "sha384-26j+lJ8JbQrtOiT71bvYSOaBVsE/nhqqudV3Ax/DzJL0dtqKhV0RQ5Oe+y4Ylw0E",
         "protoc-26.0-rc-3-linux-ppcle_64.zip": "sha384-1QxiTOdrXbB/tr1u0LpheREKIdPzOafq6IEx72V54DuKHhIyDUCkxzNXyC+pNfXQ",
         "protoc-26.0-rc-3-linux-s390_64.zip": "sha384-NYWag2bs+quuhzhYlhXcQaJHc1banME7D3UGGVjidZ3G9rEzp6wT1rrwyl9IndkI",
