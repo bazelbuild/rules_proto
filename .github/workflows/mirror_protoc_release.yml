@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          ./tools/protoc/mirror_protoc_releases.sh
-          npx @bazel/buildifier tools/protoc/versions.bzl
+          ./proto/private/protoc/mirror_protoc_releases.sh
+          npx @bazel/buildifier proto/private/protoc/versions.bzl
       - uses: peter-evans/create-pull-request@v5
         with:
           commit-message: "chore: mirror protoc release"
