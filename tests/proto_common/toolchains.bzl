@@ -14,9 +14,9 @@
 
 "unit tests for proto_common.toolchains"
 
-load("//proto/modules:proto_common.bzl", "toolchains")
 load("@bazel_skylib//lib:partial.bzl", "partial")
 load("@bazel_skylib//lib:unittest.bzl", "asserts", "unittest")
+load("//proto/modules:proto_common.bzl", "toolchains")
 
 def _test_toolchains_without_incompatible_flag(ctx):
     env = unittest.begin(ctx)
