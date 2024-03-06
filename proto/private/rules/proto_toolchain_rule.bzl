@@ -15,8 +15,7 @@
 """A Starlark implementation of the proto_toolchain rule."""
 
 load("@bazel_features//:features.bzl", "bazel_features")
-load("//proto/modules:proto_common.bzl", "proto_common")
-load("//proto/modules:proto_lang_toolchain_info.bzl", "ProtoLangToolchainInfo")
+load("//proto:proto_common.bzl", "ProtoLangToolchainInfo", "proto_common")
 
 def _impl(ctx):
     kwargs = {}
