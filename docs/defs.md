@@ -93,3 +93,59 @@ Toolchain target is suffixed with "_toolchain".
 | <a id="proto_toolchain-exec_compatible_with"></a>exec_compatible_with |  ([constraints]) List of constraints the prebuild binary is compatible with.   |  <code>[]</code> |
 
 
+<a id="toolchains.use_toolchain"></a>
+
+## toolchains.use_toolchain
+
+<pre>
+toolchains.use_toolchain(<a href="#toolchains.use_toolchain-toolchain_type">toolchain_type</a>)
+</pre>
+
+
+
+**PARAMETERS**
+
+
+| Name  | Description | Default Value |
+| :------------- | :------------- | :------------- |
+| <a id="toolchains.use_toolchain-toolchain_type"></a>toolchain_type |  <p align="center"> - </p>   |  none |
+
+
+<a id="toolchains.find_toolchain"></a>
+
+## toolchains.find_toolchain
+
+<pre>
+toolchains.find_toolchain(<a href="#toolchains.find_toolchain-ctx">ctx</a>, <a href="#toolchains.find_toolchain-legacy_attr">legacy_attr</a>, <a href="#toolchains.find_toolchain-toolchain_type">toolchain_type</a>)
+</pre>
+
+
+
+**PARAMETERS**
+
+
+| Name  | Description | Default Value |
+| :------------- | :------------- | :------------- |
+| <a id="toolchains.find_toolchain-ctx"></a>ctx |  <p align="center"> - </p>   |  none |
+| <a id="toolchains.find_toolchain-legacy_attr"></a>legacy_attr |  <p align="center"> - </p>   |  none |
+| <a id="toolchains.find_toolchain-toolchain_type"></a>toolchain_type |  <p align="center"> - </p>   |  none |
+
+
+<a id="toolchains.if_legacy_toolchain"></a>
+
+## toolchains.if_legacy_toolchain
+
+<pre>
+toolchains.if_legacy_toolchain(<a href="#toolchains.if_legacy_toolchain-legacy_attr_dict">legacy_attr_dict</a>)
+</pre>
+
+
+
+**PARAMETERS**
+
+
+| Name  | Description | Default Value |
+| :------------- | :------------- | :------------- |
+| <a id="toolchains.if_legacy_toolchain-legacy_attr_dict"></a>legacy_attr_dict |  <p align="center"> - </p>   |  none |
+
+
