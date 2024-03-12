@@ -31,7 +31,7 @@ proto_toolchain(
     visibility = ["//visibility:public"],
 )
 """.format(
-        protoc_label = ":bin/protoc.exe" if rctx.attr.platform.find("windows") != -1 else ":bin/protoc",
+        protoc_label = ":bin/protoc.exe" if rctx.attr.platform.startswith("win") != -1 else ":bin/protoc",
     ))
 
 prebuilt_protoc_repo = repository_rule(
