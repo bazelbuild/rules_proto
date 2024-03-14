@@ -4,6 +4,52 @@ See ./mirror_protoc_release.sh for automation to update this file.
 See .github/workflows/mirror_protoc_release.yml for automation that runs the script daily.
 """
 
+# Keys are chosen to match the filenames published on protocolbuffers/protobuf releases
+PROTOC_PLATFORMS = {
+    "linux-aarch_64": {
+        "compatible_with": [
+            "@platforms//os:linux",
+            "@platforms//cpu:aarch64",
+        ],
+    },
+    "linux-ppcle_64": {
+        "compatible_with": [
+            "@platforms//os:linux",
+            "@platforms//cpu:ppc64le",
+        ],
+    },
+    "linux-s390_64": {
+        "compatible_with": [
+            "@platforms//os:linux",
+            "@platforms//cpu:s390x",
+        ],
+    },
+    "linux-x86_64": {
+        "compatible_with": [
+            "@platforms//os:linux",
+            "@platforms//cpu:x86_64",
+        ],
+    },
+    "osx-aarch_64": {
+        "compatible_with": [
+            "@platforms//os:macos",
+            "@platforms//cpu:aarch64",
+        ],
+    },
+    "osx-x86_64": {
+        "compatible_with": [
+            "@platforms//os:macos",
+            "@platforms//cpu:x86_64",
+        ],
+    },
+    "win64": {
+        "compatible_with": [
+            "@platforms//os:windows",
+            "@platforms//cpu:x86_64",
+        ],
+    },
+}
+
 PROTOC_VERSIONS = {
     "v25.3": {
         "protoc-25.3-linux-aarch_64.zip": "sha384-jwCvnInYx9lD4bNy3EI/leVIVGqpyYkJ3qZSXXtIERcaBRIS1hAi4Tluu9Cy4eiy",
