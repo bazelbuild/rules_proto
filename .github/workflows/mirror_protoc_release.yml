@@ -3,6 +3,9 @@ on:
   # Trigger manually in the UI
   workflow_dispatch:
   # Trigger daily at 06:10 UTC
+  # Note, the create-pull-request action only sends a PR if there's a code change,
+  # so a no-op execution of the mirror_protoc_releases script on most days will
+  # not create a pull request.
   schedule:
     - cron: "10 6 * * *"
 
