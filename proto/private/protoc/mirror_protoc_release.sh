@@ -26,10 +26,15 @@ map(select(.tag_name == $version))[0]
 | map(select(.name | startswith("protoc")))
 | map(.browser_download_url)[]
 '
-# Workaround: protobuf doesn't publish their integrity hashes to e.g. checksums.txt
+# Workaround https://github.com/protocolbuffers/protobuf/issues/16165:
+# protobuf doesn't publish their integrity hashes to e.g. checksums.txt
 # Create a file that looks like a checksums.txt from a shasum command, i.e.
 # sha384-RVFu8PJJCOSXwYTqH7FyWRSgsP1AAjcEa+VViddVTgtd9wYvZjQoQ8jmlFxwfFw+ protobuf-26.0-rc3.tar.gz
 # sha384-JYSXGTSBfwUU6UzqazUTkT3lTZDzx10YdaNQYjojrT7X1Ro1fA+T4tjJw0e8UISV protobuf-26.0-rc3.zip
+#
+# Note, this follows https://en.wikipedia.org/wiki/Trust_on_first_use
+# in that we assume that a release is not tampered for 24h until we mirror it, then afterward
+# we are guaranteed that whatever we initially trusted does not change.
 CHECKSUMS=$(mktemp)
 for url in $(jq --arg version $VERSION --raw-output "$DOWNLOAD_URLS_FILTER" <$RELEASES); do
     sha=$(curl -sSL $url | shasum -b -a 384 | awk "{ print \$1 }" | xxd -r -p | base64)
