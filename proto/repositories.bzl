@@ -43,7 +43,7 @@ def rules_proto_dependencies():
     maybe(
         http_archive,
         name = "bazel_features",
-        sha256 = "b8789c83c893d7ef3041d3f2795774936b27ff61701a705df52fd41d6ddbf692",
-        strip_prefix = "bazel_features-1.2.0",
-        url = "https://github.com/bazel-contrib/bazel_features/releases/download/v1.2.0/bazel_features-v1.2.0.tar.gz",
+        sha256 = "0f23d75c7623d6dba1fd30513a94860447de87c8824570521fcc966eda3151c2",
+        strip_prefix = "bazel_features-1.4.1",
+        url = "https://github.com/bazel-contrib/bazel_features/releases/download/v1.4.1/bazel_features-v1.4.1.tar.gz",
     )
