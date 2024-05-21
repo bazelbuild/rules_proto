@@ -5,12 +5,23 @@ current_proto_toolchain(
 )
 
 genrule(
-    name = "gen_protoc_version_from_current_proto_toolchain",
-    srcs = [":current_proto_toolchain"],
-    outs = ["protoc_version_from_current_proto_toolchain"],
+    name = "gen_protoc_help_from_current_proto_toolchain",
+    srcs = [],
+    outs = ["protoc_help_from_current_proto_toolchain"],
     cmd = """
-        v=$$($(PROTOC) --version)
+        v=$$($(PROTOC) --help)
         echo $$v > $(OUTS)
     """,
     toolchains = [":current_proto_toolchain"],
+)
+
+# The genrule above will fail if PROTOC cannot be found, but using genrules for tests isn't recommended.
+# This sh_test just checks if the output of the genrule has any content.
+sh_test(
+    name = "test_protoc_help_from_current_proto_toolchain",
+    srcs = ["test_protoc_help_from_current_proto_toolchain.sh"],
+    data = [":protoc_help_from_current_proto_toolchain"],
+    env = {
+        "PROTOC_HELP_OUTPUT": "$(location :protoc_help_from_current_proto_toolchain)",
+    },
 )
