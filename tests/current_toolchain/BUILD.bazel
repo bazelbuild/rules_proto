@@ -12,6 +12,7 @@ genrule(
         v=$$($(PROTOC) --help)
         echo $$v > $(OUTS)
     """,
+    tags = ["no_windows"],
     toolchains = [":current_proto_toolchain"],
 )
 
@@ -24,4 +25,5 @@ sh_test(
     env = {
         "PROTOC_HELP_OUTPUT": "$(location :protoc_help_from_current_proto_toolchain)",
     },
+    tags = ["no_windows"],
 )
