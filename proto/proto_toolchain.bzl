@@ -14,6 +14,7 @@
 
 """Export for proto_toolchain"""
 
-load("//proto/private/rules:proto_toolchain.bzl", _proto_toolchain_macro = "proto_toolchain")
+load("//proto/private/rules:proto_toolchain.bzl", _current_proto_toolchain = "current_proto_toolchain", _proto_toolchain_macro = "proto_toolchain")
 
 proto_toolchain = _proto_toolchain_macro
+current_proto_toolchain = _current_proto_toolchain
