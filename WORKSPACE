@@ -27,3 +27,7 @@ rbe_preconfig(
     name = "buildkite_config",
     toolchain = "ubuntu1804-bazel-java11",
 )
+
+register_toolchains(
+    "//:proto_toolchain_toolchain",
+)

@@ -38,3 +38,36 @@ def proto_toolchain(*, name, proto_compiler, exec_compatible_with = []):
         target_compatible_with = [],
         toolchain = name,
     )
+
+def _current_proto_toolchain_impl(ctx):
+    toolchain = ctx.toolchains[ctx.attr._toolchain]
+
+    direct = [toolchain.proto.proto_compiler.executable]
+    transitive = []
+    files = depset(direct, transitive = transitive)
+    return [
+        toolchain,
+        platform_common.TemplateVariableInfo({
+            "PROTOC": str(toolchain.proto.proto_compiler.executable.path),
+        }),
+        DefaultInfo(
+            runfiles = ctx.runfiles(transitive_files = files),
+            files = files,
+        ),
+    ]
+
+current_proto_toolchain = rule(
+    doc = """
+    This rule exists so that the current protoc toolchain can be used in the `toolchains` attribute of
+    other rules, such as genrule. It allows exposing a protoc toolchain after toolchain resolution has
+    happened, to a rule which expects a concrete implementation of a toolchain, rather than a
+    toolchain_type which could be resolved to that toolchain.
+    """,
+    implementation = _current_proto_toolchain_impl,
+    attrs = {
+        "_toolchain": attr.string(default = str(Label("@rules_proto//proto:toolchain_type"))),
+    },
+    toolchains = [
+        str(Label("@rules_proto//proto:toolchain_type")),
+    ],
+)

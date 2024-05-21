@@ -2,6 +2,29 @@
 
 Starlark rules for building protocol buffers.
 
+<a id="current_proto_toolchain"></a>
+
+## current_proto_toolchain
+
+<pre>
+current_proto_toolchain(<a href="#current_proto_toolchain-name">name</a>)
+</pre>
+
+
+    This rule exists so that the current protoc toolchain can be used in the `toolchains` attribute of
+    other rules, such as genrule. It allows exposing a protoc toolchain after toolchain resolution has
+    happened, to a rule which expects a concrete implementation of a toolchain, rather than a
+    toolchain_type which could be resolved to that toolchain.
+    
+
+**ATTRIBUTES**
+
+
+| Name  | Description | Type | Mandatory | Default |
+| :------------- | :------------- | :------------- | :------------- | :------------- |
+| <a id="current_proto_toolchain-name"></a>name |  A unique name for this target.   | <a href="https://bazel.build/concepts/labels#target-names">Name</a> | required |  |
+
+
 <a id="proto_descriptor_set"></a>
 
 ## proto_descriptor_set
