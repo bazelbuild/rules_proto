@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 6,
-  "moduleFileHash": "7a83abe22db793fb1612f5cf942cc29bce39f91dcc76ce2f4ecc60a2f5f8a1e0",
+  "moduleFileHash": "1180f60115309a637d417b53b0188f1dcb65caf0cdbcb87d9c013c1b3b056d21",
   "flags": {
     "cmdRegistries": [
       "https://bcr.bazel.build/"
@@ -22,7 +22,9 @@
       "key": "<root>",
       "repoName": "rules_proto",
       "executionPlatformsToRegister": [],
-      "toolchainsToRegister": [],
+      "toolchainsToRegister": [
+        "//:proto_toolchain_toolchain"
+      ],
       "extensionUsages": [],
       "deps": {
         "rules_license": "rules_license@0.0.7",
@@ -1222,7 +1224,7 @@
     },
     "@@protobuf~//:non_module_deps.bzl%non_module_deps": {
       "general": {
-        "bzlTransitiveDigest": "aGnO/HqVtCmRLEQWGCuKp7jwX+lCh/nc3/hI3clfwD8=",
+        "bzlTransitiveDigest": "Ru/iB33/Fg7l06H1hBzJ1lPAZip3abmjbwD8z/MzBig=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -1250,7 +1252,7 @@
     },
     "@@rules_java~//java:extensions.bzl%toolchains": {
       "general": {
-        "bzlTransitiveDigest": "tJHbmWnq7m+9eUBnUdv7jZziQ26FmcGL9C5/hU3Q9UQ=",
+        "bzlTransitiveDigest": "0N5b5J9fUzo0sgvH4F3kIEaeXunz4Wy2/UtSFV/eXUY=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},

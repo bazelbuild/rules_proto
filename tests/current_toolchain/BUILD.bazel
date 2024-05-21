@@ -1,0 +1,16 @@
+load("//proto:defs.bzl", "current_proto_toolchain")
+
+current_proto_toolchain(
+    name = "current_proto_toolchain",
+)
+
+genrule(
+    name = "gen_protoc_version_from_current_proto_toolchain",
+    srcs = [":current_proto_toolchain"],
+    outs = ["protoc_version_from_current_proto_toolchain"],
+    cmd = """
+        v=$$($(PROTOC) --version)
+        echo $$v > $(OUTS)
+    """,
+    toolchains = [":current_proto_toolchain"],
+)
