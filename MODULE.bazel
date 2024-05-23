@@ -7,7 +7,6 @@ module(
     compatibility_level = 1,
 )
 
-# TODO(#203): remove dependency on compiling C++ tools
 bazel_dep(name = "rules_cc", version = "0.0.1")
 bazel_dep(name = "rules_license", version = "0.0.7")
 bazel_dep(name = "bazel_skylib", version = "1.3.0")
