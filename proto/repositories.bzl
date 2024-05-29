@@ -47,3 +47,14 @@ def rules_proto_dependencies():
         strip_prefix = "bazel_features-1.4.1",
         url = "https://github.com/bazel-contrib/bazel_features/releases/download/v1.4.1/bazel_features-v1.4.1.tar.gz",
     )
+
+    maybe(
+        http_archive,
+        name = "rules_cc",
+        sha256 = "4aeb102efbcfad509857d7cb9c5456731e8ce566bfbf2960286a2ec236796cc3",
+        strip_prefix = "rules_cc-2f8c04c04462ab83c545ab14c0da68c3b4c96191",
+        urls = [
+            "https://mirror.bazel.build/github.com/bazelbuild/rules_cc/archive/2f8c04c04462ab83c545ab14c0da68c3b4c96191.tar.gz",
+            "https://github.com/bazelbuild/rules_cc/archive/2f8c04c04462ab83c545ab14c0da68c3b4c96191.tar.gz",
+        ],
+    )
