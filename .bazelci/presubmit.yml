@@ -64,7 +64,7 @@ tasks:
     test_flags:
       - "--config=bzlmod"
       - "--lockfile_mode=error"
-   ubuntu2004_head:
+  ubuntu2004_head:
     bazel: last_green
     platform: ubuntu2004
     build_targets: *build_targets
