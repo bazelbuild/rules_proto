@@ -1,1 +1,6 @@
+common:ci-common --lockfile_mode=error
+common:bzlmod --config=ci-common
 build:bzlmod --enable_bzlmod
+common:nobzlmod --config=ci-common
+build:nobzlmod --noenable_bzlmod
+
