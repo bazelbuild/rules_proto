@@ -54,4 +54,8 @@ def rules_proto_dev_deps():
             "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v23.1.tar.gz",
             "https://github.com/protocolbuffers/protobuf/archive/v23.1.tar.gz",
         ],
+        remote_patch_strip = 1,
+        remote_patches = {
+            "https://raw.githubusercontent.com/bazelbuild/bazel-central-registry/main/modules/protobuf/23.1/patches/0007-bazel-Get-rid-of-exec_tools.-13401.patch": "sha256-Thj5ZYqMpgaUrjZv8XyWqyD+I6XQNcZjo4jI14a7QxE=",
+        },
     )
