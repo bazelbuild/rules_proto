@@ -11,8 +11,8 @@ on:
 
 jobs:
   release:
-    # Re-use https://github.com/bazel-contrib/.github/blob/v5/.github/workflows/release_ruleset.yaml
-    uses: bazel-contrib/.github/.github/workflows/release_ruleset.yaml@v5
+    # Re-use https://github.com/bazel-contrib/.github/blob/v6/.github/workflows/release_ruleset.yaml
+    uses: bazel-contrib/.github/.github/workflows/release_ruleset.yaml@v6
     with:
       prerelease: false
       release_files: rules_proto-*.tar.gz
