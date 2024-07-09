@@ -14,19 +14,12 @@
 
 """Starlark rules for building protocol buffers."""
 
-load("//proto:proto_lang_toolchain.bzl", _proto_lang_toolchain = "proto_lang_toolchain")
-load("//proto:proto_toolchain.bzl", _proto_toolchain = "proto_toolchain")
-load("//proto/private:native.bzl", "NativeProtoInfo", "native_proto_common")
+load("@com_google_protobuf//bazel:proto_library.bzl", _proto_library = "proto_library")
+load("@com_google_protobuf//bazel/common:proto_common.bzl", _proto_common = "proto_common")
+load("@com_google_protobuf//bazel/common:proto_info.bzl", _ProtoInfo = "ProtoInfo")
+load("@com_google_protobuf//bazel/toolchains:proto_lang_toolchain.bzl", _proto_lang_toolchain = "proto_lang_toolchain")
+load("@com_google_protobuf//bazel/toolchains:proto_toolchain.bzl", _proto_toolchain = "proto_toolchain")
 load("//proto/private/rules:proto_descriptor_set.bzl", _proto_descriptor_set = "proto_descriptor_set")
-
-_MIGRATION_TAG = "__PROTO_RULES_MIGRATION_DO_NOT_USE_WILL_BREAK__"
-
-def _add_migration_tag(attrs):
-    if "tags" in attrs and attrs["tags"] != None:
-        attrs["tags"] = attrs["tags"] + [_MIGRATION_TAG]
-    else:
-        attrs["tags"] = [_MIGRATION_TAG]
-    return attrs
 
 def proto_library(**attrs):
     """Bazel proto_library rule.
@@ -37,8 +30,7 @@ def proto_library(**attrs):
       **attrs: Rule attributes
     """
 
-    # buildifier: disable=native-proto
-    native.proto_library(**_add_migration_tag(attrs))
+    _proto_library(**attrs)
 
 proto_descriptor_set = _proto_descriptor_set
 
@@ -46,12 +38,6 @@ proto_lang_toolchain = _proto_lang_toolchain
 
 proto_toolchain = _proto_toolchain
 
-# Encapsulates information provided by `proto_library`.
-#
-# https://docs.bazel.build/versions/master/skylark/lib/ProtoInfo.html
-ProtoInfo = NativeProtoInfo
+ProtoInfo = _ProtoInfo
 
-# Utilities for protocol buffers.
-#
-# https://docs.bazel.build/versions/master/skylark/lib/proto_common.html
-proto_common = native_proto_common
+proto_common = _proto_common

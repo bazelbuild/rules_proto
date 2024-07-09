@@ -11,7 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 """A rule for generating a `FileDescriptorSet` with all transitive dependencies.
 
 This module contains the definition of `proto_descriptor_set`, a rule that
@@ -19,7 +18,7 @@ collects all `FileDescriptorSet`s from its transitive dependencies and generates
 a single `FileDescriptorSet` containing all the `FileDescriptorProto` from them.
 """
 
-load("//proto/private:native.bzl", ProtoInfo = "NativeProtoInfo")
+load("@com_google_protobuf//bazel/common:proto_info.bzl", "ProtoInfo")
 
 def _proto_descriptor_set_impl(ctx):
     args = ctx.actions.args()

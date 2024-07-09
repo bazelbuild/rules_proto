@@ -13,7 +13,9 @@
 # limitations under the License.
 """Setup required to use rules_proto."""
 
-load("@bazel_features//:deps.bzl", "bazel_features_deps")
+load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
+load("@rules_python//python:repositories.bzl", "py_repositories")
 
 def rules_proto_setup():
-    bazel_features_deps()
+    protobuf_deps()
+    py_repositories()

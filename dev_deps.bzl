@@ -45,17 +45,3 @@ def rules_proto_dev_deps():
             "https://github.com/bazelbuild/continuous-integration/releases/download/rules-1.0.0/bazelci_rules-1.0.0.tar.gz",
         ],
     )
-
-    http_archive(
-        name = "com_google_protobuf",
-        sha256 = "dc167b7d23ec0d6e4a3d4eae1798de6c8d162e69fa136d39753aaeb7a6e1289d",
-        strip_prefix = "protobuf-23.1",
-        urls = [
-            "https://mirror.bazel.build/github.com/protocolbuffers/protobuf/archive/v23.1.tar.gz",
-            "https://github.com/protocolbuffers/protobuf/archive/v23.1.tar.gz",
-        ],
-        remote_patch_strip = 1,
-        remote_patches = {
-            "https://raw.githubusercontent.com/bazelbuild/bazel-central-registry/main/modules/protobuf/23.1/patches/0007-bazel-Get-rid-of-exec_tools.-13401.patch": "sha256-Thj5ZYqMpgaUrjZv8XyWqyD+I6XQNcZjo4jI14a7QxE=",
-        },
-    )

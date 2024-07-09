@@ -17,11 +17,10 @@
 # https://docs.bazel.build/versions/master/skylark/lib/proto_common.html
 """proto_common module"""
 
-load("//proto/private:native.bzl", "native_proto_common")
+load("@com_google_protobuf//bazel/common:proto_common.bzl", _proto_common = "proto_common")
+load("@com_google_protobuf//bazel/common:proto_lang_toolchain_info.bzl", "ProtoLangToolchainInfo")
 
-proto_common = native_proto_common
-
-ProtoLangToolchainInfo = proto_common.ProtoLangToolchainInfo
+proto_common = _proto_common  # reexport proto_common for current users
 
 def _incompatible_toolchains_enabled():
     return getattr(proto_common, "INCOMPATIBLE_ENABLE_PROTO_TOOLCHAIN_RESOLUTION", False)
