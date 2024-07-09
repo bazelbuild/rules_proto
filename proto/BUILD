@@ -12,6 +12,7 @@ bzl_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
+        ":proto_common",
         ":proto_lang_toolchain",
         ":proto_toolchain",
         "//proto/private/rules:proto_descriptor_set",
