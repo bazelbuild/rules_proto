@@ -21,16 +21,7 @@ load("@com_google_protobuf//bazel/toolchains:proto_lang_toolchain.bzl", _proto_l
 load("@com_google_protobuf//bazel/toolchains:proto_toolchain.bzl", _proto_toolchain = "proto_toolchain")
 load("//proto/private/rules:proto_descriptor_set.bzl", _proto_descriptor_set = "proto_descriptor_set")
 
-def proto_library(**attrs):
-    """Bazel proto_library rule.
-
-    https://docs.bazel.build/versions/master/be/protocol-buffer.html#proto_library
-
-    Args:
-      **attrs: Rule attributes
-    """
-
-    _proto_library(**attrs)
+proto_library = _proto_library
 
 proto_descriptor_set = _proto_descriptor_set
 
