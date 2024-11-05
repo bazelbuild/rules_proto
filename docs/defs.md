@@ -49,27 +49,6 @@ https://docs.bazel.build/versions/master/be/protocol-buffer.html#proto_lang_tool
 | <a id="proto_lang_toolchain-attrs"></a>attrs |  Rule attributes   |  none |
 
 
-<a id="proto_library"></a>
-
-## proto_library
-
-<pre>
-proto_library(<a href="#proto_library-attrs">attrs</a>)
-</pre>
-
-Bazel proto_library rule.
-
-https://docs.bazel.build/versions/master/be/protocol-buffer.html#proto_library
-
-
-**PARAMETERS**
-
-
-| Name  | Description | Default Value |
-| :------------- | :------------- | :------------- |
-| <a id="proto_library-attrs"></a>attrs |  Rule attributes   |  none |
-
-
 <a id="proto_toolchain"></a>
 
 ## proto_toolchain
