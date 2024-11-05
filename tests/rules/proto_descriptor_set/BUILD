@@ -1,4 +1,4 @@
-load("@rules_cc//cc:defs.bzl", "cc_test")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
 load("//proto:defs.bzl", "proto_descriptor_set", "proto_library")
 
 proto_library(
