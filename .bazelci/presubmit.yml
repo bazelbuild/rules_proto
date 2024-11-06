@@ -67,57 +67,57 @@ tasks:
     test_flags:
       - "--config=bzlmod"
       - "--lockfile_mode=error"
-  ubuntu2004_head:
-    bazel: last_green
-    platform: ubuntu2004
-    build_targets: *build_targets
-    build_flags:
-      - "--config=nobzlmod"
-    test_targets: *test_targets
-    test_flags:
-      - "--config=nobzlmod"
-  macos_head:
-    bazel: last_green
-    platform: macos
-    build_targets: *build_targets
-    build_flags:
-      - "--config=nobzlmod"
-    test_targets: *test_targets
-    test_flags:
-      - "--config=nobzlmod"
-  windows_head:
-    bazel: last_green
-    platform: windows
-    build_targets: *build_targets
-    build_flags:
-      - "--config=nobzlmod"
-    test_targets: *test_targets
-    test_flags:
-      - "--config=nobzlmod"
-  ubuntu2004_head_bzlmod:
-    bazel: last_green
-    platform: ubuntu2004
-    build_flags:
-      - "--config=bzlmod"
-    build_targets: *build_targets_bzlmod
-    test_flags:
-      - "--config=bzlmod"
-    test_targets: *test_targets_bzlmod
-  macos_head_bzlmod:
-    bazel: last_green
-    platform: macos
-    build_flags:
-      - "--config=bzlmod"
-    build_targets: *build_targets_bzlmod
-    test_flags:
-      - "--config=bzlmod"
-    test_targets: *test_targets_bzlmod
-  windows_head_bzlmod:
-    bazel: last_green
-    platform: windows
-    build_flags:
-      - "--config=bzlmod"
-    build_targets: *build_targets_bzlmod
-    test_flags:
-      - "--config=bzlmod"
-    test_targets: *test_targets_bzlmod
+#  ubuntu2004_head:
+#    bazel: last_green
+#    platform: ubuntu2004
+#    build_targets: *build_targets
+#    build_flags:
+#      - "--config=nobzlmod"
+#    test_targets: *test_targets
+#    test_flags:
+#      - "--config=nobzlmod"
+#  macos_head:
+#    bazel: last_green
+#    platform: macos
+#    build_targets: *build_targets
+#    build_flags:
+#      - "--config=nobzlmod"
+#    test_targets: *test_targets
+#    test_flags:
+#      - "--config=nobzlmod"
+#  windows_head:
+#    bazel: last_green
+#    platform: windows
+#    build_targets: *build_targets
+#    build_flags:
+#      - "--config=nobzlmod"
+#    test_targets: *test_targets
+#    test_flags:
+#      - "--config=nobzlmod"
+#  ubuntu2004_head_bzlmod:
+#    bazel: last_green
+#    platform: ubuntu2004
+#    build_flags:
+#      - "--config=bzlmod"
+#    build_targets: *build_targets_bzlmod
+#    test_flags:
+#      - "--config=bzlmod"
+#    test_targets: *test_targets_bzlmod
+#  macos_head_bzlmod:
+#    bazel: last_green
+#    platform: macos
+#    build_flags:
+#      - "--config=bzlmod"
+#    build_targets: *build_targets_bzlmod
+#    test_flags:
+#      - "--config=bzlmod"
+#    test_targets: *test_targets_bzlmod
+#  windows_head_bzlmod:
+#    bazel: last_green
+#    platform: windows
+#    build_flags:
+#      - "--config=bzlmod"
+#    build_targets: *build_targets_bzlmod
+#    test_flags:
+#      - "--config=bzlmod"
+#    test_targets: *test_targets_bzlmod

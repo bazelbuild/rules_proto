@@ -21,7 +21,6 @@ load("@bazel_skylib//:workspace.bzl", "bazel_skylib_workspace")
 
 bazel_skylib_workspace()
 
-
 load("@bazelci_rules//:rbe_repo.bzl", "rbe_preconfig")
 
 rbe_preconfig(
