@@ -28,6 +28,13 @@ def rules_proto_dev_deps():
     )
 
     http_archive(
+        name = "rules_shell",
+        sha256 = "410e8ff32e018b9efd2743507e7595c26e2628567c42224411ff533b57d27c28",
+        strip_prefix = "rules_shell-0.2.0",
+        url = "https://github.com/bazelbuild/rules_shell/releases/download/v0.2.0/rules_shell-v0.2.0.tar.gz",
+    )
+
+    http_archive(
         name = "com_google_googletest",
         sha256 = "81964fe578e9bd7c94dfdb09c8e4d6e6759e19967e397dbea48d1c10e45d0df2",
         strip_prefix = "googletest-release-1.12.1",

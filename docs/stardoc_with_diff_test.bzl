@@ -11,7 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 """Helpers for keeping stardoc documentation up-to-date.
 
 These are currently a private API in bazel-skylib.
@@ -26,6 +25,7 @@ https://github.com/aspect-build/bazel-lib/blob/main/docs/docs.md
 load("@bazel_skylib//rules:diff_test.bzl", "diff_test")
 load("@bazel_skylib//rules:write_file.bzl", "write_file")
 load("@io_bazel_stardoc//stardoc:stardoc.bzl", "stardoc")
+load("@rules_shell//shell:sh_binary.bzl", "sh_binary")
 
 def stardoc_with_diff_test(
         name,
@@ -104,7 +104,7 @@ def update_docs(
         content = content,
     )
 
-    native.sh_binary(
+    sh_binary(
         name = name,
         srcs = [update_script],
         data = data,
