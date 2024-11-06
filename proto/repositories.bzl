@@ -51,12 +51,9 @@ def rules_proto_dependencies():
     maybe(
         http_archive,
         name = "rules_cc",
-        sha256 = "4aeb102efbcfad509857d7cb9c5456731e8ce566bfbf2960286a2ec236796cc3",
-        strip_prefix = "rules_cc-2f8c04c04462ab83c545ab14c0da68c3b4c96191",
-        urls = [
-            "https://mirror.bazel.build/github.com/bazelbuild/rules_cc/archive/2f8c04c04462ab83c545ab14c0da68c3b4c96191.tar.gz",
-            "https://github.com/bazelbuild/rules_cc/archive/2f8c04c04462ab83c545ab14c0da68c3b4c96191.tar.gz",
-        ],
+        urls = ["https://github.com/bazelbuild/rules_cc/releases/download/0.0.13/rules_cc-0.0.13.tar.gz"],
+        sha256 = "d9bdd3ec66b6871456ec9c965809f43a0901e692d754885e89293807762d3d80",
+        strip_prefix = "rules_cc-0.0.13",
     )
 
     maybe(
