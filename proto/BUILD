@@ -59,7 +59,8 @@ bzl_library(
 )
 
 # Toolchain type provided by proto_toolchain rule and used by proto_library
-toolchain_type(
+alias(
     name = "toolchain_type",
+    actual = "@com_google_protobuf//bazel/private:proto_toolchain_type",
     visibility = ["//visibility:public"],
 )
