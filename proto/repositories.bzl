@@ -24,10 +24,10 @@ def rules_proto_dependencies():
     maybe(
         http_archive,
         name = "com_google_protobuf",
-        sha256 = "6fbe2e6f703bcd3a246529c2cab586ca12a98c4e641f5f71d51fde09eb48e9e7",
-        strip_prefix = "protobuf-27.1",
+        integrity = "sha256-PTKUDpdcStm4umlkDnj1UnB1uuM8ookCdb8muFPAliw=",
+        strip_prefix = "protobuf-29.1",
         urls = [
-            "https://github.com/protocolbuffers/protobuf/archive/v27.1.tar.gz",
+            "https://github.com/protocolbuffers/protobuf/archive/v29.1.tar.gz",
         ],
     )
     maybe(
@@ -43,10 +43,10 @@ def rules_proto_dependencies():
         http_archive,
         name = "rules_license",
         urls = [
-            "https://mirror.bazel.build/github.com/bazelbuild/rules_license/releases/download/0.0.7/rules_license-0.0.7.tar.gz",
-            "https://github.com/bazelbuild/rules_license/releases/download/0.0.7/rules_license-0.0.7.tar.gz",
+            "https://mirror.bazel.build/github.com/bazelbuild/rules_license/releases/download/1.0.0/rules_license-1.0.0.tar.gz",
+            "https://github.com/bazelbuild/rules_license/releases/download/1.0.0/rules_license-1.0.0.tar.gz",
         ],
-        sha256 = "4531deccb913639c30e5c7512a054d5d875698daeb75d8cf90f284375fe7c360",
+        sha256 = "26d4021f6898e23b82ef953078389dd49ac2b5618ac564ade4ef87cced147b38",
     )
 
     maybe(
@@ -60,16 +60,16 @@ def rules_proto_dependencies():
     maybe(
         http_archive,
         name = "rules_python",
-        sha256 = "ca77768989a7f311186a29747e3e95c936a41dffac779aff6b443db22290d913",
-        strip_prefix = "rules_python-0.36.0",
-        url = "https://github.com/bazelbuild/rules_python/releases/download/0.36.0/rules_python-0.36.0.tar.gz",
+        sha256 = "4f7e2aa1eb9aa722d96498f5ef514f426c1f55161c3c9ae628c857a7128ceb07",
+        strip_prefix = "rules_python-1.0.0",
+        url = "https://github.com/bazelbuild/rules_python/releases/download/1.0.0/rules_python-1.0.0.tar.gz",
     )
 
     maybe(
         http_archive,
         name = "rules_java",
         urls = [
-            "https://github.com/bazelbuild/rules_java/releases/download/8.3.0/rules_java-8.3.0.tar.gz",
+            "https://github.com/bazelbuild/rules_java/releases/download/8.6.2/rules_java-8.6.2.tar.gz",
         ],
-        sha256 = "c7bd858a132c7b8febe040a90fa138c2e3e7f0bce47122ac2ad43906036a276c",
+        sha256 = "a64ab04616e76a448c2c2d8165d836f0d2fb0906200d0b7c7376f46dd62e59cc",
     )
