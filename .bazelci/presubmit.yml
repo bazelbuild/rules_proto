@@ -1,10 +1,8 @@
 ---
 build_targets: &build_targets
   - "//..."
-  - "-//docs/..."
 test_targets: &test_targets
   - "//..."
-  - "-//docs/..."
 
 buildifier:
   version: latest
@@ -127,15 +125,3 @@ tasks:
     test_flags:
       - "--config=bzlmod"
     test_targets: *test_targets
-#  docs:
-#    name: "Docs"
-#    bazel: last_green
-#    platform: ubuntu2004
-#    build_flags:
-#      - "--config=bzlmod"
-#    build_targets:
-#      - "//docs/..."
-#    test_flags:
-#      - "--config=bzlmod"
-#    test_targets:
-#      - "//docs/..."
